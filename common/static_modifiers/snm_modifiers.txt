@@ -1,0 +1,50 @@
+﻿snm_blocfree_early = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
+	state_construction_mult = 0.1
+	country_tech_spread_mult = 0.1
+	country_company_throughput_bonus_add = 0.1
+	state_birth_rate_mult = 0.1
+	country_military_goods_cost_mult = -0.1
+	country_tax_income_add = 10000
+}
+
+snm_blocfree_mid = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
+	state_construction_mult = 0.1
+	country_tech_spread_mult = 0.1
+	country_company_throughput_bonus_add = 0.1
+	state_birth_rate_mult = 0.1
+	country_military_goods_cost_mult = -0.1
+	country_tax_income_add = 10000
+	country_leverage_resistance_mult = -0.50
+}
+
+snm_blocfree_late = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
+	state_construction_mult = 0.1
+	country_tech_spread_mult = 0.1
+	country_company_throughput_bonus_add = 0.1
+	state_birth_rate_mult = 0.1
+	country_military_goods_cost_mult = -0.1
+	country_tax_income_add = 10000
+	country_leverage_resistance_mult = -1.5
+}
+
+
+
+snm_populating_north = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
+	state_birth_rate_mult = 0.05
+}
+
+snm_populating_south = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
+	state_birth_rate_mult = 0.2
+}
+
+snm_vertretung = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
+	state_construction_mult = 0.5
+	country_legitimacy_base_add = 50
+	country_infamy_decay_mult = 0.25
+}

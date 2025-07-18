@@ -1,0 +1,119 @@
+﻿on_monthly_pulse_country = {
+    on_actions = {
+    	snm_blocfree_pulse
+    }
+}
+
+on_yearly_pulse_country = {
+	events = {
+			snm_perf.1
+	}
+}
+
+
+snm_blocfree_pulse = {
+	effect={
+		if = {
+			limit = {
+				AND = {
+					game_date < 1860.1.1
+					Not = {has_modifier = snm_blocfree_early}
+					is_player = yes
+					is_in_power_bloc = no
+					country_rank < rank_value:great_power
+				}
+			}
+			add_modifier = snm_blocfree_early
+		} 
+		else_if = {
+			limit = {
+				AND = {
+					has_modifier = snm_blocfree_early
+					OR = {
+					is_in_power_bloc= yes
+					country_rank >= rank_value:great_power
+					}
+				}
+
+			}
+			remove_modifier = snm_blocfree_early
+		}
+		
+		if = {
+			limit = {
+				AND = {
+					game_date >= 1860.1.1
+					game_date < 1875.1.1
+					Not = {has_modifier = snm_blocfree_mid}
+					is_player = yes
+					is_in_power_bloc = no
+					country_rank < rank_value:great_power
+				}
+			}
+			add_modifier = snm_blocfree_mid
+		} 
+		else_if = {
+			limit = {
+				AND = {
+					has_modifier = snm_blocfree_mid
+					OR = {
+					is_in_power_bloc= yes
+					country_rank >= rank_value:great_power
+					}
+				}
+
+			}
+			remove_modifier = snm_blocfree_mid
+		}
+
+		if = {
+			limit = {
+				AND = {
+					game_date >= 1875.1.1
+					Not = {has_modifier = snm_blocfree_late}
+					is_player = yes
+					is_in_power_bloc = no
+					country_rank < rank_value:great_power
+				}
+			}
+			add_modifier = snm_blocfree_late
+		} 
+		else_if = {
+			limit = {
+				AND = {
+					has_modifier = snm_blocfree_late
+					OR = {
+					is_in_power_bloc= yes
+					country_rank >= rank_value:great_power
+					}
+				}
+
+			}
+			remove_modifier = snm_blocfree_late
+		}
+
+		if = {
+			limit = {
+				AND = {
+					game_date >= 1860.1.1
+					has_modifier = snm_blocfree_early
+					}
+				}		
+			remove_modifier = snm_blocfree_early
+		}
+		if = {
+			limit = {
+				AND = {
+					game_date >= 1875.1.1
+					has_modifier = snm_blocfree_mid
+					}
+				}
+
+			
+			remove_modifier = snm_blocfree_mid
+		}
+
+
+
+	}
+}
