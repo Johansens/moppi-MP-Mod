@@ -1,0 +1,189 @@
+﻿GLOBAL = {
+
+	add_to_global_variable_list = { name = native_american_cultures target = cu:metis }
+	add_to_global_variable_list = { name = native_american_cultures target = cu:dakota }
+	add_to_global_variable_list = { name = native_american_cultures target = cu:cherokee }
+	add_to_global_variable_list = { name = native_american_cultures target = cu:muskogean }
+	add_to_global_variable_list = { name = native_american_cultures target = cu:pueblo }
+	add_to_global_variable_list = { name = native_american_cultures target = cu:inuit }
+	add_to_global_variable_list = { name = native_american_cultures target = cu:cree }
+	add_to_global_variable_list = { name = native_american_cultures target = cu:navajo }
+	add_to_global_variable_list = { name = native_american_cultures target = cu:athabaskan }
+	add_to_global_variable_list = { name = native_american_cultures target = cu:salish }
+	add_to_global_variable_list = { name = native_american_cultures target = cu:nez_perce }
+	add_to_global_variable_list = { name = native_american_cultures target = cu:siouan }
+	add_to_global_variable_list = { name = native_american_cultures target = cu:comanche }
+	add_to_global_variable_list = { name = native_american_cultures target = cu:algonquian }
+	add_to_global_variable_list = { name = native_american_cultures target = cu:iroquoian }
+	add_to_global_variable_list = { name = native_american_cultures target = cu:caddoan }
+	add_to_global_variable_list = { name = native_american_cultures target = cu:paiute }
+	add_to_global_variable_list = { name = native_american_cultures target = cu:hokan }
+	add_to_global_variable_list = { name = native_american_cultures target = cu:apache }
+	add_to_global_variable_list = { name = native_american_cultures target = cu:oodham }
+	add_to_global_variable_list = { name = native_american_cultures target = cu:quechua }
+	add_to_global_variable_list = { name = native_american_cultures target = cu:guarani }
+	add_to_global_variable_list = { name = native_american_cultures target = cu:aimara }
+	add_to_global_variable_list = { name = native_american_cultures target = cu:amazonian }
+	add_to_global_variable_list = { name = native_american_cultures target = cu:patagonian }
+	add_to_global_variable_list = { name = native_american_cultures target = cu:guajiro }
+	add_to_global_variable_list = { name = native_american_cultures target = cu:tupinamba }
+	add_to_global_variable_list = { name = native_american_cultures target = cu:muisca }
+	add_to_global_variable_list = { name = native_american_cultures target = cu:cariban }
+	add_to_global_variable_list = { name = native_american_cultures target = cu:zapotec }
+	add_to_global_variable_list = { name = native_american_cultures target = cu:mayan }
+	add_to_global_variable_list = { name = native_american_cultures target = cu:nahua }
+	add_to_global_variable_list = { name = native_american_cultures target = cu:tarascan }
+	add_to_global_variable_list = { name = native_american_cultures target = cu:mixtec }
+	add_to_global_variable_list = { name = native_american_cultures target = cu:miskito }
+
+
+	add_to_global_variable_list = { name = central_african_cultures target = cu:baguirmi }
+	add_to_global_variable_list = { name = central_african_cultures target = cu:kanuri }
+	add_to_global_variable_list = { name = central_african_cultures target = cu:sara }
+	add_to_global_variable_list = { name = central_african_cultures target = cu:teda }
+	add_to_global_variable_list = { name = central_african_cultures target = cu:bakongo }
+	add_to_global_variable_list = { name = central_african_cultures target = cu:fang }
+	add_to_global_variable_list = { name = central_african_cultures target = cu:luba }
+	add_to_global_variable_list = { name = central_african_cultures target = cu:lunda }
+	add_to_global_variable_list = { name = central_african_cultures target = cu:mongo }
+	add_to_global_variable_list = { name = central_african_cultures target = cu:equatorial_bantu }
+	add_to_global_variable_list = { name = central_african_cultures target = cu:fluvian_bantu }
+
+	add_to_global_variable_list = { name = east_african_cultures target = cu:nilotic }
+	add_to_global_variable_list = { name = east_african_cultures target = cu:azande }
+	add_to_global_variable_list = { name = east_african_cultures target = cu:beja }
+	add_to_global_variable_list = { name = east_african_cultures target = cu:dinka }
+	add_to_global_variable_list = { name = east_african_cultures target = cu:fur }
+	add_to_global_variable_list = { name = east_african_cultures target = cu:luo }
+	add_to_global_variable_list = { name = east_african_cultures target = cu:maasai }
+	add_to_global_variable_list = { name = east_african_cultures target = cu:nuer }
+	add_to_global_variable_list = { name = east_african_cultures target = cu:nuba }
+	add_to_global_variable_list = { name = east_african_cultures target = cu:baganda }
+	add_to_global_variable_list = { name = east_african_cultures target = cu:kikuyu }
+	add_to_global_variable_list = { name = east_african_cultures target = cu:ruanda }
+	add_to_global_variable_list = { name = east_african_cultures target = cu:rundi }
+	add_to_global_variable_list = { name = east_african_cultures target = cu:sukuma }
+	add_to_global_variable_list = { name = east_african_cultures target = cu:swahili }
+	add_to_global_variable_list = { name = east_african_cultures target = cu:unyamwezi }
+	add_to_global_variable_list = { name = east_african_cultures target = cu:lacustrine_bantu }
+	add_to_global_variable_list = { name = east_african_cultures target = cu:amhara }
+	add_to_global_variable_list = { name = east_african_cultures target = cu:afar }
+	add_to_global_variable_list = { name = east_african_cultures target = cu:oromo }
+	add_to_global_variable_list = { name = east_african_cultures target = cu:sidama }
+	add_to_global_variable_list = { name = east_african_cultures target = cu:tigray }
+
+	add_to_global_variable_list = { name = west_african_cultures target = cu:akan }
+	add_to_global_variable_list = { name = west_african_cultures target = cu:bambara }
+	add_to_global_variable_list = { name = west_african_cultures target = cu:bassa }
+	add_to_global_variable_list = { name = west_african_cultures target = cu:dyula }
+	add_to_global_variable_list = { name = west_african_cultures target = cu:edo }
+	add_to_global_variable_list = { name = west_african_cultures target = cu:ewe }
+	add_to_global_variable_list = { name = west_african_cultures target = cu:fon }
+	add_to_global_variable_list = { name = west_african_cultures target = cu:fulbe }
+	add_to_global_variable_list = { name = west_african_cultures target = cu:hausa }
+	add_to_global_variable_list = { name = west_african_cultures target = cu:ibibio }
+	add_to_global_variable_list = { name = west_african_cultures target = cu:ibo }
+	add_to_global_variable_list = { name = west_african_cultures target = cu:kru }
+	add_to_global_variable_list = { name = west_african_cultures target = cu:mande }
+	add_to_global_variable_list = { name = west_african_cultures target = cu:mossi }
+	add_to_global_variable_list = { name = west_african_cultures target = cu:senufo }
+	add_to_global_variable_list = { name = west_african_cultures target = cu:songhai }
+	add_to_global_variable_list = { name = west_african_cultures target = cu:tiv }
+	add_to_global_variable_list = { name = west_african_cultures target = cu:tuareg }
+	add_to_global_variable_list = { name = west_african_cultures target = cu:kissi }
+	add_to_global_variable_list = { name = west_african_cultures target = cu:wolof }
+	add_to_global_variable_list = { name = west_african_cultures target = cu:yoruba }
+
+	add_to_global_variable_list = { name = southern_african_cultures target = cu:malagasy }
+	add_to_global_variable_list = { name = southern_african_cultures target = cu:khoisan }
+	add_to_global_variable_list = { name = southern_african_cultures target = cu:chewa }
+	add_to_global_variable_list = { name = southern_african_cultures target = cu:herero }
+	add_to_global_variable_list = { name = southern_african_cultures target = cu:lomwe }
+	add_to_global_variable_list = { name = southern_african_cultures target = cu:makua }
+	add_to_global_variable_list = { name = southern_african_cultures target = cu:nguni }
+	add_to_global_variable_list = { name = southern_african_cultures target = cu:ovimbundu }
+	add_to_global_variable_list = { name = southern_african_cultures target = cu:sena }
+	add_to_global_variable_list = { name = southern_african_cultures target = cu:shona }
+	add_to_global_variable_list = { name = southern_african_cultures target = cu:sotho }
+	add_to_global_variable_list = { name = southern_african_cultures target = cu:tonga }
+	add_to_global_variable_list = { name = southern_african_cultures target = cu:tswana }
+	add_to_global_variable_list = { name = southern_african_cultures target = cu:xhosa }
+	add_to_global_variable_list = { name = southern_african_cultures target = cu:yao }
+	add_to_global_variable_list = { name = southern_african_cultures target = cu:zulu }
+	add_to_global_variable_list = { name = southern_african_cultures target = cu:kavango_bantu }
+
+
+	add_to_global_variable_list = { name = nafri_cultures target = cu:haratin }
+	add_to_global_variable_list = { name = nafri_cultures target = cu:bidan }
+	add_to_global_variable_list = { name = nafri_cultures target = cu:mashriqi }
+	add_to_global_variable_list = { name = nafri_cultures target = cu:berber }
+	add_to_global_variable_list = { name = nafri_cultures target = cu:yemenite }
+	add_to_global_variable_list = { name = nafri_cultures target = cu:maghrebi }
+
+
+	add_to_global_variable_list = { name = deutsche_kultur target = cu:sorb }
+
+	add_to_global_variable_list = { name = native_oceanic target = cu:aborigine }
+	add_to_global_variable_list = { name = native_oceanic target = cu:polynesian }
+	add_to_global_variable_list = { name = native_oceanic target = cu:melanesian }
+	add_to_global_variable_list = { name = native_oceanic target = cu:micronesian }
+	add_to_global_variable_list = { name = native_oceanic target = cu:maori }
+	add_to_global_variable_list = { name = native_oceanic target = cu:yuanzhumin }
+	add_to_global_variable_list = { name = native_oceanic target = cu:hawaiian }
+
+	add_to_global_variable_list = { name = true_han target = cu:hakka }
+	add_to_global_variable_list = { name = true_han target = cu:min }
+	add_to_global_variable_list = { name = true_han target = cu:yue }
+
+
+
+
+
+
+
+	cop_merger_pops = { kulturen_liste = native_american_cultures merged_kultur = cu:comanche }
+	cop_merger_pops = { kulturen_liste = central_african_cultures merged_kultur = cu:sara }
+	cop_merger_pops = { kulturen_liste = east_african_cultures merged_kultur = cu:nilotic }
+	cop_merger_pops = { kulturen_liste = west_african_cultures merged_kultur = cu:akan }
+	cop_merger_pops = { kulturen_liste = southern_african_cultures merged_kultur = cu:khoisan }
+	cop_merger_pops = { kulturen_liste = deutsche_kultur merged_kultur = cu:north_german }
+	cop_merger_pops = { kulturen_liste = nafri_cultures merged_kultur = cu:bedouin }
+	cop_merger_pops = { kulturen_liste = native_oceanic merged_kultur = cu:hawaiian }
+	cop_merger_pops = { kulturen_liste = true_han merged_kultur = cu:han }
+
+
+	every_state_region = {
+		cop_merger_homelands = { kulturen_liste = native_american_cultures merged_kultur = cu:comanche }
+		cop_merger_homelands = { kulturen_liste = central_african_cultures merged_kultur = cu:akan }
+		cop_merger_homelands = { kulturen_liste = east_african_cultures merged_kultur = cu:sara }
+		cop_merger_homelands = { kulturen_liste = west_african_cultures merged_kultur = cu:nilotic }
+		cop_merger_homelands = { kulturen_liste = southern_african_cultures merged_kultur = cu:khoisan }
+		cop_merger_homelands = { kulturen_liste = deutsche_kultur merged_kultur = cu:north_german }
+		cop_merger_homelands = { kulturen_liste = native_oceanic merged_kultur = cu:hawaiian }
+		cop_merger_homelands = { kulturen_liste = true_han merged_kultur = cu:han }
+		cop_merger_homelands = { kulturen_liste = nafri_cultures merged_kultur = cu:bedouin }
+
+
+
+	}
+
+
+
+
+	every_country = {
+		cop_merger_countries = { kulturen_liste = native_american_cultures merged_kultur = cu:comanche }
+		cop_merger_countries = { kulturen_liste = central_african_cultures merged_kultur = cu:sara }
+		cop_merger_countries = { kulturen_liste = east_african_cultures merged_kultur = cu:akan }
+		cop_merger_countries = { kulturen_liste = west_african_cultures merged_kultur = cu:nilotic }
+		cop_merger_countries = { kulturen_liste = southern_african_cultures merged_kultur = cu:khoisan }
+		cop_merger_countries = { kulturen_liste = deutsche_kultur merged_kultur = cu:north_german }
+		cop_merger_countries = { kulturen_liste = native_oceanic merged_kultur = cu:hawaiian }
+		cop_merger_countries = { kulturen_liste = true_han merged_kultur = cu:han }
+		cop_merger_countries = { kulturen_liste = nafri_cultures merged_kultur = cu:bedouin }
+
+
+
+
+	}
+
+}

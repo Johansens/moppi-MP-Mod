@@ -1,0 +1,79 @@
+﻿cop_merger_pops = {
+	every_in_global_list = {
+		variable = $kulturen_liste$
+
+		if = {
+			limit = {
+				THIS != $merged_kultur$
+			}
+			every_scope_pop = {
+				change_pop_culture = { target = $merged_kultur$ value = 1.0 }
+			}
+		}
+	}
+}
+
+cop_merger_homelands = {
+	save_temporary_scope_as = current_state_region
+
+	every_in_global_list = {
+		variable = $kulturen_liste$
+		save_temporary_scope_as = current_culture
+
+		if = {
+			limit = {
+				scope:current_culture != $merged_kultur$
+				scope:current_state_region = {
+					is_homeland = scope:current_culture
+				}
+			}
+			scope:current_state_region = {
+				remove_homeland = scope:current_culture
+
+				if = {
+					limit = {
+						NOT = {
+							is_homeland = $merged_kultur$
+						}
+					}
+					add_homeland = $merged_kultur$
+				}
+			}
+		}
+	}
+}
+
+cop_merger_countries = {
+	save_temporary_scope_as = current_country
+
+	every_in_global_list = {
+		variable = $kulturen_liste$
+		save_temporary_scope_as = current_culture
+
+		if = {
+			limit = {
+				scope:current_culture != $merged_kultur$
+				scope:current_country = {
+					country_has_primary_culture = scope:current_culture
+				}
+			}
+			scope:current_country = {
+				remove_primary_culture = scope:current_culture
+
+				if = {
+					limit = {
+						NOT = {
+							country_has_primary_culture = $merged_kultur$
+						}
+					}
+					add_primary_culture = $merged_kultur$
+				}
+			}
+		}
+	}
+}
+
+
+
+
+
