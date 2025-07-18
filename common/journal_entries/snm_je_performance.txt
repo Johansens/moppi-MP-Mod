@@ -1,0 +1,22 @@
+﻿
+je_performance_1 = {
+	icon = "gfx/interface/icons/event_icons/event_industry.dds"
+	group = je_group_historical_content
+	should_be_pinned_by_default = no
+
+
+
+	is_shown_when_inactive = {
+		AND = {
+			exists = c:CHI
+			this = c:CHI
+		}
+	}
+
+	possible = {
+		is_player = yes
+	}
+
+	scripted_button = snm_performance_button
+
+}
