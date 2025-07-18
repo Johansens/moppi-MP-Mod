@@ -1,0 +1,20 @@
+﻿l_english:
+
+snm_pb_je_events.cool:0 "Großartig"
+
+snm_button_1:0 "Reform der Verwaltung beginnen"
+snm_button_2:0 "Tiefgreifende Reform der Verwaltung beginnen"
+snm_button_1.d:0 "Die Verwaltung über 2 Jahre reformieren."
+snm_button_2.d:0 "Die Verwaltung über 5 Jahre reformieren."
+
+snm_perfb_1:0 "Merge Pops"
+snm_perfb_1.d:0 "Alle pops <100 werden in die Hauptkultur/Religion gemerged"
+snm_performance.1.t:0 "Copula Performance Boost"
+
+snm_blocfree_early:0 "Bonus für blockfreie Staaten"
+snm_blocfree_mid:0 "Bonus für blockfreie Staaten"
+snm_blocfree_late:0 "Bonus für blockfreie Staaten"
+snm_vertretung:0 "Bonus für Vertretung"
+
+je_performance_1:0 "Performance Booster"
+je_performance_1_reason:0 "Erhöht die Performance indem alle Pops <100 gemerged werden."
