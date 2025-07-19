@@ -1,0 +1,18 @@
+﻿namespace = kmpmp_money_transfer_events
+
+# remove country from money tranfered list
+kmpmp_money_transfer_events.1 = {
+    type = country_event
+	hidden = yes
+	
+	trigger = {
+        # Fired by transfer money effect
+	}
+
+    immediate = {
+        remove_list_variable = {
+            name = money_sent_to_list
+            target = scope:target_country
+        }
+    }
+}
