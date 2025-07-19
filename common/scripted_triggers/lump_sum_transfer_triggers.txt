@@ -1,0 +1,90 @@
+﻿can_send_money_to_recipient_trigger = {
+	has_send_money_cooldown = no
+	can_send_money_to_recipient_in_war = yes
+	var:imperia_money_transfer_amount >= 1000
+	var:imperia_money_transfer_amount <= imperia_current_transferable_money_value
+	OR = {
+		AND = {
+			exists = scope:target
+			scope:target.imperia_current_max_of_recievable_money_value >= var:imperia_money_transfer_amount
+		}
+		AND = {
+			has_variable = money_transfer_target_country
+			var:money_transfer_target_country.imperia_current_max_of_recievable_money_value >= var:imperia_money_transfer_amount
+		}
+	}
+}
+
+has_send_money_cooldown = {
+	has_variable_list = money_sent_to_list
+	OR = {
+		AND = {
+			exists = scope:target
+			is_target_in_variable_list = {
+				name = money_sent_to_list
+				target = scope:target
+			}
+		}
+		AND = {
+			has_variable = money_transfer_target_country
+			is_target_in_variable_list = {
+				name = money_sent_to_list
+				target = var:money_transfer_target_country
+			}
+		}
+	}
+}
+
+# kmpmp - can't send money to target at war
+can_send_money_to_recipient_in_war = {
+	OR = {
+		AND = {
+			exists = scope:target
+			OR = {
+				# either target is not at war
+				scope:target = {
+					is_at_war = no
+				}
+
+				# or we are in war together
+				AND = {
+					is_at_war = yes
+					is_in_war_together = scope:target
+				}
+
+				# or target is not in player war
+				NOT = {
+					scope:target = {
+						any_enemy_in_war = {
+							is_player = yes
+						}
+					}
+				}
+			}
+		}
+		AND = {
+			has_variable = money_transfer_target_country
+			OR = {
+				# either target is not at war
+				var:money_transfer_target_country = {
+					is_at_war = no
+				}
+
+				# or we are in war together
+				AND = {
+					is_at_war = yes
+					is_in_war_together = var:money_transfer_target_country
+				}
+
+				# or target is not in player war
+				NOT = {
+					var:money_transfer_target_country = {
+						any_enemy_in_war = {
+							is_player = yes
+						}
+					}
+				}
+			}
+		}
+	}
+}
