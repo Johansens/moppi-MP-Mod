@@ -154,7 +154,7 @@ types country_panel_types
 					}
 
 					dynamicgridbox = {
-						datamodel = "[CountryPanel.AccessCountry.AccessInterestGroupsInGovernment]"
+						datamodel = "[CountryPanel.GetCountry.AccessInterestGroupsInGovernment]"
 						datamodel_wrap = 4
 						flipdirection = yes
 
@@ -319,7 +319,8 @@ types country_panel_types
 							position = { -5 0 }
 							onclick = "[InformationPanelBar.OpenPowerBlocPanelTab( PowerBloc.Self, 'default' )]"
 							onrightclick = "[RightClickMenuManager.ShowForPowerBloc( PowerBloc.AccessSelf )]"
-							onclick = "[PowerBlocPanel.ShowLeverage]"
+							# masterson - TODO: creates errors
+							#onclick = "[PowerBlocPanel.ShowLeverage]"
 
 							blockoverride "size" {
 								size = { 45 45 }
