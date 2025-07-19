@@ -12,7 +12,3 @@ snm_blocfree_early:0 "Bonus für blockfreie Staaten"
 snm_blocfree_mid:0 "Bonus für blockfreie Staaten"
 snm_blocfree_late:0 "Bonus für blockfreie Staaten"
 snm_vertretung:0 "Bonus für Vertretung"
-
- je_performance_1:0 "Performance Booster"
- je_performance_1_reason:0 "Erhöht die Performance indem alle Pops <100 gemerged werden."
-
