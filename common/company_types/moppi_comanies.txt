@@ -1,0 +1,84 @@
+﻿# Eselzucht GmbH
+company_donkies = {
+	icon = "gfx/interface/icons/company_icons/moppi_donkies.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_farm_wheat.dds"
+
+	flavored_company = yes
+
+	preferred_headquarters = { }
+
+	building_types = {
+		# Viehhöfe
+		building_livestock_ranch
+		# Weizenfarmen
+		 building_wheat_farm
+	}
+
+	extension_building_types = {
+		 # Roggenfarmen
+		 building_rye_farm
+		 # Hirse
+		 building_millet_farm
+		 # Mais
+		 building_maize_farm
+	}
+
+	possible_prestige_goods = {
+		prestige_good_generic_meat
+	}
+
+	prestige_goods_trigger = {
+		custom_tooltip = {
+			text = je_prestige_goods_meat_complete_tt
+			has_variable = prestige_good_generic_meat_var
+		}
+	}
+
+	potential = {
+	}
+
+	attainable = {
+	}
+
+	possible = {
+		any_scope_state = {
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_livestock_ranch
+				level >= 10
+			}
+		}
+	}
+
+	prosperity_modifier = {
+		# +10% Durchsatz für Viehhöfe 
+		building_livestock_ranch_throughput_add = 0.1
+		# +5% Durchsatz auf Agrargebäude
+		building_group_bg_agriculture_throughput_add = 0.05
+		# -10% Infrastrukturverbrauch von landwirtschaftlichen Gebäudearten
+		building_group_bg_agriculture_infrastructure_usage_mult = -0.1
+		# +0.5 SOL für Unterschicht
+		state_lower_strata_standard_of_living_add = 0.5
+		# +10% Arbeitsqualifikation
+		state_pop_qualifications_mult = 0.1
+	}
+
+	ai_will_do = {
+		any_scope_state = {
+			is_incorporated = yes
+		}
+	}
+
+	ai_construction_targets = {
+		building_livestock_ranch = {
+			level = 10
+			state_trigger = {
+				is_incorporated = yes
+			}
+		}
+	}
+
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
