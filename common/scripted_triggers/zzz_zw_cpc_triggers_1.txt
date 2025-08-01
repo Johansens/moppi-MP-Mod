@@ -1,0 +1,269 @@
+﻿zw_trigger_autonom_investment_manufacture = {
+	# player's state
+	trigger_if = {
+		limit = {
+			owner = { is_player = yes }
+		}
+		# case 1: domestic investment
+		trigger_if = {
+			limit = {
+				owner = scope:investor_country
+			}
+			# trigger 1: incorporation
+			trigger_if = {
+				limit = {
+					owner = { has_variable = zw_var_auto_invest_incorporated_states_only }
+				}
+				is_incorporated = yes
+			}
+			# trigger 2: existing buildings only (manufacture, agro, resource, infrastructure)
+			trigger_if = {
+				limit = {
+					owner = { has_variable = zw_var_auto_invest_existing_buildings_only_manufacture }
+				}
+				# trigger 2.1 existing building types
+				has_building = $building_1$
+				# trigger 2.2 existing building profit conditions
+				b:$building_1$ = { zw_trigger_profit_conditions = yes }
+			}
+			# trigger 3: restricted building type
+			owner = {
+				NOT = { has_variable = zw_var_auto_invest_disallow_$building_1$ }
+			}
+			# trigger 4: decree
+			NOT = { has_decree = decree_zw_no_state_private_investment }
+		}
+		# case 2: investment from abroad (industry, agriculture)
+		trigger_else_if = {
+			limit = {
+				owner = { has_variable = zw_var_intervene_investment_from_abroad_industry }
+			}
+			has_building = $building_1$
+		}
+	}
+	# case 3: investment in foreign countries (manufacture, agro, resource, infrastructure)
+	trigger_if = {
+		limit = {
+			scope:investor_country = {
+				has_variable = zw_var_no_foreign_private_investment_manufacture
+			}
+		}
+		owner = scope:investor_country
+	}
+}
+
+zw_trigger_autonom_investment_agro = {
+	# player's state
+	trigger_if = {
+		limit = {
+			owner = { is_player = yes }
+		}
+		# case 1: domestic investment
+		trigger_if = {
+			limit = {
+				owner = scope:investor_country
+			}
+			# trigger 1: incorporation
+			trigger_if = {
+				limit = {
+					owner = { has_variable = zw_var_auto_invest_incorporated_states_only }
+				}
+				is_incorporated = yes
+			}
+			# trigger 2: existing buildings only (manufacture, agro, resource, infrastructure)
+			trigger_if = {
+				limit = {
+					owner = { has_variable = zw_var_auto_invest_existing_buildings_only_agro }
+				}
+				# trigger 2.1 existing building types
+				has_building = $building_1$
+				# trigger 2.2 existing building profit conditions
+				b:$building_1$ = { zw_trigger_profit_conditions = yes }
+			}
+			# trigger 3: restricted building type
+			owner = {
+				NOT = { has_variable = zw_var_auto_invest_disallow_$building_1$ }
+			}
+			# trigger 4: decree
+			NOT = { has_decree = decree_zw_no_state_private_investment }
+		}
+		# case 2: investment from abroad (industry, agriculture)
+		trigger_else_if = {
+			limit = {
+				owner = { has_variable = zw_var_intervene_investment_from_abroad_agriculture }
+			}
+			has_building = $building_1$
+		}
+	}
+	# case 3: investment in foreign countries (manufacture, agro, resource, infrastructure)
+	trigger_if = {
+		limit = {
+			scope:investor_country = {
+				has_variable = zw_var_no_foreign_private_investment_agro
+			}
+		}
+		owner = scope:investor_country
+	}
+}
+
+zw_trigger_autonom_investment_resource = {
+	# player's state
+	trigger_if = {
+		limit = {
+			owner = { is_player = yes }
+		}
+		# case 1: domestic investment
+		trigger_if = {
+			limit = {
+				owner = scope:investor_country
+			}
+			# trigger 1: incorporation
+			trigger_if = {
+				limit = {
+					owner = { has_variable = zw_var_auto_invest_incorporated_states_only }
+				}
+				is_incorporated = yes
+			}
+			# trigger 2: existing buildings only (manufacture, agro, resource, infrastructure)
+			trigger_if = {
+				limit = {
+					owner = { has_variable = zw_var_auto_invest_existing_buildings_only_resource }
+				}
+				# trigger 2.1 existing building types
+				has_building = $building_1$
+				# trigger 2.2 existing building profit conditions
+				b:$building_1$ = { zw_trigger_profit_conditions = yes }
+			}
+			# trigger 3: restricted building type
+			owner = {
+				NOT = { has_variable = zw_var_auto_invest_disallow_$building_1$ }
+			}
+			# trigger 4: decree
+			NOT = { has_decree = decree_zw_no_state_private_investment }
+		}
+		# case 2: investment from abroad (industry, agriculture)
+		#trigger_else_if = {
+			#limit = {
+			#	owner = { has_variable = zw_var_intervene_investment_from_abroad_resource }
+			#}
+			#has_building = $building_1$
+		#}
+	}
+	# case 3: investment in foreign countries (manufacture, agro, resource, infrastructure)
+	trigger_if = {
+		limit = {
+			scope:investor_country = {
+				has_variable = zw_var_no_foreign_private_investment_resource
+			}
+		}
+		owner = scope:investor_country
+	}
+}
+
+zw_trigger_autonom_investment_infrastructure = {
+	# player's state
+	trigger_if = {
+		limit = {
+			owner = { is_player = yes }
+		}
+		# case 1: domestic investment
+		trigger_if = {
+			limit = {
+				owner = scope:investor_country
+			}
+			# trigger 1: incorporation
+			trigger_if = {
+				limit = {
+					owner = { has_variable = zw_var_auto_invest_incorporated_states_only }
+				}
+				is_incorporated = yes
+			}
+			# trigger 2: existing buildings only (manufacture, agro, resource, infrastructure)
+			trigger_if = {
+				limit = {
+					owner = { has_variable = zw_var_auto_invest_existing_buildings_only_infrastructure }
+				}
+				# trigger 2.1 existing building types
+				has_building = $building_1$
+				# trigger 2.2 existing building profit conditions
+				b:$building_1$ = { zw_trigger_profit_conditions = yes }
+			}
+			# trigger 3: restricted building type
+			owner = {
+				NOT = { has_variable = zw_var_auto_invest_disallow_$building_1$ }
+			}
+			# trigger 4: decree
+			NOT = { has_decree = decree_zw_no_state_private_investment }
+		}
+		# case 2: investment from abroad (industry, agriculture)
+		trigger_else_if = {
+			limit = {
+				owner = { has_variable = zw_var_intervene_investment_from_abroad_industry }
+			}
+			has_building = $building_1$
+		}
+	}
+	# case 3: investment in foreign countries (manufacture, agro, resource, infrastructure)
+	trigger_if = {
+		limit = { 
+			scope:investor_country = {
+				has_variable = zw_var_no_foreign_private_investment_infrastructure
+			}
+		}
+		owner = scope:investor_country
+	}
+}
+
+zw_trigger_autonom_investment_infrastructure_railway = {
+	# player's state
+	trigger_if = {
+		limit = {
+			owner = { is_player = yes }
+		}
+		# case 1: domestic investment
+		trigger_if = {
+			limit = {
+				owner = scope:investor_country
+			}
+			# trigger 1: incorporation
+			trigger_if = {
+				limit = {
+					owner = { has_variable = zw_var_auto_invest_incorporated_states_only }
+				}
+				is_incorporated = yes
+			}
+			# trigger 2: existing buildings only (manufacture, agro, resource, infrastructure)
+			trigger_if = {
+				limit = {
+					owner = { has_variable = zw_var_auto_invest_existing_buildings_only_infrastructure }
+				}
+				# trigger 2.1 existing building types
+				has_building = $building_1$
+				# trigger 2.2 existing building profit conditions
+				b:$building_1$ = { zw_trigger_profit_conditions_railway = yes }
+			}
+			# trigger 3: restricted building type
+			owner = {
+				NOT = { has_variable = zw_var_auto_invest_disallow_$building_1$ }
+			}
+			# trigger 4: decree
+			NOT = { has_decree = decree_zw_no_state_private_investment }
+		}
+		# case 2: investment from abroad (industry, agriculture)
+		trigger_else_if = {
+			limit = {
+				owner = { has_variable = zw_var_intervene_investment_from_abroad_industry }
+			}
+			has_building = $building_1$
+		}
+	}
+	# case 3: investment in foreign countries (manufacture, agro, resource, infrastructure)
+	trigger_if = {
+		limit = {
+			scope:investor_country = {
+				has_variable = zw_var_no_foreign_private_investment_infrastructure
+			}
+		}
+		owner = scope:investor_country
+	}
+}

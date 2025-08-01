@@ -1,0 +1,69 @@
+﻿zw_trigger_gov_investment = {
+	trigger_if = {
+		limit = {
+			owner = { has_variable = zw_var_intervene_investment_from_abroad_$bgs_1$ }
+			NOT = { owner = scope:investor_country }
+		}
+		has_building = $building_1$
+	}
+}
+
+zw_trigger_profit_conditions = {
+	trigger_if = {
+		limit = {
+			owner = { has_variable = zw_var_auto_invest_profitable_buildings_only }
+		}
+		trigger_if = {
+			limit = { is_under_construction = no }
+			occupancy >= 0.9
+			state.market_access >= 1
+			weekly_profit >= {
+				value = 200
+				multiply = level
+			}
+		}
+		trigger_else = {
+			state.market_access >= 0.8
+			weekly_profit >= 0
+		}
+	}
+}
+
+zw_trigger_profit_conditions_railway = {
+	trigger_if = {
+		limit = {
+			owner = { has_variable = zw_var_auto_invest_profitable_buildings_only }
+		}
+		trigger_if = {
+			limit = { is_under_construction = no }
+			occupancy >= 0.9
+			trigger_if = {
+				limit = { state.relative_infrastructure <= 1 }
+				OR = {
+					is_subsidized = yes
+					weekly_profit > 0
+				}
+			}
+			trigger_else = {
+				state.market_access >= 1
+				building_has_goods_shortage = no
+				weekly_profit > {
+					value = 200
+					multiply = level
+				}
+			}
+		}
+		trigger_else = {
+			trigger_if = {
+				limit = { state.relative_infrastructure < 1.5 }
+				OR = {
+					is_subsidized = yes
+					weekly_profit > 0
+				}
+			}
+			trigger_else = {
+				weekly_profit > 0
+			}
+		}
+	}
+}

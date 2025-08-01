@@ -1,0 +1,49 @@
+﻿je_zw_autonom_invest_management = {
+
+	icon = "gfx/interface/icons/invention_icons/investment_banks.dds"
+	group = je_group_historical_content
+
+	# incorporated states, auto-expand
+
+		scripted_button = zw_auto_expand_incorporated_states_only_button
+
+	# incorporated states, private constructions
+
+		scripted_button = zw_auto_invest_incorporated_states_only_button
+
+	# existing profitable buildings only
+
+		scripted_button = zw_auto_invest_profitable_buildings_only_button
+
+		scripted_button = zw_auto_invest_profitable_buildings_only_undo_button
+
+	# existing buildings only
+
+		scripted_button = zw_auto_invest_existing_buildings_only_manufacture_button
+
+		scripted_button = zw_auto_invest_existing_buildings_only_infrastructure_button
+
+		scripted_button = zw_auto_invest_existing_buildings_only_agro_button
+
+		scripted_button = zw_auto_invest_existing_buildings_only_resource_button
+
+	# no foreign investment
+
+		scripted_button = zw_no_foreign_private_investment_manufacture_button
+
+		scripted_button = zw_no_foreign_private_investment_infrastructure_button
+
+		scripted_button = zw_no_foreign_private_investment_agro_button
+
+		scripted_button = zw_no_foreign_private_investment_resource_button
+
+	# intervene investment from abroad
+
+		scripted_button = zw_intervene_investment_from_abroad_industry_button
+
+		scripted_button = zw_intervene_investment_from_abroad_agriculture_button
+
+	weight = 99999
+
+	should_be_pinned_by_default = yes
+}

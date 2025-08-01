@@ -1,0 +1,9 @@
+﻿zw_modifier_intervene_investment_from_abroad_industry = {
+	icon = gfx/interface/icons/invention_icons/manufacturies.dds
+	country_bureaucracy_mult = -0.05
+}
+
+zw_modifier_intervene_investment_from_abroad_agriculture = {
+	icon = gfx/interface/icons/goods_icons/grain.dds
+	country_bureaucracy_mult = -0.05
+}
