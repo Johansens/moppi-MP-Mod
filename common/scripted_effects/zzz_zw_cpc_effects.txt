@@ -1,0 +1,71 @@
+﻿zw_effect_set_remove_disallowed_building_type = {
+		if = {
+			limit = { has_variable = zw_var_auto_invest_disallow_$building_1$ }
+			remove_variable = zw_var_auto_invest_disallow_$building_1$
+		}
+		else = {
+			set_variable = {
+				name = zw_var_auto_invest_disallow_$building_1$
+				value = yes
+			}
+		}
+}
+
+zw_effect_remove_disallowed_building_type = {
+	if = {
+		limit = { has_variable = zw_var_auto_invest_disallow_$building_1$ }
+		remove_variable = zw_var_auto_invest_disallow_$building_1$
+	}
+}
+
+zw_effect_remove_disallowed_building_type_all = {
+	zw_effect_remove_disallowed_building_type = { building_1 = building_food_industry }
+	zw_effect_remove_disallowed_building_type = { building_1 = building_textile_mills }
+	zw_effect_remove_disallowed_building_type = { building_1 = building_furniture_manufacturies }
+	zw_effect_remove_disallowed_building_type = { building_1 = building_glassworks }
+	zw_effect_remove_disallowed_building_type = { building_1 = building_tooling_workshops }
+	zw_effect_remove_disallowed_building_type = { building_1 = building_paper_mills }
+	zw_effect_remove_disallowed_building_type = { building_1 = building_chemical_plants }
+	zw_effect_remove_disallowed_building_type = { building_1 = building_explosives_factory }
+	zw_effect_remove_disallowed_building_type = { building_1 = building_synthetics_plants }
+	zw_effect_remove_disallowed_building_type = { building_1 = building_steel_mills }
+	zw_effect_remove_disallowed_building_type = { building_1 = building_motor_industry }
+	zw_effect_remove_disallowed_building_type = { building_1 = building_shipyards }
+	zw_effect_remove_disallowed_building_type = { building_1 = building_military_shipyards }
+	zw_effect_remove_disallowed_building_type = { building_1 = building_automotive_industry }
+	zw_effect_remove_disallowed_building_type = { building_1 = building_electrics_industry }
+	zw_effect_remove_disallowed_building_type = { building_1 = building_arms_industry }
+	zw_effect_remove_disallowed_building_type = { building_1 = building_artillery_foundries }
+	zw_effect_remove_disallowed_building_type = { building_1 = building_munition_plants }
+	zw_effect_remove_disallowed_building_type = { building_1 = building_rye_farm }
+	zw_effect_remove_disallowed_building_type = { building_1 = building_wheat_farm }
+	zw_effect_remove_disallowed_building_type = { building_1 = building_rice_farm }
+	zw_effect_remove_disallowed_building_type = { building_1 = building_maize_farm }
+	zw_effect_remove_disallowed_building_type = { building_1 = building_millet_farm }
+	zw_effect_remove_disallowed_building_type = { building_1 = building_livestock_ranch }
+	zw_effect_remove_disallowed_building_type = { building_1 = building_coal_mine }
+	zw_effect_remove_disallowed_building_type = { building_1 = building_iron_mine }
+	zw_effect_remove_disallowed_building_type = { building_1 = building_lead_mine }
+	zw_effect_remove_disallowed_building_type = { building_1 = building_sulfur_mine }
+	zw_effect_remove_disallowed_building_type = { building_1 = building_gold_mine }
+	zw_effect_remove_disallowed_building_type = { building_1 = building_coffee_plantation }
+	zw_effect_remove_disallowed_building_type = { building_1 = building_cotton_plantation }
+	zw_effect_remove_disallowed_building_type = { building_1 = building_dye_plantation }
+	zw_effect_remove_disallowed_building_type = { building_1 = building_opium_plantation }
+	zw_effect_remove_disallowed_building_type = { building_1 = building_tea_plantation }
+	zw_effect_remove_disallowed_building_type = { building_1 = building_tobacco_plantation }
+	zw_effect_remove_disallowed_building_type = { building_1 = building_sugar_plantation }
+	zw_effect_remove_disallowed_building_type = { building_1 = building_banana_plantation }
+	zw_effect_remove_disallowed_building_type = { building_1 = building_silk_plantation }
+	zw_effect_remove_disallowed_building_type = { building_1 = building_vineyard_plantation }
+	zw_effect_remove_disallowed_building_type = { building_1 = building_arts_academy }
+	zw_effect_remove_disallowed_building_type = { building_1 = building_power_plant }
+	zw_effect_remove_disallowed_building_type = { building_1 = building_logging_camp }
+	zw_effect_remove_disallowed_building_type = { building_1 = building_rubber_plantation }
+	zw_effect_remove_disallowed_building_type = { building_1 = building_fishing_wharf }
+	zw_effect_remove_disallowed_building_type = { building_1 = building_whaling_station }
+	zw_effect_remove_disallowed_building_type = { building_1 = building_oil_rig }
+	zw_effect_remove_disallowed_building_type = { building_1 = building_port }
+	zw_effect_remove_disallowed_building_type = { building_1 = building_railway }
+	zw_effect_remove_disallowed_building_type = { building_1 = building_trade_center }
+}

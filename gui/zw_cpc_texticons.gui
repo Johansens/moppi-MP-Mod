@@ -1,0 +1,105 @@
+# 256 * 256, fontsize = 250, offset = { 0 50 }
+# 128 * 128, fontsize = 100, offset = { 0 22 }
+# 120 * 120, fontsize = 120, offset = { 0 15 }
+# 30 * 30, fontsize = 30, offset = { 0 5 }
+# 20 * 20, fontsize = 20, offset = { 0 2 }
+
+texticon = {
+	icon = zw_texticon_manufacture
+	iconsize = {
+		texture = "gfx/interface/icons/invention_icons/manufacturies.dds"
+		size = { 25 25 }
+		offset = { 0 7 }
+		fontsize = 18
+	}
+}
+
+texticon = {
+	icon = zw_texticon_agro
+	iconsize = {
+		texture = "gfx/interface/icons/goods_icons/grain.dds"
+		size = { 25 25 }
+		offset = { 0 7 }
+		fontsize = 18
+	}
+}
+
+texticon = {
+	icon = zw_texticon_resource
+	iconsize = {
+		texture = "gfx/interface/icons/state_trait_icons/unused/rich_natural_resources.dds"
+		size = { 25 25 }
+		offset = { 0 7 }
+		fontsize = 18
+	}
+}
+
+texticon = {
+	icon = zw_texticon_infrastructure
+	iconsize = {
+		texture = "gfx/interface/icons/invention_icons/railways.dds"
+		size = { 25 25 }
+		offset = { 0 7 }
+		fontsize = 18
+	}
+}
+
+texticon = {
+	icon = zw_texticon_industry
+	iconsize = {
+		texture = "gfx/interface/icons/ai_strategy_icons/industrial_expansion.dds"
+		size = { 25 25 }
+		offset = { 0 7 }
+		fontsize = 18
+	}
+}
+
+texticon = {
+	icon = zw_texticon_agriculture
+	iconsize = {
+		texture = "gfx/interface/icons/ai_strategy_icons/agricultural_expansion.dds"
+		size = { 25 25 }
+		offset = { 0 7 }
+		fontsize = 18
+	}
+}
+
+texticon = {
+	icon = zw_texticon_investment_abroad
+	iconsize = {
+		texture = "gfx/interface/icons/lens_toolbar_icons/foreign_investment_rights.dds"
+		size = { 25 25 }
+		offset = { 0 7 }
+		fontsize = 18
+	}
+}
+
+texticon = {
+	icon = zw_texticon_investment_from_abroad
+	iconsize = {
+		texture = "gfx/interface/icons/lens_toolbar_icons/grant_foreign_investment_rights.dds"
+		size = { 25 25 }
+		offset = { 0 7 }
+		fontsize = 18
+	}
+}
+
+texticon = {
+	icon = zw_texticon_private_construction
+	iconsize = {
+		texture = "gfx/interface/icons/invention_icons/investment_banks.dds"
+		size = { 25 25 }
+		offset = { 0 7 }
+		fontsize = 18
+	}
+}
+
+texticon = {
+	icon = zw_texticon_auto_expand
+	iconsize = {
+		texture = "gfx/interface/icons/building_icons/building_browser_filter_icons/filter_icons_queued_construction.dds"
+		size = { 25 25 }
+		offset = { 0 7 }
+		fontsize = 18
+	}
+}
