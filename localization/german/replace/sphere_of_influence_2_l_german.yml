@@ -1,0 +1,7 @@
+﻿l_german:
+ je_earn_recognition_advance: "• [concept_gdp] gehört zu den 10 Besten\n• [Concept('concept_gdp_per_capita','$concept_gdp_per_capita_short$')] über 1\n• Durchschnittlicher [concept_sol] ist über 12\n• [concept_literacy] von mehr als 40 %\n• [Concept('concept_votes','$concept_voting_rights$')] haben\n• Der [concept_article] #bold $offer_embassy$#! ist aktiv"
+ je_earn_recognition_deplete: "• [Concept('concept_gdp_per_capita','$concept_gdp_per_capita_short$')] unter 0.8\n• Durchschnittlicher [concept_sol] unter 10\n• [concept_literacy] von weniger als 20 %\n•Die [concept_slavery] #bold nicht#! abgeschafft haben\n• „[GetLawType('law_serfdom').GetName]“ haben\n• „[GetLawType('law_traditionalism').GetName]“ haben\n• „[GetLawType('law_isolationism').GetName]“ haben\n• „[GetLawType('law_outlawed_dissent').GetName]“ haben"
+
+ earning_recognition_progress_gdpc_tt: "[Concept('concept_gdp_per_capita','$concept_gdp_per_capita_short$')] über 1"
+ earning_recognition_low_gdpc_tt: "[Concept('concept_gdp_per_capita','$concept_gdp_per_capita_short$')] unter 0.8"
+ earning_recognition_low_sol_tt: "durschnittlicher [concept_sol] unter 10"

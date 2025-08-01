@@ -1,0 +1,3 @@
+﻿l_german:
+ concept_budget_treaties: "Treaties"
+ concept_budget_treaties_desc: "[concept_money] collected from or remitted to the other [concept_country] in a [concept_treaty]."

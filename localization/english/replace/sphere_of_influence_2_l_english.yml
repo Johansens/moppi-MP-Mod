@@ -1,0 +1,7 @@
+﻿l_english:
+ je_earn_recognition_advance: "• Having a [concept_gdp] in the top 10\n• Having a [Concept('concept_gdp_per_capita','$concept_gdp_per_capita_short$')] above 1\n• Having an average [concept_sol] above 12\n• Having a [concept_literacy] rating above 40%\n• Having [Concept('concept_votes','$concept_voting_rights$')]\n• The #bold $offer_embassy$#! [concept_article] is active"
+ je_earn_recognition_deplete: "• Having a [Concept('concept_gdp_per_capita','$concept_gdp_per_capita_short$')] below 0.8\n• Having an average [concept_sol] below 10\n• Having a [concept_literacy] rating below 20%\n• Having #bold not#! abolished [concept_slavery].\n• Having [GetLawType('law_serfdom').GetName]\n• Having [GetLawType('law_traditionalism').GetName]\n• Having [GetLawType('law_isolationism').GetName]\n• Having [GetLawType('law_outlawed_dissent').GetName]"
+
+ earning_recognition_progress_gdpc_tt: "[Concept('concept_gdp_per_capita','$concept_gdp_per_capita_short$')] above 1"
+ earning_recognition_low_gdpc_tt: "[Concept('concept_gdp_per_capita','$concept_gdp_per_capita_short$')] below 0.8"
+ earning_recognition_low_sol_tt: "average [concept_sol] below 10"
