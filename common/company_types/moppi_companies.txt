@@ -35,13 +35,20 @@ company_donkies = {
 	}
 
 	potential = {
+		has_interest_marker_in_region = region_arabic
 	}
 
 	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_ALEPPO
+			}
+		}
 	}
 
 	possible = {
 		any_scope_state = {
+			state_region = s:STATE_ALEPPO
 			is_incorporated = yes
 			any_scope_building = {
 				is_building_type = building_livestock_ranch
@@ -65,6 +72,7 @@ company_donkies = {
 
 	ai_will_do = {
 		any_scope_state = {
+			state_region = s:STATE_ALEPPO
 			is_incorporated = yes
 		}
 	}
@@ -73,7 +81,7 @@ company_donkies = {
 		building_livestock_ranch = {
 			level = 10
 			state_trigger = {
-				is_incorporated = yes
+				state_region = s:STATE_ALEPPO
 			}
 		}
 	}
