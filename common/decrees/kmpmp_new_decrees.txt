@@ -1,0 +1,15 @@
+﻿kmpmp_decree_public_health_program = {
+	texture = "gfx/interface/icons/decree/decree_public_health_program.dds"
+	unlocking_technologies = {
+		centralization
+	}
+	modifier = {
+		state_birth_rate_mult = 0.09
+		state_mortality_mult = -0.05
+	}
+	cost = 100
+	
+	ai_weight = {
+		value = 0
+	}
+}
