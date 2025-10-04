@@ -90,3 +90,75 @@ company_donkies = {
 		value = 3 # Higher base value for flavored companies
 	}
 }
+
+company_gramo = {
+	icon = "gfx/interface/icons/company_icons/moppi_gramo.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_farm_wheat.dds"
+
+	flavored_company = yes
+
+	preferred_headquarters = { }
+
+	building_types = {
+		# Kunsthochschulen
+		building_arts_academy
+		# Holz
+		building_logging_camp 
+	}
+
+	extension_building_types = {
+		 # färbemittel
+		 building_dye_plantation
+
+	}
+
+	potential = {
+		has_interest_marker_in_region = region_brazil
+	}
+
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_RIO_DE_JANEIRO
+			}
+		}
+	}
+
+	possible = {
+		any_scope_state = {
+			state_region = s:STATE_RIO_DE_JANEIRO
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_arts_academy
+				level >= 5
+			}
+		}
+	}
+
+	prosperity_modifier = {
+		# +10% Durchsatz für Kunsthochschulen
+		building_arts_academy_throughput_add = 0.1
+		# +0.5 SOL für Oberschicht
+		state_upper_strata_standard_of_living_add = 0.5
+	}
+
+	ai_will_do = {
+		any_scope_state = {
+			state_region = s:STATE_RIO_DE_JANEIRO
+			is_incorporated = yes
+		}
+	}
+
+	ai_construction_targets = {
+		building_arts_academy = {
+			level >= 5
+			state_trigger = {
+				state_region = s:STATE_RIO_DE_JANEIRO
+			}
+		}
+	}
+
+	ai_weight = {
+		value = 0
+	}
+}
