@@ -1,0 +1,9 @@
+﻿add_birth_rate_world = { ## the modifier for population growth JE
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	state_birth_rate_mult = 0.3
+    }
+
+add_russia_birth_rate_world = { ## the modifier for population growth JE
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	state_birth_rate_mult = 0.15
+    }

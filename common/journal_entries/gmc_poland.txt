@@ -1,0 +1,162 @@
+﻿je_great_polish_revolt = {
+	icon = "gfx/interface/icons/institution_icons/schools.dds"
+
+	group = je_group_historical_content
+
+
+	is_shown_when_inactive = {
+    	c:POL ?= ROOT
+		has_variable = polish_great_rebellion
+	}
+
+  	possible = {
+    	c:POL ?= ROOT
+		has_variable = polish_great_rebellion
+  	}
+
+	modifiers_while_active = {
+		modifier_polish_uprising
+	}
+
+	immediate = {
+		every_country = {
+			limit = {
+				country_rank = rank_value:great_power
+				country_is_in_europe = yes
+				NOR = {
+					c:RUS = this
+					c:POL = this
+					has_war_with = c:RUS
+					has_war_with = c:POL
+				}
+			}
+			hidden_effect = { trigger_event = { id = gmc_polish_events.1 } }
+		}		
+	}
+
+	complete = {
+		owns_entire_state_region = STATE_MINSK
+		owns_entire_state_region = STATE_VITEBSK
+		owns_entire_state_region = STATE_MOGILEV
+		owns_entire_state_region = STATE_KIEV
+	}
+
+	on_complete = {
+		trigger_event = { id = gmc_polish_events.21  }
+
+	}
+
+	weight = 100
+	should_be_pinned_by_default = yes
+}
+
+je_small_polish_revolt = {
+	icon = "gfx/interface/icons/institution_icons/schools.dds"
+	
+	group = je_group_historical_content
+
+	is_shown_when_inactive = {
+    	c:POL ?= ROOT
+		has_variable = polish_small_rebellion
+	}
+
+  	possible = {
+    	c:POL ?= ROOT
+		has_variable = polish_small_rebellion
+  	}
+
+	modifiers_while_active = {
+		modifier_polish_uprising
+	}
+
+	immediate = {
+		every_country = {
+			limit = {
+				country_rank = rank_value:great_power
+				country_is_in_europe = yes
+				NOR = {
+					c:RUS = this
+					c:POL = this
+					has_war_with = c:RUS
+					has_war_with = c:POL
+				}
+			}
+			hidden_effect = { trigger_event = { id = gmc_polish_events.2 } }
+		}		
+	}
+
+	complete = {
+		owns_entire_state_region = STATE_VILNIUS
+		owns_entire_state_region = STATE_KAUNAS
+		owns_entire_state_region = STATE_BREST
+		owns_entire_state_region = STATE_VOLHYNIA
+		}
+
+	on_complete = {
+		trigger_event = {  }
+
+	}
+
+	weight = 100
+	should_be_pinned_by_default = yes
+}
+
+je_great_polish_revolt_2 = {
+	icon = "gfx/interface/icons/institution_icons/schools.dds"
+
+	group = je_group_historical_content
+
+
+	is_shown_when_inactive = {
+    	c:POL ?= ROOT
+		has_variable = War_against_Russia
+	}
+
+  	possible = {
+    	c:POL ?= ROOT
+		has_variable = War_against_Russia
+  	}
+
+	modifiers_while_active = {
+		modifier_polish_uprising
+	}
+
+	immediate = {		
+	}
+
+	complete = {
+		owns_entire_state_region = STATE_KURSK
+		owns_entire_state_region = STATE_MOSCOW
+		owns_entire_state_region = STATE_INGRIA
+		owns_entire_state_region = STATE_KHARKOV
+	}
+
+	on_complete = {
+		if = {
+			limit = {
+				NOT = {
+					c:POL ?= {
+					has_variable = aid_talks
+					}
+				}
+			}
+			trigger_event = { id = gmc_polish_events.23  }
+		}
+
+		if = {
+			limit = {
+				c:POL ?= {
+				has_variable = aid_talks
+				}
+			}
+			trigger_event = { id = gmc_polish_events.24  }
+		}
+	}
+
+	fail = {
+		game_date >= 1850.2.2
+	}
+
+	weight = 100
+	should_be_pinned_by_default = yes
+}

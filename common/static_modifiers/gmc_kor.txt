@@ -1,0 +1,13 @@
+﻿modifier_kor_terakoya = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
+	state_education_access_add = 0.20
+	state_peasants_education_access_add = 0.20
+	country_tech_research_speed_mult = -0.10
+}
+
+modifier_legacy_of_kor_terakoya = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
+	state_education_access_add = 0.20
+	country_tech_research_speed_mult = 0.15
+	country_bureaucracy_mult = -0.05
+}

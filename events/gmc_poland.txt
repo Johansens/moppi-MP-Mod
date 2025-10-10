@@ -1,0 +1,2365 @@
+﻿namespace = gmc_polish_events
+
+gmc_polish_events.1 = { # Message to everyone else, big uprising
+	type = country_event
+    placement = root
+
+	title = gmc_polish_events.1.t
+	desc = gmc_polish_events.1.d
+	flavor = gmc_polish_events.1.f
+
+	event_image = {
+		video = "middleeast_courtroom_upheaval"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_fire.dds"
+
+	duration = 3
+
+	trigger = {
+
+	}
+
+	immediate = {
+				
+	}
+
+	option = { # Pro Poland
+		name = gmc_polish_events.1.a
+
+        default_option = yes
+        ai_chance = {
+			base = 10
+		}
+
+        add_declared_interest = region_poland
+
+        change_relations = {
+				country = c:POL
+				value = 50
+		}
+        change_relations = {
+				country = c:RUS
+				value = -50
+		}
+
+        c:POL = { 
+            add_modifier = {name = modifier_polish_aid years = 5}
+        }
+         
+        add_modifier = { 
+			name = poland_aid years = 5 
+		}
+		set_variable = {
+			name = poland_aid years = 5
+		} 
+	}
+
+    option = { # Neutral
+		name = gmc_polish_events.1.b
+
+        ai_chance = {
+			base = 4
+		}
+
+        change_relations = {
+				country = c:POL
+				value = 25
+		}
+        change_relations = {
+				country = c:RUS
+				value = 25
+		}
+	}
+
+    option = { # Pro Russia
+		name = gmc_polish_events.1.c
+
+        ai_chance = {
+			base = 0
+		}
+
+        change_relations = {
+				country = c:POL
+				value = -50
+		}
+        change_relations = {
+				country = c:RUS
+				value = 50
+		}
+
+        c:RUS = { 
+            add_modifier = {name = modifier_russia_aid years = 5}
+        }
+
+        add_modifier = { 
+		name = russia_aid years = 5 
+		}
+	}
+}
+
+gmc_polish_events.2 = { # Message to everyone else, small uprising
+	type = country_event
+    placement = root
+
+	title = gmc_polish_events.2.t
+	desc = gmc_polish_events.2.d
+	flavor = gmc_polish_events.2.f
+
+	event_image = {
+		video = "middleeast_courtroom_upheaval"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_fire.dds"
+
+	duration = 3
+
+	trigger = {
+
+	}
+
+	immediate = {
+				
+	}
+
+	option = { # Pro Poland
+		name = gmc_polish_events.2.a
+
+        ai_chance = {
+			base = 1
+		}
+
+        add_declared_interest = region_poland
+
+        change_relations = {
+				country = c:POL
+				value = 50
+		}
+        change_relations = {
+				country = c:RUS
+				value = -50
+		}
+
+        c:POL = { 
+            add_modifier = {name = modifier_polish_aid years = 5}
+        } 
+	}
+
+    option = { # Neutral
+		name = gmc_polish_events.2.b
+
+        ai_chance = {
+			base = 4
+		}
+
+        change_relations = {
+				country = c:POL
+				value = 25
+		}
+        change_relations = {
+				country = c:RUS
+				value = 25
+		}
+	}
+
+    option = { # Pro Russia
+		name = gmc_polish_events.2.c
+
+        default_option = yes
+        ai_chance = {
+			base = 5
+		}
+
+        change_relations = {
+				country = c:POL
+				value = -50
+		}
+        change_relations = {
+				country = c:RUS
+				value = 50
+		}
+
+        c:RUS = { 
+            add_modifier = {name = modifier_russia_aid years = 5}
+        }
+	}
+}
+
+##################################################################------GBR------
+gmc_polish_events.3 = { # Request for help from Poland / GB
+	type = country_event
+    placement = root
+
+	title = gmc_polish_events.3.t
+	desc = gmc_polish_events.3.d
+	flavor = gmc_polish_events.3.f
+
+	event_image = {
+		video = "middleeast_courtroom_upheaval"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_fire.dds"
+
+    trigger = {
+
+	}
+
+	immediate = {
+				
+	}
+
+	duration = 3
+
+	option = { # help, but at a high price
+		name = gmc_polish_events.3.a
+
+        default_option = yes
+        ai_chance = {
+			base = 6
+		}
+
+        c:POL ?= {
+            trigger_event = { id = gmc_polish_events.4 popup = yes}
+        }
+		custom_tooltip = british_help_high_price_tt
+		show_as_tooltip = {
+			c:POL ?= {
+        		add_technology_researched = lathe
+        		add_technology_researched = atmospheric_engine
+        		add_technology_researched = railways
+    	    	add_technology_researched = mechanical_tools
+    	    	add_technology_researched = percussion_cap
+    	    	add_technology_researched = general_staff
+    	    	add_technology_researched = banking
+    	    	add_technology_researched = stock_exchange
+    	    	add_technology_researched = mass_communication
+    	    	add_technology_researched = empiricism
+			}
+			c:GBR ?= {
+				create_diplomatic_pact = {
+					country = c:POL
+					type = protectorate
+				}
+			}
+		}
+	}
+
+    option = { # help, at a small price, but not quite as strong
+		name = gmc_polish_events.3.b
+
+        ai_chance = {
+			base = 3
+		}
+
+        c:POL ?= {
+            trigger_event = { id = gmc_polish_events.7 popup = yes}
+			hidden_effect = {
+				remove_variable = aid_talks
+			}
+        }
+
+		custom_tooltip = british_help_small_price_tt
+		show_as_tooltip = {
+			c:POL ?= {
+        		add_technology_researched = lathe
+        		add_technology_researched = banking
+        		add_technology_researched = stock_exchange
+        		add_technology_researched = mass_communication
+        		add_technology_researched = empiricism
+			}
+
+			c:GBR ?= {
+			add_modifier = {name = modifier_gbr_polish_payments years = 5}
+			}
+			c:POL ?= {
+			add_modifier = {name = modifier_pol_polish_payments years = 5}
+			}
+			}
+	}
+    option = { # request for help rejected
+		name = gmc_polish_events.3.c
+
+        ai_chance = {
+			base = 1
+		}
+
+        c:POL ?= {
+            trigger_event = { id = gmc_polish_events.8 popup = yes}
+			hidden_effect = {
+				remove_variable = aid_talks
+			}
+        }
+
+		show_as_tooltip = {
+			c:POL ?= {
+        		change_relations = {
+				country = c:GBR
+				value = -20
+				}
+			}
+		}
+	}
+}
+
+gmc_polish_events.4 = { # Offer from the British
+	type = country_event
+    placement = root
+
+	title = gmc_polish_events.4.t
+	desc = gmc_polish_events.4.d
+	flavor = gmc_polish_events.4.f
+
+	event_image = {
+		video = "middleeast_courtroom_upheaval"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_fire.dds"
+
+	duration = 3
+
+	trigger = {
+
+	}
+
+	immediate = {
+				
+	}
+
+	option = { # Offer from the British, accept
+		name = gmc_polish_events.4.a
+
+        ai_chance = {
+			base = 3
+		}
+
+        c:GBR ?= {
+            trigger_event = { id = gmc_polish_events.5 popup = yes}
+        }
+
+        c:GBR ?= {
+			create_diplomatic_pact = {
+				country = c:POL
+				type = protectorate
+			}
+		}
+
+        add_technology_researched = lathe
+        add_technology_researched = atmospheric_engine
+        add_technology_researched = railways
+        add_technology_researched = mechanical_tools
+        add_technology_researched = percussion_cap
+        add_technology_researched = general_staff
+        add_technology_researched = banking
+        add_technology_researched = stock_exchange
+        add_technology_researched = mass_communication
+        add_technology_researched = empiricism
+	}
+
+    option = { # Offer from the British, rejected
+		name = gmc_polish_events.4.b
+        
+        default_option = yes
+        ai_chance = {
+			base = 7
+		}
+
+        c:GBR ?= {
+            trigger_event = { id = gmc_polish_events.6 popup = yes}
+        }
+		hidden_effect = {
+				remove_variable = aid_talks
+			}
+
+        change_relations = {
+				country = c:GBR
+				value = -10
+		}
+	}
+}
+
+gmc_polish_events.5 = { # consent of Poland
+	type = country_event
+    placement = root
+
+	title = gmc_polish_events.5.t
+	desc = gmc_polish_events.5.d
+	flavor = gmc_polish_events.5.f
+
+	event_image = {
+		video = "middleeast_courtroom_upheaval"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_fire.dds"
+
+	duration = 3
+
+	trigger = {
+
+	}
+
+	immediate = {
+				
+	}
+
+	option = { # good / nothing more
+		name = gmc_polish_events.5.a
+        ai_chance = {
+			base = 3
+		}
+	}
+}
+
+gmc_polish_events.6 = { # Poland refuses
+	type = country_event
+    placement = root
+
+	title = gmc_polish_events.6.t
+	desc = gmc_polish_events.6.d
+	flavor = gmc_polish_events.6.f
+
+	event_image = {
+		video = "middleeast_courtroom_upheaval"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_fire.dds"
+
+	duration = 3
+
+	trigger = {
+
+	}
+
+	immediate = {
+				
+	}
+
+	option = { # too bad / nothing more
+		name = gmc_polish_events.6.a
+        ai_chance = {
+			base = 3
+		}
+	}
+}
+
+gmc_polish_events.7 = { # help for money, but not quite as strong
+	type = country_event
+    placement = root
+
+	title = gmc_polish_events.7.t
+	desc = gmc_polish_events.7.d
+	flavor = gmc_polish_events.7.f
+
+	event_image = {
+		video = "middleeast_courtroom_upheaval"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_fire.dds"
+
+	duration = 3
+
+	trigger = {
+
+	}
+
+	immediate = {
+				
+	}
+
+	option = { # Offer from the British, accept
+		name = gmc_polish_events.7.a
+
+        ai_chance = {
+			base = 8
+		}
+
+        c:GBR ?= { # British tech support
+            trigger_event = { id = gmc_polish_events.5 popup = yes}
+        }
+
+		c:GBR ?= {
+			add_modifier = {name = modifier_gbr_polish_payments years = 5}
+		}
+
+		hidden_effect = {
+				remove_variable = aid_talks
+			}
+
+		add_modifier = {name = modifier_pol_polish_payments years = 5}
+
+        add_technology_researched = lathe
+        add_technology_researched = banking
+        add_technology_researched = stock_exchange
+        add_technology_researched = mass_communication
+        add_technology_researched = empiricism
+	}
+
+    option = { # Offer from the British, rejected
+		name = gmc_polish_events.7.b
+        
+        default_option = yes
+        ai_chance = {
+			base = 2
+		}
+
+        c:GBR ?= {
+            trigger_event = { id = gmc_polish_events.6 popup = yes}
+        }
+
+		hidden_effect = {
+				remove_variable = aid_talks
+			}
+
+        change_relations = {
+				country = c:GBR
+				value = -10
+		}
+	}
+}
+
+gmc_polish_events.8 = { # Asking for help from England was refused. / nothing more
+	type = country_event
+    placement = root
+
+	title = gmc_polish_events.8.t
+	desc = gmc_polish_events.8.d
+	flavor = gmc_polish_events.8.f
+
+	event_image = {
+		video = "middleeast_courtroom_upheaval"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_fire.dds"
+
+	duration = 3
+
+	trigger = {
+
+	}
+
+	immediate = {
+				
+	}
+
+	option = { # Asking for help from England was refused. / nothing more
+		name = gmc_polish_events.8.a
+        ai_chance = {
+			base = 3
+		}
+
+		change_relations = {
+				country = c:GBR
+				value = -20
+		}
+	}
+}
+
+##################################################################------PRU------
+gmc_polish_events.9 = { # Request for help from Poland / PRU
+	type = country_event
+    placement = root
+
+	title = gmc_polish_events.9.t
+	desc = gmc_polish_events.9.d
+	flavor = gmc_polish_events.9.f
+
+	event_image = {
+		video = "middleeast_courtroom_upheaval"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_fire.dds"
+
+    trigger = {
+
+	}
+
+	immediate = {
+				
+	}
+
+	duration = 3
+
+	option = { # help, but at a high price
+		name = gmc_polish_events.9.a
+
+        default_option = yes
+        ai_chance = {
+			base = 6
+		}
+
+        c:POL ?= {
+            trigger_event = { id = gmc_polish_events.10 popup = yes}
+        }
+		custom_tooltip = prussia_help_high_price_tt
+		show_as_tooltip = {
+			c:PRU ?= {
+				create_diplomatic_pact = {
+					country = c:POL
+					type = protectorate
+				}
+			}	
+
+        	c:POL ?= {
+    	    	add_technology_researched = lathe
+        		add_technology_researched = atmospheric_engine
+        		add_technology_researched = railways
+    	    	add_technology_researched = mechanical_tools
+    		    add_technology_researched = banking
+    	    	add_technology_researched = stock_exchange
+    	    	add_technology_researched = mass_communication
+    	    	add_technology_researched = empiricism
+				add_technology_researched = percussion_cap
+        		add_technology_researched = general_staff
+			}
+		}
+	}
+
+    option = { # help, at a small price, but not quite as strong
+		name = gmc_polish_events.9.b
+
+        ai_chance = {
+			base = 3
+		}
+
+        c:POL ?= {
+            trigger_event = { id = gmc_polish_events.11 popup = yes}
+        }
+
+		custom_tooltip = prussia_help_small_price_tt
+		show_as_tooltip = {
+			c:POL ?= {
+			join_power_bloc = c:PRU
+			}
+			c:POL ?= {
+        		add_technology_researched = lathe
+   		    	add_technology_researched = atmospheric_engine
+        		add_technology_researched = railways
+        		add_technology_researched = mechanical_tools
+        		add_technology_researched = banking
+        		add_technology_researched = stock_exchange
+        		add_technology_researched = mass_communication
+        		add_technology_researched = empiricism
+			}
+			c:PRU ?= {
+			add_modifier = {name = modifier_gbr_polish_payments years = 5}
+			}
+			c:POL ?= {
+			add_modifier = {name = modifier_pol_polish_payments years = 5}
+			}
+
+			hidden_effect = {
+				remove_variable = aid_talks
+			}
+		}
+	}
+    option = { # request for help rejected
+		name = gmc_polish_events.9.c
+
+        ai_chance = {
+			base = 1
+		}
+
+        c:POL ?= {
+            trigger_event = { id = gmc_polish_events.12 popup = yes}
+			hidden_effect = {
+				remove_variable = aid_talks
+			}
+        }
+
+		hidden_effect = {
+				remove_variable = aid_talks
+			}
+
+		show_as_tooltip = {
+			c:POL ?= {
+        		change_relations = {
+				country = c:PRU
+				value = -20
+				}
+			}
+		}
+	}
+}
+
+gmc_polish_events.10 = { # Offer from the Prussia
+	type = country_event
+    placement = root
+
+	title = gmc_polish_events.10.t
+	desc = gmc_polish_events.10.d
+	flavor = gmc_polish_events.10.f
+
+	event_image = {
+		video = "middleeast_courtroom_upheaval"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_fire.dds"
+
+	duration = 3
+
+	trigger = {
+
+	}
+
+	immediate = {
+				
+	}
+
+	option = { # Offer from Prussia, accept
+		name = gmc_polish_events.10.a
+
+        ai_chance = {
+			base = 8
+		}
+
+        c:PRU ?= {
+            trigger_event = { id = gmc_polish_events.5 popup = yes}
+        }
+
+        c:PRU ?= {
+			create_diplomatic_pact = {
+				country = c:POL
+				type = protectorate
+			}
+		}
+
+        add_technology_researched = lathe
+        add_technology_researched = atmospheric_engine
+        add_technology_researched = railways
+        add_technology_researched = mechanical_tools
+        add_technology_researched = banking
+        add_technology_researched = stock_exchange
+        add_technology_researched = mass_communication
+        add_technology_researched = empiricism
+		add_technology_researched = percussion_cap
+        add_technology_researched = general_staff
+	}
+
+    option = { # Offer from Prussia, rejected
+		name = gmc_polish_events.10.b
+        
+        default_option = yes
+        ai_chance = {
+			base = 2
+		}
+
+        c:PRU ?= {
+            trigger_event = { id = gmc_polish_events.6 popup = yes}
+        }
+		hidden_effect = {
+				remove_variable = aid_talks
+			}
+
+        change_relations = {
+				country = c:PRU
+				value = -10
+		}
+	}
+}
+
+gmc_polish_events.11 = { # Offer from the Prussia
+	type = country_event
+    placement = root
+
+	title = gmc_polish_events.11.t
+	desc = gmc_polish_events.11.d
+	flavor = gmc_polish_events.11.f
+
+	event_image = {
+		video = "middleeast_courtroom_upheaval"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_fire.dds"
+
+	duration = 3
+
+	trigger = {
+
+	}
+
+	immediate = {
+				
+	}
+
+	option = { # Offer from Prussia, accept
+		name = gmc_polish_events.11.a
+
+        ai_chance = {
+			base = 8
+		}
+
+		c:PRU ?= {
+            trigger_event = { id = gmc_polish_events.5 popup = yes}
+        }
+
+		c:POL ?= {
+			join_power_bloc = c:PRU
+		}
+
+        add_technology_researched = lathe
+        add_technology_researched = atmospheric_engine
+        add_technology_researched = railways
+        add_technology_researched = mechanical_tools
+        add_technology_researched = banking
+        add_technology_researched = stock_exchange
+        add_technology_researched = mass_communication
+        add_technology_researched = empiricism
+
+		c:PRU ?= {
+			add_modifier = {name = modifier_gbr_polish_payments years = 5}
+		}
+
+		add_modifier = {name = modifier_pol_polish_payments years = 5}
+
+		hidden_effect = {
+				remove_variable = aid_talks
+			}
+	}
+
+    option = { # Offer from Prussia, rejected
+		name = gmc_polish_events.11.b
+        
+        default_option = yes
+        ai_chance = {
+			base = 2
+		}
+
+        c:PRU ?= {
+            trigger_event = { id = gmc_polish_events.6 popup = yes}
+        }
+
+		hidden_effect = {
+				remove_variable = aid_talks
+			}
+
+        change_relations = {
+				country = c:PRU
+				value = -10
+		}
+	}
+}
+
+gmc_polish_events.12 = { # Asking for help from Prussia was refused. / nothing more
+	type = country_event
+    placement = root
+
+	title = gmc_polish_events.12.t
+	desc = gmc_polish_events.12.d
+	flavor = gmc_polish_events.12.f
+
+	event_image = {
+		video = "middleeast_courtroom_upheaval"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_fire.dds"
+
+	duration = 3
+
+	trigger = {
+
+	}
+
+	immediate = {
+				
+	}
+
+	option = { # Asking for help from Prussia was refused. / nothing more
+		name = gmc_polish_events.12.a
+        ai_chance = {
+			base = 3
+		}
+
+		change_relations = {
+				country = c:PRU
+				value = -20
+		}
+	}
+}
+
+##################################################################------FRA------
+gmc_polish_events.13 = { # Request for help from Poland / FRA
+	type = country_event
+    placement = root
+
+	title = gmc_polish_events.13.t
+	desc = gmc_polish_events.13.d
+	flavor = gmc_polish_events.13.f
+
+	event_image = {
+		video = "middleeast_courtroom_upheaval"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_fire.dds"
+
+    trigger = {
+
+	}
+
+	immediate = {
+				
+	}
+
+	duration = 3
+
+	option = { # help, but at a high price
+		name = gmc_polish_events.13.a
+
+        default_option = yes
+        ai_chance = {
+			base = 6
+		}
+
+        c:POL ?= {
+            trigger_event = { id = gmc_polish_events.14 popup = yes}
+        }
+		custom_tooltip = france_help_high_price_tt
+		show_as_tooltip = {
+			c:FRA ?= {
+				create_diplomatic_pact = {
+					country = c:POL
+					type = protectorate
+				}
+			}	
+
+        	c:POL ?= {
+    	    	add_technology_researched = lathe
+        		add_technology_researched = atmospheric_engine
+        		add_technology_researched = railways
+    	    	add_technology_researched = mechanical_tools
+    		    add_technology_researched = banking
+    	    	add_technology_researched = stock_exchange
+    	    	add_technology_researched = mass_communication
+    	    	add_technology_researched = empiricism
+				add_technology_researched = percussion_cap
+        		add_technology_researched = general_staff
+			}
+		}
+	}
+
+    option = { # help, at a small price, but not quite as strong
+		name = gmc_polish_events.13.b
+
+        ai_chance = {
+			base = 3
+		}
+
+        c:POL ?= {
+            trigger_event = { id = gmc_polish_events.15 popup = yes}
+        }
+		hidden_effect = {
+				remove_variable = aid_talks
+		}
+
+		custom_tooltip = france_help_small_price_tt
+		show_as_tooltip = {
+			c:POL ?= {
+        		add_technology_researched = lathe
+   		    	add_technology_researched = atmospheric_engine
+        		add_technology_researched = railways
+        		add_technology_researched = mechanical_tools
+        		add_technology_researched = banking
+        		add_technology_researched = stock_exchange
+        		add_technology_researched = mass_communication
+        		add_technology_researched = empiricism
+			}
+			c:FRA ?= {
+			add_modifier = {name = modifier_gbr_polish_payments years = 5}
+			}
+			c:POL ?= {
+			add_modifier = {name = modifier_pol_polish_payments years = 5}
+			}
+		}
+	}
+    option = { # request for help rejected
+		name = gmc_polish_events.13.c
+
+        ai_chance = {
+			base = 1
+		}
+
+        c:POL ?= {
+            trigger_event = { id = gmc_polish_events.16 popup = yes}
+			hidden_effect = {
+				remove_variable = aid_talks
+			}
+        }
+
+		show_as_tooltip = {
+			c:POL ?= {
+        		change_relations = {
+				country = c:FRA
+				value = -20
+				}
+			}
+		}
+	}
+}
+
+gmc_polish_events.14 = { # Offer from the france
+	type = country_event
+    placement = root
+
+	title = gmc_polish_events.14.t
+	desc = gmc_polish_events.14.d
+	flavor = gmc_polish_events.14.f
+
+	event_image = {
+		video = "middleeast_courtroom_upheaval"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_fire.dds"
+
+	duration = 3
+
+	trigger = {
+
+	}
+
+	immediate = {
+				
+	}
+
+	option = { # Offer from france, accept
+		name = gmc_polish_events.14.a
+
+        ai_chance = {
+			base = 8
+		}
+
+        c:FRA ?= {
+            trigger_event = { id = gmc_polish_events.5 popup = yes}
+        }
+
+        c:FRA ?= {
+			create_diplomatic_pact = {
+				country = c:POL
+				type = protectorate
+			}
+		}
+
+        add_technology_researched = lathe
+        add_technology_researched = atmospheric_engine
+        add_technology_researched = railways
+        add_technology_researched = mechanical_tools
+        add_technology_researched = banking
+        add_technology_researched = stock_exchange
+        add_technology_researched = mass_communication
+        add_technology_researched = empiricism
+		add_technology_researched = percussion_cap
+        add_technology_researched = general_staff
+	}
+
+    option = { # Offer from france, rejected
+		name = gmc_polish_events.14.b
+        
+        default_option = yes
+        ai_chance = {
+			base = 2
+		}
+
+        c:FRA ?= {
+            trigger_event = { id = gmc_polish_events.6 popup = yes}
+        }
+		hidden_effect = {
+				remove_variable = aid_talks
+			}
+
+        change_relations = {
+				country = c:FRA
+				value = -10
+		}
+	}
+}
+
+gmc_polish_events.15 = { # Offer from the france
+	type = country_event
+    placement = root
+
+	title = gmc_polish_events.15.t
+	desc = gmc_polish_events.15.d
+	flavor = gmc_polish_events.15.f
+
+	event_image = {
+		video = "middleeast_courtroom_upheaval"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_fire.dds"
+
+	duration = 3
+
+	trigger = {
+
+	}
+
+	immediate = {
+				
+	}
+
+	option = { # Offer from france, accept
+		name = gmc_polish_events.15.a
+
+        ai_chance = {
+			base = 8
+		}
+
+		c:FRA ?= {
+            trigger_event = { id = gmc_polish_events.5 popup = yes}
+        }
+
+		c:POL ?= {
+			join_power_bloc = c:FRA
+		}
+
+        add_technology_researched = lathe
+        add_technology_researched = atmospheric_engine
+        add_technology_researched = railways
+        add_technology_researched = mechanical_tools
+        add_technology_researched = banking
+        add_technology_researched = stock_exchange
+        add_technology_researched = mass_communication
+        add_technology_researched = empiricism
+
+		c:FRA ?= {
+			add_modifier = {name = modifier_gbr_polish_payments years = 5}
+		}
+
+		add_modifier = {name = modifier_pol_polish_payments years = 5}
+
+		hidden_effect = {
+				remove_variable = aid_talks
+			}
+	}
+
+    option = { # Offer from france, rejected
+		name = gmc_polish_events.15.b
+        
+        default_option = yes
+        ai_chance = {
+			base = 2
+		}
+
+        c:FRA ?= {
+            trigger_event = { id = gmc_polish_events.6 popup = yes}
+        }
+
+		hidden_effect = {
+				remove_variable = aid_talks
+			}
+
+        change_relations = {
+				country = c:FRA
+				value = -10
+		}
+	}
+}
+
+gmc_polish_events.16 = { # Asking for help from france was refused. / nothing more
+	type = country_event
+    placement = root
+
+	title = gmc_polish_events.16.t
+	desc = gmc_polish_events.16.d
+	flavor = gmc_polish_events.16.f
+
+	event_image = {
+		video = "middleeast_courtroom_upheaval"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_fire.dds"
+
+	duration = 3
+
+	trigger = {
+
+	}
+
+	immediate = {
+				
+	}
+
+	option = { # Asking for help from france was refused. / nothing more
+		name = gmc_polish_events.16.a
+        ai_chance = {
+			base = 3
+		}
+
+		change_relations = {
+				country = c:FRA
+				value = -20
+		}
+	}
+}
+
+##################################################################------AUS------
+gmc_polish_events.17 = { # Request for help from Poland / austria
+	type = country_event
+    placement = root
+
+	title = gmc_polish_events.17.t
+	desc = gmc_polish_events.17.d
+	flavor = gmc_polish_events.17.f
+
+	event_image = {
+		video = "middleeast_courtroom_upheaval"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_fire.dds"
+
+    trigger = {
+
+	}
+
+	immediate = {			
+	}
+
+	duration = 3
+
+	option = { # help, but at a high price
+		name = gmc_polish_events.17.a
+
+        default_option = yes
+        ai_chance = {
+			base = 6
+		}
+
+        c:POL ?= {
+            trigger_event = { id = gmc_polish_events.18 popup = yes}
+        }
+		custom_tooltip = austria_help_high_price_tt
+		show_as_tooltip = {
+			c:AUS ?= {
+				create_diplomatic_pact = {
+					country = c:POL
+					type = protectorate
+				}
+			}
+
+			s:STATE_WEST_GALICIA = {
+            region_state:AUS = {
+				set_state_owner = c:POL
+                set_state_type = incorporated
+            	}
+        	}
+			s:STATE_EAST_GALICIA = {
+            region_state:AUS = {
+				set_state_owner = c:POL
+                set_state_type = incorporated
+            	}
+        	}	
+
+        	c:POL ?= {
+    	    	add_technology_researched = lathe
+        		add_technology_researched = atmospheric_engine
+    		    add_technology_researched = banking
+    	    	add_technology_researched = stock_exchange
+    	    	add_technology_researched = mass_communication
+    	    	add_technology_researched = empiricism
+			}
+		}
+	}
+
+    option = { # help, at a small price, but not quite as strong
+		name = gmc_polish_events.17.b
+
+        ai_chance = {
+			base = 3
+		}
+
+        c:POL ?= {
+            trigger_event = { id = gmc_polish_events.19 popup = yes}
+        }
+		hidden_effect = {
+				remove_variable = aid_talks
+		}
+
+		custom_tooltip = austria_help_small_price_tt
+		show_as_tooltip = {
+
+		s:STATE_WEST_GALICIA = {
+            region_state:AUS = {
+				set_state_owner = c:POL
+                set_state_type = incorporated
+            }
+        }
+		s:STATE_EAST_GALICIA = {
+        	region_state:AUS = {
+				set_state_owner = c:POL
+            	set_state_type = incorporated
+            }
+        }
+
+		c:POL ?= {
+    	    	add_technology_researched = lathe
+        		add_technology_researched = atmospheric_engine
+    		    add_technology_researched = banking
+    	    	add_technology_researched = stock_exchange
+    	    	add_technology_researched = mass_communication
+    	    	add_technology_researched = empiricism
+		}
+
+			c:AUS ?= {
+			add_modifier = {name = modifier_gbr_polish_payments years = 5}
+			}
+			c:POL ?= {
+			add_modifier = {name = modifier_pol_polish_payments years = 5}
+			}
+		}
+	}
+    option = { # request for help rejected
+		name = gmc_polish_events.17.c
+
+        ai_chance = {
+			base = 1
+		}
+
+        c:POL ?= {
+            trigger_event = { id = gmc_polish_events.20 popup = yes}
+			hidden_effect = {
+				remove_variable = aid_talks
+			}
+        }
+
+		show_as_tooltip = {
+			c:POL ?= {
+        		change_relations = {
+				country = c:AUS
+				value = -20
+				}
+			}
+		}
+	}
+}
+
+gmc_polish_events.18 = { # Offer from the austria
+	type = country_event
+    placement = root
+
+	title = gmc_polish_events.18.t
+	desc = gmc_polish_events.18.d
+	flavor = gmc_polish_events.18.f
+
+	event_image = {
+		video = "middleeast_courtroom_upheaval"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_fire.dds"
+
+	duration = 3
+
+	trigger = {
+
+	}
+
+	immediate = {
+		s:STATE_WEST_GALICIA = {
+            region_state:AUS = {
+            }
+        }
+		s:STATE_EAST_GALICIA = {
+            region_state:AUS = {
+            }
+        }		
+	}
+
+	option = { # Offer from austria, accept
+		name = gmc_polish_events.18.a
+
+        ai_chance = {
+			base = 8
+		}
+
+        c:AUS ?= {
+            trigger_event = { id = gmc_polish_events.5 popup = yes}
+        }
+
+        c:AUS ?= {
+			create_diplomatic_pact = {
+				country = c:POL
+				type = protectorate
+			}
+		}
+		annex = c:KRA
+
+		s:STATE_WEST_GALICIA = {
+            region_state:AUS = {
+				set_state_owner = c:POL
+                set_state_type = incorporated
+            }
+        }
+		s:STATE_EAST_GALICIA = {
+            region_state:AUS = {
+				set_state_owner = c:POL
+                set_state_type = incorporated
+            }
+        }
+		hidden_effect = {
+			s:STATE_WEST_GALICIA = {
+            region_state:POL = {
+				set_state_owner = c:POL
+                set_state_type = incorporated
+            }
+        }
+		s:STATE_EAST_GALICIA = {
+            region_state:POL = {
+				set_state_owner = c:POL
+                set_state_type = incorporated
+            }
+        }
+		}
+
+        add_technology_researched = lathe
+        add_technology_researched = atmospheric_engine
+    	add_technology_researched = banking
+    	add_technology_researched = stock_exchange
+    	add_technology_researched = mass_communication
+    	add_technology_researched = empiricism
+	}
+
+    option = { # Offer from austria, rejected
+		name = gmc_polish_events.18.b
+        
+        default_option = yes
+        ai_chance = {
+			base = 2
+		}
+
+        c:AUS ?= {
+            trigger_event = { id = gmc_polish_events.6 popup = yes}
+        }
+		hidden_effect = {
+				remove_variable = aid_talks
+			}
+
+        change_relations = {
+				country = c:AUS
+				value = -10
+		}
+	}
+}
+
+gmc_polish_events.19 = { # Offer from the austria
+	type = country_event
+    placement = root
+
+	title = gmc_polish_events.19.t
+	desc = gmc_polish_events.19.d
+	flavor = gmc_polish_events.19.f
+
+	event_image = {
+		video = "middleeast_courtroom_upheaval"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_fire.dds"
+
+	duration = 3
+
+	trigger = {
+
+	}
+
+	immediate = {
+		s:STATE_WEST_GALICIA = {
+            region_state:AUS = {
+            }
+        }
+		s:STATE_EAST_GALICIA = {
+            region_state:AUS = {
+            }
+        }		
+	}
+
+	option = { # Offer from austria, accept
+		name = gmc_polish_events.19.a
+
+        ai_chance = {
+			base = 8
+		}
+
+		annex = c:KRA
+
+		s:STATE_WEST_GALICIA = {
+            region_state:AUS = {
+				set_state_owner = c:POL
+                set_state_type = incorporated
+            }
+        }
+		s:STATE_EAST_GALICIA = {
+            region_state:AUS = {
+				set_state_owner = c:POL
+                set_state_type = incorporated
+            }
+        }
+		hidden_effect = {
+			s:STATE_WEST_GALICIA = {
+            region_state:POL = {
+				set_state_owner = c:POL
+                set_state_type = incorporated
+            }
+        }
+		s:STATE_EAST_GALICIA = {
+            region_state:POL = {
+				set_state_owner = c:POL
+                set_state_type = incorporated
+            }
+        }
+		}
+
+        add_technology_researched = lathe
+        add_technology_researched = atmospheric_engine
+    	add_technology_researched = banking
+    	add_technology_researched = stock_exchange
+    	add_technology_researched = mass_communication
+    	add_technology_researched = empiricism
+
+		c:AUS ?= {
+			add_modifier = {name = modifier_gbr_polish_payments years = 5}
+		}
+
+		add_modifier = {name = modifier_pol_polish_payments years = 5}
+
+		c:AUS ?= {
+            trigger_event = { id = gmc_polish_events.5 popup = yes}
+        }
+
+		hidden_effect = {
+				remove_variable = aid_talks
+			}
+	}
+
+    option = { # Offer from austria, rejected
+		name = gmc_polish_events.19.b
+        
+        default_option = yes
+        ai_chance = {
+			base = 2
+		}
+
+        c:AUS ?= {
+            trigger_event = { id = gmc_polish_events.6 popup = yes}
+        }
+
+		hidden_effect = {
+				remove_variable = aid_talks
+			}
+
+        change_relations = {
+				country = c:AUS
+				value = -10
+		}
+	}
+}
+
+gmc_polish_events.20 = { # Asking for help from austria was refused. / nothing more
+	type = country_event
+    placement = root
+
+	title = gmc_polish_events.20.t
+	desc = gmc_polish_events.20.d
+	flavor = gmc_polish_events.20.f
+
+	event_image = {
+		video = "middleeast_courtroom_upheaval"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_fire.dds"
+
+	duration = 3
+
+	trigger = {
+
+	}
+
+	immediate = {
+		s:STATE_WEST_GALICIA = {
+            region_state:AUS = {
+				set_state_owner = c:POL
+                set_state_type = incorporated
+            }
+        }
+		s:STATE_EAST_GALICIA = {
+            region_state:AUS = {
+				set_state_owner = c:POL
+                set_state_type = incorporated
+            }
+        }		
+	}
+
+	option = { # Asking for help from france was refused. / nothing more
+		name = gmc_polish_events.20.a
+        ai_chance = {
+			base = 3
+		}
+
+		change_relations = {
+				country = c:AUS
+				value = -20
+		}
+	}
+}
+
+#################################################### POLAND EVENT FOR EXPANSION JE--------------
+
+gmc_polish_events.21 = { # WAR or PEACE ?
+	type = country_event
+    placement = root
+
+	title = gmc_polish_events.21.t
+	desc = gmc_polish_events.21.d
+	flavor = gmc_polish_events.21.f
+
+	event_image = {
+		video = "middleeast_courtroom_upheaval"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_fire.dds"
+
+	duration = 3
+
+	trigger = {
+
+	}
+
+	immediate = {		
+	}
+
+	option = { # WAR!!!!!!
+		name = gmc_polish_events.21.a
+
+		default_option = yes
+        ai_chance = {
+			base = 8
+		}
+		s:STATE_KURSK = {
+            add_claim = c:POL
+        }
+		s:STATE_MOSCOW = {
+            add_claim = c:POL
+        }
+		s:STATE_INGRIA = {
+            add_claim = c:POL
+        }
+		s:STATE_KHARKOV = {
+            add_claim = c:POL
+        }
+		s:STATE_SMOLENSK = {
+            add_claim = c:POL
+        }
+		s:STATE_PSKOV = {
+            add_claim = c:POL
+        }
+		s:STATE_ORYOL = {
+            add_claim = c:POL
+        }
+		s:STATE_CHERNIHIV = {
+            add_claim = c:POL
+        }
+
+		s:STATE_MINSK = {
+            add_claim = c:RUS
+        }
+		s:STATE_VITEBSK = {
+            add_claim = c:RUS
+        }
+		s:STATE_MOGILEV = {
+            add_claim = c:RUS
+        }
+		s:STATE_KIEV = {
+            add_claim = c:RUS
+        }
+
+		set_variable = War_against_Russia
+	}
+
+    option = { # "PEACE in Our Time." -Chamberlain
+		name = gmc_polish_events.21.b
+        
+        ai_chance = {
+			base = 2
+		}
+		c:RUS ?= {
+				trigger_event = { id = gmc_polish_events.22 }
+		}
+		show_as_tooltip = {
+			s:STATE_CHERSON = {
+            region_state:RUS = {
+				set_state_owner = c:POL
+                set_state_type = incorporated
+            	}
+        	}
+			s:STATE_BESSARABIA = {
+            region_state:RUS = {
+				set_state_owner = c:POL
+                set_state_type = incorporated
+           		}
+        	}
+			s:STATE_DOBRUDJA = {
+            region_state:RUS = {
+				set_state_owner = c:POL
+                set_state_type = incorporated
+           		}
+        	}
+
+				s:STATE_GREATER_POLAND = {
+           			remove_claim = c:RUS
+        		}
+				s:STATE_VOLHYNIA = {
+           			remove_claim = c:RUS
+        		}
+				s:STATE_BREST = {
+           			remove_claim = c:RUS
+        		}
+				s:STATE_MAZOVIA = {
+           			remove_claim = c:RUS
+        		}
+				s:STATE_LESSER_POLAND = {
+           			remove_claim = c:RUS
+        		}
+				s:STATE_VILNIUS = {
+           			remove_claim = c:RUS
+        		}
+				s:STATE_KAUNAS = {
+           			remove_claim = c:RUS
+        		}
+
+			c:POL ?= {
+			join_power_bloc = c:RUS
+			}
+		}
+	}
+}
+
+gmc_polish_events.22 = { # "PEACE in Our Time." -Chamberlain
+	type = country_event
+    placement = root
+
+	title = gmc_polish_events.22.t
+	desc = gmc_polish_events.22.d
+	flavor = gmc_polish_events.22.f
+
+	event_image = {
+		video = "middleeast_courtroom_upheaval"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_fire.dds"
+
+	duration = 3
+
+	trigger = {
+
+	}
+
+	immediate = {
+		s:STATE_CHERSON = {
+            region_state:RUS = {
+            }
+        }
+		s:STATE_BESSARABIA = {
+            region_state:RUS = {
+            }
+        }
+		s:STATE_DOBRUDJA = {
+            region_state:RUS = {
+            }
+        }		
+	}
+
+	option = { # War!!!!
+		name = gmc_polish_events.22.a
+
+        ai_chance = {
+			base = 8
+		}
+		hidden_effect ={
+			c:POL ?= {
+				set_variable = War_against_Russia
+			}
+		}
+
+		s:STATE_KURSK = {
+            add_claim = c:POL
+        }
+		s:STATE_MOSCOW = {
+            add_claim = c:POL
+        }
+		s:STATE_INGRIA = {
+            add_claim = c:POL
+        }
+		s:STATE_KHARKOV = {
+            add_claim = c:POL
+        }
+		s:STATE_SMOLENSK = {
+            add_claim = c:POL
+        }
+		s:STATE_PSKOV = {
+            add_claim = c:POL
+        }
+		s:STATE_ORYOL = {
+            add_claim = c:POL
+        }
+		s:STATE_CHERNIHIV = {
+            add_claim = c:POL
+        }
+
+		s:STATE_MINSK = {
+            add_claim = c:RUS
+        }
+		s:STATE_VITEBSK = {
+            add_claim = c:RUS
+        }
+		s:STATE_MOGILEV = {
+            add_claim = c:RUS
+        }
+		s:STATE_KIEV = {
+            add_claim = c:RUS
+        }
+	}
+
+    option = { # PEACE
+		name = gmc_polish_events.22.b
+        
+        default_option = yes
+        ai_chance = {
+			base = 2
+		}
+
+		s:STATE_CHERSON = {
+            region_state:RUS = {
+				set_state_owner = c:POL
+                set_state_type = incorporated
+            }
+        }
+		s:STATE_BESSARABIA = {
+            region_state:RUS = {
+				set_state_owner = c:POL
+                set_state_type = incorporated
+            }
+        }
+		s:STATE_DOBRUDJA = {
+            region_state:RUS = {
+				set_state_owner = c:POL
+                set_state_type = incorporated
+            }
+        }
+
+			s:STATE_GREATER_POLAND = {
+           		remove_claim = c:RUS
+        	}
+			s:STATE_VOLHYNIA = {
+           		remove_claim = c:RUS
+        	}
+			s:STATE_BREST = {
+           		remove_claim = c:RUS
+        	}
+			s:STATE_MAZOVIA = {
+        		remove_claim = c:RUS
+        	}
+			s:STATE_LESSER_POLAND = {
+        		remove_claim = c:RUS
+        	}
+			s:STATE_VILNIUS = {
+        		remove_claim = c:RUS
+        	}
+			s:STATE_KAUNAS = {
+        		remove_claim = c:RUS
+        	}
+
+		c:POL ?= {
+			join_power_bloc = c:RUS
+		}
+	}
+}
+
+gmc_polish_events.23 = { # downfall of Russia / independent
+	type = country_event
+    placement = root
+
+	title = gmc_polish_events.23.t
+	desc = gmc_polish_events.23.d
+	flavor = gmc_polish_events.23.f
+
+	event_image = {
+		video = "middleeast_courtroom_upheaval"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_fire.dds"
+
+	duration = 3
+
+	trigger = {
+
+	}
+
+	immediate = {		
+	}
+
+    option = { # downfall of Russia / independent
+		name = gmc_polish_events.23.a
+        
+        default_option = yes
+        ai_chance = {
+			base = 8
+		}
+
+		annex = c:RUS
+		c:GBR ?= {
+			annex = c:ALK
+		}
+
+		add_primary_culture = cu:russian
+
+		c:KZH ?= {
+			make_independent = yes	
+		}
+		c:OZH ?= {
+			make_independent = yes	
+		}
+		c:UZH ?= {
+			make_independent = yes	
+		}
+
+		s:STATE_DOBRUDJA = {
+            region_state:POL = {
+				set_state_owner = c:TUR
+                set_state_type = incorporated
+            }
+        }
+		s:STATE_KARS = {
+            region_state:POL = {
+				set_state_owner = c:TUR
+                set_state_type = incorporated
+            }
+        }
+
+		s:STATE_ARMENIA = {
+            region_state:POL = {
+				set_state_owner = c:PER
+                set_state_type = incorporated
+            }
+        }
+		s:STATE_ELIZAVETPOL = {
+            region_state:POL = {
+				set_state_owner = c:PER
+                set_state_type = incorporated
+            }
+        }
+		s:STATE_AZERBAIJAN = {
+            region_state:POL = {
+				set_state_owner = c:PER
+                set_state_type = incorporated
+            }
+        }
+
+		s:STATE_KUBAN = {
+            region_state:POL = {
+				set_state_owner = c:CIR
+                set_state_type = incorporated
+            }
+        }
+		s:STATE_STAVROPOL = {
+            region_state:POL = {
+				set_state_owner = c:CIR
+                set_state_type = incorporated
+            }
+        }
+
+		s:STATE_NORTH_CAUCASUS = {
+            region_state:POL = {
+				set_state_owner = c:CHC
+                set_state_type = incorporated
+            }
+        }
+		s:STATE_DAGESTAN = {
+            region_state:POL = {
+				set_state_owner = c:CHC
+                set_state_type = incorporated
+            }
+        }
+
+		s:STATE_KOLA = {
+            region_state:POL = {
+				set_state_owner = c:FIN
+                set_state_type = incorporated
+            }
+        }
+		s:STATE_EAST_KARELIA = {
+            region_state:POL = {
+				set_state_owner = c:FIN
+                set_state_type = incorporated
+            }
+        }
+
+		create_country = {
+			tag = GEO
+			origin = root
+			state = s:STATE_GREATER_CAUCASUS.region_state:POL
+		}
+
+		create_country = {
+			tag = SIB
+			origin = root
+			state = s:STATE_URAL.region_state:POL
+
+			on_created = { 
+				s:STATE_AKMOLINSK = {
+            		region_state:POL = {
+						set_state_owner = c:SIB
+                		set_state_type = incorporated
+            		}
+        		}
+				s:STATE_CHELYABINSK = {
+            		region_state:POL = {
+						set_state_owner = c:SIB
+                		set_state_type = incorporated
+            		}
+        		}
+				s:STATE_TOMSK = {
+            		region_state:POL = {
+						set_state_owner = c:SIB
+                		set_state_type = incorporated
+            		}
+        		}
+				s:STATE_TOBOLSK = {
+            		region_state:POL = {
+						set_state_owner = c:SIB
+                		set_state_type = incorporated
+            		}
+        		}
+				s:STATE_UPPER_YENISEYSK = {
+            		region_state:POL = {
+						set_state_owner = c:SIB
+                		set_state_type = incorporated
+            		}
+        		}
+				s:STATE_OB = {
+            		region_state:POL = {
+						set_state_owner = c:SIB
+                		set_state_type = incorporated
+            		}
+        		}
+				s:STATE_CHUKOTKA = {
+            		region_state:POL = {
+						set_state_owner = c:SIB
+                		set_state_type = incorporated
+            		}
+        		}
+				s:STATE_KAMCHATKA = {
+            		region_state:POL = {
+						set_state_owner = c:SIB
+                		set_state_type = incorporated
+            		}
+        		}
+				s:STATE_OKHOTSK = {
+            		region_state:POL = {
+						set_state_owner = c:SIB
+                		set_state_type = incorporated
+            		}
+        		}
+				s:STATE_YAKUTSK = {
+            		region_state:POL = {
+						set_state_owner = c:SIB
+                		set_state_type = incorporated
+            		}
+        		}
+				s:STATE_TRANS_BAIKAL = {
+            		region_state:POL = {
+						set_state_owner = c:SIB
+                		set_state_type = incorporated
+            		}
+        		}
+				s:STATE_IRKUTSK = {
+            		region_state:POL = {
+						set_state_owner = c:SIB
+                		set_state_type = incorporated
+            		}
+        		}
+				s:STATE_SURGUT = {
+            		region_state:POL = {
+						set_state_owner = c:SIB
+                		set_state_type = incorporated
+            		}
+        		}
+				s:STATE_KRASNOYARSK = {
+            		region_state:POL = {
+						set_state_owner = c:SIB
+                		set_state_type = incorporated
+            		}
+        		}
+				s:STATE_BURYATIA = {
+            		region_state:POL = {
+						set_state_owner = c:SIB
+                		set_state_type = incorporated
+            		}
+        		}
+				s:STATE_KOLYMA = {
+            		region_state:POL = {
+						set_state_owner = c:SIB
+                		set_state_type = incorporated
+            		}
+        		}
+
+				c:POL ?= {
+					create_diplomatic_pact = {
+						country = c:SIB
+						type = puppet
+					}
+				}
+			}
+		}
+	}
+}
+
+gmc_polish_events.24 = { # downfall of Russia / dependent
+	type = country_event
+    placement = root
+
+	title = gmc_polish_events.24.t
+	desc = gmc_polish_events.24.d
+	flavor = gmc_polish_events.24.f
+
+	event_image = {
+		video = "middleeast_courtroom_upheaval"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_fire.dds"
+
+	duration = 3
+
+	trigger = {
+
+	}
+
+	immediate = {
+		c:RUS ?= {
+			ruler = {
+				save_scope_as = Tzar_scope
+			}
+		}		
+	}
+
+    option = { # downfall of Russia / dependent
+		name = gmc_polish_events.24.a
+        
+        default_option = yes
+        ai_chance = {
+			base = 8
+		}
+
+		c:GBR ?= {
+			annex = c:ALK
+		}
+
+		add_primary_culture = cu:russian
+		
+		c:RUS ?= {
+			ruler = {
+				kill_character = yes
+			}
+
+			activate_law = law_type:law_presidential_republic
+			activate_law = law_type:law_professional_army
+			activate_law = law_type:law_appointed_bureaucrats
+			activate_law = law_type:law_freedom_of_conscience
+			activate_law = law_type:law_homesteading
+			activate_law = law_type:law_interventionism
+			activate_law = law_type:law_dedicated_police
+			activate_law = law_type:law_per_capita_based_taxation
+			activate_law = law_type:law_protectionism
+
+		}
+
+		c:KZH ?= {
+			make_independent = yes	
+		}
+		c:OZH ?= {
+			make_independent = yes	
+		}
+		c:UZH ?= {
+			make_independent = yes	
+		}
+
+		s:STATE_DOBRUDJA = {
+            region_state:RUS = {
+				set_state_owner = c:TUR
+                set_state_type = incorporated
+            }
+        }
+		s:STATE_KARS = {
+            region_state:RUS = {
+				set_state_owner = c:TUR
+                set_state_type = incorporated
+            }
+        }
+
+		s:STATE_ARMENIA = {
+            region_state:RUS = {
+				set_state_owner = c:PER
+                set_state_type = incorporated
+            }
+        }
+		s:STATE_ELIZAVETPOL = {
+            region_state:RUS = {
+				set_state_owner = c:PER
+                set_state_type = incorporated
+            }
+        }
+		s:STATE_AZERBAIJAN = {
+            region_state:RUS = {
+				set_state_owner = c:PER
+                set_state_type = incorporated
+            }
+        }
+
+		s:STATE_KUBAN = {
+            region_state:RUS = {
+				set_state_owner = c:CIR
+                set_state_type = incorporated
+            }
+        }
+		s:STATE_STAVROPOL = {
+            region_state:RUS = {
+				set_state_owner = c:CIR
+                set_state_type = incorporated
+            }
+        }
+
+		s:STATE_NORTH_CAUCASUS = {
+            region_state:RUS = {
+				set_state_owner = c:CHC
+                set_state_type = incorporated
+            }
+        }
+		s:STATE_DAGESTAN = {
+            region_state:RUS = {
+				set_state_owner = c:CHC
+                set_state_type = incorporated
+            }
+        }
+
+		s:STATE_KOLA = {
+            region_state:RUS = {
+				set_state_owner = c:FIN
+                set_state_type = incorporated
+            }
+        }
+		s:STATE_EAST_KARELIA = {
+            region_state:RUS = {
+				set_state_owner = c:FIN
+                set_state_type = incorporated
+            }
+        }
+
+		s:STATE_CHERNIHIV = {
+            region_state:RUS = {
+				set_state_owner = c:POL
+                set_state_type = incorporated
+            }
+        }
+		s:STATE_ORYOL = {
+            region_state:RUS = {
+				set_state_owner = c:POL
+                set_state_type = incorporated
+            }
+        }
+		s:STATE_PSKOV = {
+            region_state:RUS = {
+				set_state_owner = c:POL
+                set_state_type = incorporated
+            }
+        }
+		s:STATE_NOVGOROD = {
+            region_state:RUS = {
+				set_state_owner = c:POL
+                set_state_type = incorporated
+            }
+        }
+		s:STATE_TVER = {
+            region_state:RUS = {
+				set_state_owner = c:POL
+                set_state_type = incorporated
+            }
+        }
+		s:STATE_TAURIDA = {
+            region_state:RUS = {
+				set_state_owner = c:POL
+                set_state_type = incorporated
+            }
+        }
+		s:STATE_CHERSON = {
+            region_state:RUS = {
+				set_state_owner = c:POL
+                set_state_type = incorporated
+            }
+        }
+		s:STATE_BESSARABIA = {
+            region_state:RUS = {
+				set_state_owner = c:POL
+                set_state_type = incorporated
+            }
+        }
+		s:STATE_CRIMEA = {
+            region_state:RUS = {
+				set_state_owner = c:POL
+                set_state_type = incorporated
+            }
+        }
+		s:STATE_SMOLENSK = {
+            region_state:RUS = {
+				set_state_owner = c:POL
+                set_state_type = incorporated
+            }
+        }
+
+		create_country = {
+			tag = GEO
+			origin = root
+			state = s:STATE_GREATER_CAUCASUS.region_state:RUS
+		}
+	}
+}

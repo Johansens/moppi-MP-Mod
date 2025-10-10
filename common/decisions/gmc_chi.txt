@@ -1,0 +1,31 @@
+﻿china_state_tax_bureaucrats_1 = {
+	is_shown = {
+		exists = c:CHI
+		c:CHI = ROOT
+		is_player = yes
+		hidden_trigger = {
+			Not = {has_variable = tax_chi}
+		}
+	}
+
+	possible = {
+		hidden_trigger = {
+			c:CHI ?= ROOT
+		}
+
+		Not = {	
+			c:CHI ?= {
+				has_variable = tax_chi
+			}
+		}
+	
+}
+	when_taken = {
+		add_modifier = china_state_tax_bureaucrats_1
+		set_variable = tax_chi
+	}
+
+	ai_chance = {
+		base = -100		
+	}
+}

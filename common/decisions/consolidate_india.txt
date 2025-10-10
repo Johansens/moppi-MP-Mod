@@ -1,0 +1,74 @@
+﻿bic_consolidate_india = {
+	is_shown = {
+		exists = c:BIC
+		c:BIC ?= ROOT
+		hidden_trigger = {
+			Not = {has_variable = consolidate_india_var}
+		}
+	}
+
+	possible = {
+		c:BIC ?= ROOT
+		game_date >= 1836.2.2
+
+	}
+
+	when_taken = {
+		set_variable = { name = consolidate_india_var value = 1 }
+		c:PTN = { 
+			annex = c:NAR
+			annex = c:MYB
+			annex = c:JEY 
+			}
+		c:NAG = {
+			annex = c:BAS
+			}
+		c:BAG = {
+			annex = c:BUN
+			annex = c:JHN
+			annex = c:SUR
+		}
+		c:TRA = {
+			annex = c:COC
+			annex = c:PUD
+		}
+		c:HYD = {
+			annex = c:KNO
+		}
+		c:SAT = {
+			annex = c:KHP
+		}
+		c:ASM = {
+			annex = c:MNP
+			annex = c:COO
+		}
+		c:PTA = {
+			annex = c:GAR
+		}
+		c:JOD = {
+			annex = c:JAS
+			annex = c:BIK
+			annex = c:JAI
+			annex = c:ALW
+			annex = c:KOT
+			annex = c:MEW
+		}
+		c:GWA = {
+			annex = c:IND
+			annex = c:BHO
+		}
+		c:KUT = {
+			annex = c:BER
+			annex = c:NAW
+			annex = c:JUN
+			annex = c:BHV
+			annex = c:IDA
+			annex = c:DHA
+			annex = c:PLP
+		}
+	}
+
+	ai_chance = {
+		value = 100		
+	}
+}

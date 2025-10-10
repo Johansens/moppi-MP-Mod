@@ -1,0 +1,150 @@
+﻿seek_british_aid = {
+	is_shown = {
+		exists = c:POL
+		c:POL = ROOT
+		is_player = yes
+		hidden_trigger = {
+			Not = {has_variable = british_aid_taken}
+		}
+	}
+
+	possible = {
+		hidden_trigger = {
+			c:POL ?= ROOT
+		}
+
+		c:GBR ?= {
+				has_variable = poland_aid
+			}
+
+		Not = {	
+			c:POL ?= {
+				has_variable = aid_talks
+			}
+		}
+	
+}
+	when_taken = {
+
+		     c:GBR ?= {
+				trigger_event = { id = gmc_polish_events.3 }
+			}
+
+		set_variable = british_aid_taken
+		set_variable = aid_talks
+	}
+
+	ai_chance = {
+		base = -100		
+	}
+}
+
+seek_prussia_aid = {
+	is_shown = {
+		exists = c:POL
+		c:POL = ROOT
+		is_player = yes
+		hidden_trigger = {
+			Not = {has_variable = prussia_aid_taken}
+		}
+	}
+
+	possible = {
+		hidden_trigger = {
+			c:POL ?= ROOT
+		}
+		c:PRU ?= {
+				has_variable = poland_aid
+		}
+		hidden_trigger = { 
+			Not = {has_variable = aid_talks}
+		}
+	}
+
+	when_taken = {
+
+		     c:PRU ?= {
+				trigger_event = { id = gmc_polish_events.9 }
+			}
+
+		set_variable = prussia_aid_taken
+		set_variable = aid_talks
+	}
+
+	ai_chance = {
+		base = 	-100		
+	}
+}
+
+seek_france_aid = {
+	is_shown = {
+		exists = c:POL
+		c:POL = ROOT
+		is_player = yes
+		hidden_trigger = {
+			Not = {has_variable = france_aid_taken}
+		}
+	}
+	possible = {
+		hidden_trigger = {
+			c:POL ?= ROOT
+		}
+		c:FRA ?= {
+			has_variable = poland_aid
+		}
+		hidden_trigger = { 
+			Not = {has_variable = aid_talks}
+		}
+	}
+
+	when_taken = {
+
+		     c:FRA ?= {
+				trigger_event = { id = gmc_polish_events.13 }
+			}
+
+		set_variable = france_aid_taken
+		set_variable = aid_talks
+	}
+
+	ai_chance = {
+		base = 	-100		
+	}
+}
+
+seek_austria_aid = {
+	is_shown = {
+		exists = c:POL
+		c:POL = ROOT
+		is_player = yes
+		hidden_trigger = {
+			Not = {has_variable = austria_aid_taken}
+		}
+	}
+
+	possible = {
+		hidden_trigger = {
+			c:POL ?= ROOT
+		}
+		c:AUS ?= {
+			has_variable = poland_aid
+		}
+		hidden_trigger = { 
+			Not = {has_variable = aid_talks}
+		}
+	}
+
+	when_taken = {
+
+		    c:AUS ?= {
+				trigger_event = { id = gmc_polish_events.17 }
+			}
+
+		set_variable = austria_aid_taken
+		set_variable = aid_talks
+	}
+
+	ai_chance = {
+		base = 	-100		
+	}
+}

@@ -1,0 +1,404 @@
+﻿namespace = return_money
+
+return_money.1 = {
+	type = country_event
+	placement = ROOT
+
+	trigger = {
+		exists = scope:target_country
+	}
+
+	title = return_money.1.t
+	desc = return_money.1.d
+
+	event_image = {
+		video = "gfx/event_pictures/unspecific_signed_contract.bk2"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/unspecific/signed_contract"
+
+	icon = "gfx/interface/icons/event_icons/event_default.dds"
+
+	duration = 1
+
+	option = {
+		name = return_money.1.a
+
+		add_treasury = 20000
+
+		default_option = yes
+	}
+}
+
+return_money.2 = {
+	type = country_event
+	placement = ROOT
+
+	trigger = {
+		exists = scope:target_country
+	}
+
+	title = return_money.2.t
+	desc = return_money.2.d
+
+	event_image = {
+		video = "gfx/event_pictures/unspecific_signed_contract.bk2"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/unspecific/signed_contract"
+
+	icon = "gfx/interface/icons/event_icons/event_default.dds"
+
+	duration = 1
+
+	option = {
+		name = return_money.2.a
+
+		add_treasury = 50000
+		
+		default_option = yes
+	}
+}
+
+return_money.3 = {
+	type = country_event
+	placement = ROOT
+
+	trigger = {
+		exists = scope:target_country
+	}
+
+	title = return_money.3.t
+	desc = return_money.3.d
+
+	event_image = {
+		video = "gfx/event_pictures/unspecific_signed_contract.bk2"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/unspecific/signed_contract"
+
+	icon = "gfx/interface/icons/event_icons/event_default.dds"
+
+	duration = 1
+
+	option = {
+		name = return_money.3.a
+
+		add_treasury = 100000
+		
+		default_option = yes
+	}
+}
+
+return_money.4 = {
+	type = country_event
+	placement = ROOT
+
+	trigger = {
+		exists = scope:target_country
+	}
+
+	title = return_money.4.t
+	desc = return_money.4.d
+
+	event_image = {
+		video = "gfx/event_pictures/unspecific_signed_contract.bk2"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/unspecific/signed_contract"
+
+	icon = "gfx/interface/icons/event_icons/event_default.dds"
+
+	duration = 1
+
+	option = {
+		name = return_money.4.a
+
+		add_treasury = 250000
+		
+		default_option = yes
+	}
+}
+
+return_money.5 = {
+	type = country_event
+	placement = ROOT
+
+	trigger = {
+		exists = scope:target_country
+	}
+
+	title = return_money.5.t
+	desc = return_money.5.d
+
+	event_image = {
+		video = "gfx/event_pictures/unspecific_signed_contract.bk2"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/unspecific/signed_contract"
+
+	icon = "gfx/interface/icons/event_icons/event_default.dds"
+
+	duration = 1
+
+	option = {
+		name = return_money.5.a
+
+		add_treasury = 350000
+		
+		default_option = yes
+	}
+}
+
+return_money.6 = {
+	type = country_event
+	placement = ROOT
+
+	trigger = {
+		exists = scope:target_country
+	}
+
+	title = return_money.6.t
+	desc = return_money.6.d
+
+	event_image = {
+		video = "gfx/event_pictures/unspecific_signed_contract.bk2"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/unspecific/signed_contract"
+
+	icon = "gfx/interface/icons/event_icons/event_default.dds"
+
+	duration = 1
+
+	option = {
+		name = return_money.6.a
+
+		add_treasury = 500000
+		
+		default_option = yes
+	}
+}
+
+return_money.7 = {
+	type = country_event
+	placement = ROOT
+
+	trigger = {
+		exists = scope:target_country
+	}
+
+	title = return_money.7.t
+	desc = return_money.7.d
+
+	event_image = {
+		video = "gfx/event_pictures/unspecific_signed_contract.bk2"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/unspecific/signed_contract"
+
+	icon = "gfx/interface/icons/event_icons/event_default.dds"
+
+	duration = 1
+
+	option = {
+		name = return_money.7.a
+
+		add_treasury = 750000
+		
+		default_option = yes
+	}
+}
+
+return_money.8 = {
+	type = country_event
+	placement = ROOT
+
+	trigger = {
+		exists = scope:target_country
+	}
+
+	title = return_money.8.t
+	desc = return_money.8.d
+
+	event_image = {
+		video = "gfx/event_pictures/unspecific_signed_contract.bk2"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/unspecific/signed_contract"
+
+	icon = "gfx/interface/icons/event_icons/event_default.dds"
+
+	duration = 1
+
+	option = {
+		name = return_money.8.a
+
+		add_treasury = 1000000
+		
+		default_option = yes
+	}
+}
+
+return_money.9 = {
+	type = country_event
+	placement = ROOT
+
+	trigger = {
+		exists = scope:target_country
+	}
+
+	title = return_money.9.t
+	desc = return_money.9.d
+
+	event_image = {
+		video = "gfx/event_pictures/unspecific_signed_contract.bk2"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/unspecific/signed_contract"
+
+	icon = "gfx/interface/icons/event_icons/event_default.dds"
+
+	duration = 1
+
+	option = {
+		name = return_money.9.a
+
+		add_treasury = 1500000
+		
+		default_option = yes
+	}
+}
+
+return_money.10 = {
+	type = country_event
+	placement = ROOT
+
+	trigger = {
+		exists = scope:target_country
+	}
+
+	title = return_money.10.t
+	desc = return_money.10.d
+
+	event_image = {
+		video = "gfx/event_pictures/unspecific_signed_contract.bk2"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/unspecific/signed_contract"
+
+	icon = "gfx/interface/icons/event_icons/event_default.dds"
+
+	duration = 1
+
+	option = {
+		name = return_money.10.a
+
+		add_treasury = 2500000
+		
+		default_option = yes
+	}
+}
+
+return_money.11 = {
+	type = country_event
+	placement = ROOT
+
+	trigger = {
+		exists = scope:target_country
+	}
+
+	title = return_money.11.t
+	desc = return_money.11.d
+
+	event_image = {
+		video = "gfx/event_pictures/unspecific_signed_contract.bk2"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/unspecific/signed_contract"
+
+	icon = "gfx/interface/icons/event_icons/event_default.dds"
+
+	duration = 1
+
+	option = {
+		name = return_money.11.a
+
+		add_treasury = 5000000
+		
+		default_option = yes
+	}
+}
+
+return_money.12 = {
+	type = country_event
+	placement = ROOT
+
+	trigger = {
+		exists = scope:target_country
+	}
+
+	title = return_money.12.t
+	desc = return_money.12.d
+
+	event_image = {
+		video = "gfx/event_pictures/unspecific_signed_contract.bk2"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/unspecific/signed_contract"
+
+	icon = "gfx/interface/icons/event_icons/event_default.dds"
+
+	duration = 1
+
+	option = {
+		name = return_money.12.a
+
+		add_treasury = 7500000
+		
+		default_option = yes
+	}
+}
+
+return_money.13 = {
+	type = country_event
+	placement = ROOT
+
+	trigger = {
+		exists = scope:target_country
+	}
+
+	title = return_money.13.t
+	desc = return_money.13.d
+
+	event_image = {
+		video = "gfx/event_pictures/unspecific_signed_contract.bk2"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/unspecific/signed_contract"
+
+	icon = "gfx/interface/icons/event_icons/event_default.dds"
+
+	duration = 1
+
+	option = {
+		name = return_money.13.a
+
+		add_treasury = 10000000
+		
+		default_option = yes
+	}
+}

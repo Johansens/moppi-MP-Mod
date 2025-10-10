@@ -1,0 +1,47 @@
+﻿transfer_money = {
+	requires_approval = yes
+	groups = {
+		general
+	}
+	should_notify_third_parties = no
+	
+	potential = { 
+		scope:target_country = {
+			NOT = { is_country_type = decentralized }
+			is_revolutionary = no
+		}
+	}
+
+	selectable = {
+		NOT = { is_country_type = decentralized }
+		is_revolutionary = no
+	}
+	
+	possible = {
+		NOT = {
+			is_country_type = decentralized
+			has_variable = transferring_money
+		}
+		scope:target_country = {
+			NOT = { is_country_type = decentralized }
+		}
+	}
+
+	accept_effect = {
+		trigger_event = { id = transfer_money.1 popup = yes }
+		hidden_effect = {
+			set_variable = {
+				name = transferring_money
+			}
+		}
+	}
+	
+	ai = {
+		accept_score = {
+			value = 10
+		}
+		will_propose = { 
+			always = no
+		}
+	}
+}

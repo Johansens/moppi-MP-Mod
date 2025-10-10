@@ -1,0 +1,46 @@
+﻿### ERA 4
+
+trench_works = {
+	# Unlocks Officer Training PM in Barracks
+	# Unlocks Barbed Wire Fences in Livestock Ranches
+	# Unlocks Trench Infantry
+	era = era_4
+	texture = "gfx/interface/icons/invention_icons/trench_works.dds"
+	category = military
+
+	modifier = {
+		# defensive bonus, either to the army or ideally to fortifications
+		unit_army_defense_mult = 0.05
+	}
+
+	unlocking_technologies = {
+		general_staff
+		electric_telegraph
+	}
+
+	ai_weight = {
+		value = 2 # important for everyone
+	}
+}
+
+defense_in_depth = {
+	# Increases defense
+	# Unlock Delay Order?
+	era = era_4
+	texture = "gfx/interface/icons/invention_icons/defense_in_depth.dds"
+	category = military
+
+	modifier = {
+		# defensive bonus, either to the army or ideally to fortifications
+		unit_army_defense_mult = 0.05
+	}
+
+	unlocking_technologies = {
+		trench_works
+		handcranked_machine_gun
+	}
+
+	ai_weight = {
+		value = 1
+	}
+}

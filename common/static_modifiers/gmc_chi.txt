@@ -1,0 +1,5 @@
+﻿china_state_tax_bureaucrats_1 = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
+
+	state_tax_capacity_mult = 0.25
+}

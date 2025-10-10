@@ -1,0 +1,126 @@
+﻿# ROOT is the leader of the power bloc.
+# scope:target is the target country.
+# scope:has_interest is whether the power bloc has interest on the target country.
+# scope:has_capital_interest is whether the power bloc has interest on the capital of the target country.
+# No randomness is allowed in this script value
+power_bloc_mandate_progress_by_rank = {
+	value = {
+		value = 40
+			if = {
+				limit = { 
+					power_bloc_rank = 1
+				}
+				subtract = 5
+			}
+			if = {
+				limit = { 
+					power_bloc_rank = 2
+				}
+				subtract = 10
+			}
+			if = {
+				limit = { 
+					power_bloc_rank = 3
+				}
+				subtract = 15
+			}
+			if = {
+				limit = { 
+					power_bloc_rank = 4
+				}
+				subtract = 20
+			}
+			if = {
+				limit = { 
+					power_bloc_rank >= 5
+				}
+				subtract = 25
+			}
+		min = 15
+		desc = "POWER_BLOC_MANDATE_PROGRESS_BASE"
+	}
+
+	if = {
+		limit = {
+			power_bloc_great_power_non_leader_members > 0
+			power_bloc_mandate_progress_per_great_power_member != 0
+		}
+		add = {
+			value = power_bloc_great_power_non_leader_members
+			multiply = power_bloc_mandate_progress_per_great_power_member
+			desc = "POWER_BLOC_MANDATE_PROGRESS_FROM_GREAT_POWER_MEMBERS"
+		}
+	}
+
+	if = {
+		limit = {
+			power_bloc_major_power_non_leader_members > 0
+			power_bloc_mandate_progress_per_major_power_member != 0
+		}
+		add = {
+			value = power_bloc_major_power_non_leader_members
+			multiply = power_bloc_mandate_progress_per_major_power_member
+			desc = "POWER_BLOC_MANDATE_PROGRESS_FROM_MAJOR_POWER_MEMBERS"
+		}
+	}
+
+	if = {
+		limit = {
+			power_bloc_minor_power_non_leader_members > 0
+			power_bloc_mandate_progress_per_minor_power_member != 0
+		}
+		add = {
+			value = power_bloc_minor_power_non_leader_members
+			multiply = power_bloc_mandate_progress_per_minor_power_member
+			desc = "POWER_BLOC_MANDATE_PROGRESS_FROM_MINOR_POWER_MEMBERS"
+		}
+	}
+
+	if = {
+		limit = {
+			power_bloc_unrecognized_major_power_non_leader_members > 0
+			power_bloc_mandate_progress_per_unrecognized_major_power_member != 0
+		}
+		add = {
+			value = power_bloc_unrecognized_major_power_non_leader_members
+			multiply = power_bloc_mandate_progress_per_unrecognized_major_power_member
+			desc = "POWER_BLOC_MANDATE_PROGRESS_FROM_UNRECOGNIZED_MAJOR_POWER_MEMBERS"
+		}
+	}
+
+	if = {
+		limit = {
+			power_bloc_unrecognized_regional_power_non_leader_members > 0
+			power_bloc_mandate_progress_per_unrecognized_regional_power_member != 0
+		}
+		add = {
+			value = power_bloc_unrecognized_regional_power_non_leader_members
+			multiply = power_bloc_mandate_progress_per_unrecognized_regional_power_member
+			desc = "POWER_BLOC_MANDATE_PROGRESS_FROM_UNRECOGNIZED_REGIONAL_POWER_MEMBERS"
+		}
+	}
+
+	if = {
+		limit = {
+			power_bloc_unrecognized_power_non_leader_members > 0
+			power_bloc_mandate_progress_per_unrecognized_power_member != 0
+		}
+		add = {
+			value = power_bloc_unrecognized_power_non_leader_members
+			multiply = power_bloc_mandate_progress_per_unrecognized_power_member
+			desc = "POWER_BLOC_MANDATE_PROGRESS_FROM_UNRECOGNIZED_POWER_MEMBERS"
+		}
+	}
+
+	if = {
+		limit = {
+			power_bloc_insignificant_power_non_leader_members > 0
+			power_bloc_mandate_progress_per_insignificant_power_member != 0
+		}
+		add = {
+			value = power_bloc_insignificant_power_non_leader_members
+			multiply = power_bloc_mandate_progress_per_insignificant_power_member
+			desc = "POWER_BLOC_MANDATE_PROGRESS_FROM_INSIGNIFICANT_POWER_MEMBERS"
+		}
+	}
+}

@@ -1,0 +1,30 @@
+﻿# goods types, organized by category
+
+# prestige_factor							Base prestige for occupying the rank MIN_PRESTIGE_AWARD spot on the goods production leaderboard. x2 awarded for every rank above the minimum.
+
+############
+# MILITARY #
+############
+
+##########
+# STAPLE #
+##########
+
+electricity = {
+	texture = "gfx/interface/icons/goods_icons/electricity.dds"
+	cost = 30
+	category = staple
+	#Local = yes	##GMC: Removed in MOD with #
+
+	traded_quantity = 5 # 250
+
+	consumption_tax_cost = 200
+}
+
+##############
+# INDUSTRIAL #
+##############
+
+##########
+# LUXURY #
+##########

@@ -3,7 +3,7 @@
 krakatoa.1 = { #krakatoa erupts and you're the owner
 	type = country_event
 	placement = scope:krakatoa_state
-	
+
 	event_image = {
 		video = "unspecific_devastation"
 	}
@@ -16,57 +16,21 @@ krakatoa.1 = { #krakatoa erupts and you're the owner
 	desc = krakatoa.1.d
 	flavor = krakatoa.1.f
 
+	#Cooldown handled by variable
+	# deactivated in GMC Mod
+
 	trigger = {
 		game_date >= 1850.1.1
-		NOT = { has_variable = mega_eruption }
+		has_variable = mega_eruption 
 		NOT = { global_var:number_of_mega_eruptions > 3 }
-		NOT = { has_global_variable = krakatoa_var }
+		has_global_variable = krakatoa_var 
 		any_scope_state = {
 			state_region = s:STATE_WEST_JAVA
 		}
 	}
 
-	immediate = {	
-		set_global_variable = krakatoa_var
-		random_scope_state = {
-			limit = {
-				state_region = s:STATE_WEST_JAVA
-			}
-			save_scope_as = krakatoa_state
-			owner = {
-				save_scope_as = krakatoa_country
-				set_variable = krakatoa_country_var
-			}
-		}
-		every_country = {
-			limit = {
-				is_player = yes
-				NOT = { has_variable = krakatoa_country_var }
-			}
-			trigger_event = { id = krakatoa.5 } #notification event
-		}
-		every_country = {
-			limit = {
-				is_player = yes
-				any_scope_state = {
-					is_coastal = yes
-					OR = {
-						region = sr:region_ethiopia
-						region = sr:region_indochina
-						region = sr:region_indonesia
-						region = sr:region_south_china
-						region = sr:region_japan
-						region = sr:region_oceania
-						region = sr:region_zanj
-						region = sr:region_southern_africa
-						region = sr:region_bombay
-						region = sr:region_madras
-						region = sr:region_bengal
-					}
-				}
-			}
-			trigger_event = { id = krakatoa.2 } #tsunamis
-		}
+	immediate = {
+
 	}
 
 	duration = 3
@@ -74,51 +38,17 @@ krakatoa.1 = { #krakatoa erupts and you're the owner
 	option = { #help our people
 		name = krakatoa.1.a
 		default_option = yes
-		scope:krakatoa_state = {
-			add_modifier = {
-				name = krakatoa_eruption_help_modifier
-				days = short_modifier_time
-			}
-		}
-		scope:krakatoa_state.state_region = {
-			add_devastation = 80
-		}
-		add_modifier = {
-			name = krakatoa_cost_modifier
-			days = short_modifier_time
-			multiplier = money_amount_multiplier_small
-		}
-		add_journal_entry = {	
-			type = je_krakatoa
-		}
 	}
-	
+
 	option = { #nothing we can do
 		name = krakatoa.1.b
-		scope:krakatoa_state = {
-			add_modifier = {
-				name = krakatoa_eruption_no_help_modifier
-				days = short_modifier_time
-			}
-		}
-		scope:krakatoa_state.state_region = {
-			add_devastation = 100
-		}
-		capital = {
-			add_radicals_in_state = { #public outrage
-				value = medium_radicals
-			}
-		}
-		add_journal_entry = {	
-			type = je_krakatoa
-		}
 	}
 }
 
 krakatoa.5 = { #krakatoa erupts but youre not the owner
 	type = country_event
 	placement = scope:krakatoa_state
-	
+
 	event_image = {
 		video = "unspecific_devastation"
 	}
@@ -144,11 +74,11 @@ krakatoa.5 = { #krakatoa erupts but youre not the owner
 			days = short_modifier_time
 			multiplier = money_amount_multiplier_small
 		}
-		add_journal_entry = {	
+		add_journal_entry = {
 			type = je_krakatoa
 		}
 	}
-	
+
 	option = { #it doesn't affect us that much
 		name = krakatoa.5.b
 		default_option = yes
@@ -157,7 +87,7 @@ krakatoa.5 = { #krakatoa erupts but youre not the owner
 			value = -30
 		}
 		change_infamy = 5
-		add_journal_entry = {	
+		add_journal_entry = {
 			type = je_krakatoa
 		}
 	}
@@ -166,7 +96,7 @@ krakatoa.5 = { #krakatoa erupts but youre not the owner
 krakatoa.2 = { #global tsunamis
 	type = country_event
 	placement = scope:tsunami_state
-	
+
 	event_image = {
 		video = "unspecific_devastation"
 	}
@@ -180,8 +110,6 @@ krakatoa.2 = { #global tsunamis
 	flavor = krakatoa.2.f
 
 	immediate = {
-
-
 		random_scope_state = {
 			limit = {
 				is_coastal = yes
@@ -201,20 +129,7 @@ krakatoa.2 = { #global tsunamis
 			}
 			save_scope_as = tsunami_state
 		}
-		if = {
-			limit = {
-				NOT = {
-					exists = global_var:krakatoa_waves_triggered
-				}
-			}
-
-			set_global_variable = {
-				name = krakatoa_waves_triggered
-				months = 20
-			}
-
-			krakatoa_tsunami_effect = yes
-		}
+		krakatoa_tsunami_effect = yes
 	}
 
 	duration = 3
@@ -229,7 +144,7 @@ krakatoa.2 = { #global tsunamis
 krakatoa.3 = { #crop failure
 	type = country_event
 	placement = scope:farm_state
-	
+
 	event_image = {
 		video = "asia_dead_cattle_poor_harvest"
 	}
@@ -241,7 +156,7 @@ krakatoa.3 = { #crop failure
 	title = krakatoa.3.t
 	desc = krakatoa.3.d
 	flavor = krakatoa.3.f
-	
+
 	trigger = {
 		NOT = { has_global_variable = krakatoa_crop_failure_var }
 		is_player = yes
@@ -278,7 +193,7 @@ krakatoa.3 = { #crop failure
 				set_variable = crop_failure_small_var
 			}
 		}
-		hidden_effect = { 
+		hidden_effect = {
 			if = {
 				limit = {
 					has_variable = crop_failure_big_var
@@ -375,7 +290,7 @@ krakatoa.3 = { #crop failure
 			custom_tooltip = krakatoa_crop_failure_small_modifier_tt
 		}
 	}
-	
+
 	option = { #oh well
 		name = krakatoa.3.b
 		default_option = yes
@@ -423,10 +338,10 @@ krakatoa.3 = { #crop failure
 			custom_tooltip = krakatoa_crop_failure_small_modifier_tt
 		}
 	}
-	
+
 	option = { #then again, emergency relief was here to save us!
 		name = krakatoa.3.c
-		highlighted_option = yes 
+		highlighted_option = yes
 		custom_tooltip = krakatoa_crop_failure_tt
 		trigger = {
 			scope:farm_state = {
@@ -484,13 +399,13 @@ krakatoa.3 = { #crop failure
 krakatoa.4 = { #art goes crazy
 	type = country_event
 	placement = scope:art_state
-	
+
 	event_image = {
 		video = "unspecific_fire"
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	
+
 	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
 
 	title = krakatoa.4.t
@@ -509,7 +424,7 @@ krakatoa.4 = { #art goes crazy
 		}
 	}
 
-	immediate = {	
+	immediate = {
 		set_variable = krakatoa_art_var
 		random_scope_state = {
 			limit = {
@@ -556,16 +471,16 @@ krakatoa.4 = { #art goes crazy
 				}
 			}
 		}
-		else = {	
+		else = {
 			scope:art_state = {
 				add_modifier = {
 					name = krakatoa_art_modifier
 					days = normal_modifier_time
 				}
 			}
-		}	
+		}
 	}
-	
+
 	option = { #ask academics to study it
 		name = krakatoa.4.b
 		custom_tooltip = krakatoa_uni.tt #less bad volcanic eruptions in the future
@@ -582,13 +497,13 @@ krakatoa.4 = { #art goes crazy
 				}
 			}
 		}
-		else = {	
+		else = {
 			scope:university_state = {
 				add_modifier = {
 					name = krakatoa_uni_modifier
 					days = normal_modifier_time
 				}
 			}
-		}	
+		}
 	}
 }

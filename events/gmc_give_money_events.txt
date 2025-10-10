@@ -1,0 +1,201 @@
+﻿namespace = transfer_money
+
+transfer_money.1 = {
+	type = country_event
+	placement = ROOT
+
+	trigger = {
+		exists = scope:target_country
+	}
+
+	title = transfer_money.1.t
+	desc = transfer_money.1.d
+
+	event_image = {
+		video = "gfx/event_pictures/unspecific_signed_contract.bk2"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/unspecific/signed_contract"
+
+	icon = "gfx/interface/icons/event_icons/event_default.dds"
+
+	duration = 1
+
+	option = {
+		name = CANCEL
+		default_option = yes
+		hidden_effect = {
+			remove_variable = transferring_money
+		}
+	}
+	option = {
+		name = transfer_money.1.a
+		trigger = {
+			in_default = no 
+		}
+		add_treasury = -20000
+		scope:target_country = {
+			trigger_event = { id = return_money.1 popup = yes }
+		}
+		hidden_effect = {
+        	remove_variable = transferring_money
+    	}
+	}
+	option = {
+		name = transfer_money.1.b
+		trigger = {
+			in_default = no 
+		}
+		add_treasury = -50000
+		scope:target_country = {
+			trigger_event = { id = return_money.2 popup = yes  }
+		}
+		hidden_effect = {
+			remove_variable = transferring_money
+		}
+	}
+	option = {
+		name = transfer_money.1.c
+		trigger = {
+			in_default = no 
+		}
+		add_treasury = -100000
+		scope:target_country = {
+			trigger_event = { id = return_money.3 popup = yes  }
+		}
+		hidden_effect = {
+			remove_variable = transferring_money
+		}
+	}
+	option = {
+		name = transfer_money.1.e
+		trigger = {
+			in_default = no 
+		}
+		add_treasury = -250000
+		scope:target_country = {
+			trigger_event = { id = return_money.4 popup = yes  }
+		}
+		hidden_effect = {
+			remove_variable = transferring_money
+		}
+	}
+	option = {
+		name = transfer_money.1.g
+		trigger = {
+			in_default = no 
+		}
+		add_treasury = -350000
+		scope:target_country = {
+			trigger_event = { id = return_money.5 popup = yes  }
+		}
+		hidden_effect = {
+			remove_variable = transferring_money
+		}
+	}
+	option = {
+		name = transfer_money.1.h
+		trigger = {
+			in_default = no 
+		}
+		add_treasury = -500000
+		scope:target_country = {
+			trigger_event = { id = return_money.6 popup = yes  }
+		}
+		hidden_effect = {
+			remove_variable = transferring_money
+		}
+	}
+	option = {
+		name = transfer_money.1.i
+		trigger = {
+			in_default = no 
+		}
+		add_treasury = -750000
+		scope:target_country = {
+			trigger_event = { id = return_money.7 popup = yes  }
+		}
+		hidden_effect = {
+			remove_variable = transferring_money
+		}
+	}
+	option = {
+		name = transfer_money.1.j
+		trigger = {
+			in_default = no 
+		}
+		add_treasury = -1000000
+		scope:target_country = {
+			trigger_event = { id = return_money.8 popup = yes  }
+		}
+		hidden_effect = {
+			remove_variable = transferring_money
+		}
+	}
+	option = {
+		name = transfer_money.1.k
+		trigger = {
+			in_default = no 
+		}
+		add_treasury = -1500000
+		scope:target_country = {
+			trigger_event = { id = return_money.9 popup = yes  }
+		}
+		hidden_effect = {
+			remove_variable = transferring_money
+		}
+	}
+	option = {
+		name = transfer_money.1.l
+		trigger = {
+			in_default = no 
+		}
+		add_treasury = -2500000
+		scope:target_country = {
+			trigger_event = { id = return_money.10 popup = yes  }
+		}
+		hidden_effect = {
+			remove_variable = transferring_money
+		}
+	}
+	option = {
+		name = transfer_money.1.m
+		trigger = {
+			in_default = no 
+		}
+		add_treasury = -5000000
+		scope:target_country = {
+			trigger_event = { id = return_money.11 popup = yes  }
+		}
+		hidden_effect = {
+			remove_variable = transferring_money
+		}
+	}
+	option = {
+		name = transfer_money.1.n
+		trigger = {
+			in_default = no 
+		}
+		add_treasury = -7500000
+		scope:target_country = {
+			trigger_event = { id = return_money.12 popup = yes  }
+		}
+		hidden_effect = {
+			remove_variable = transferring_money
+		}
+	}
+	option = {
+		name = transfer_money.1.o
+		trigger = {
+			in_default = no
+		}
+		add_treasury = -10000000
+		scope:target_country = {
+			trigger_event = { id = return_money.13 popup = yes  }
+		}
+		hidden_effect = {
+			remove_variable = transferring_money
+		}
+	}
+}

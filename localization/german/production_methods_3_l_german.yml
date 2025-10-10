@@ -1,0 +1,9 @@
+﻿l_german:
+ pmg_base_building_synthetic_oil_plants:0 "Synthetisches Öl"
+ pmg_base_building_synthetic_rubber_plants:0 "Synthetisches Gummi"
+ pm_synth_oil_production:0 "Synthetische Öl Produktion"
+ pm_synth_rubber_production:0 "Synthetische Gummi Produktion"
+
+ pmg_ownership_capital_building_synthetic_oil_plants:0 "Besitz"
+ pmg_ownership_capital_building_synthetic_rubber_plants:0 "Besitz"
+ pm_publicly_traded_building_synthetic_plants:0 "Privatisierung"

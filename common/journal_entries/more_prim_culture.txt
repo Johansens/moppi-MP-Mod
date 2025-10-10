@@ -1,0 +1,153 @@
+﻿je_arg_more_prim_culture = { ## Here, a new primary culture is added to each of 5 countries
+	icon = "gfx/interface/icons/event_icons/event_map.dds"
+
+	group = je_group_internal_affairs
+
+	is_shown_when_inactive = {
+    c:ARG ?= ROOT
+	}
+
+  possible = {
+    c:ARG ?= ROOT
+  }
+
+  complete = {
+    game_date >= 1836.2.2
+    }
+
+  on_complete = {
+    add_primary_culture = cu:patagonian
+  }
+}
+
+je_bol_more_prim_culture = {
+	icon = "gfx/interface/icons/event_icons/event_map.dds"
+
+	group = je_group_internal_affairs
+
+	is_shown_when_inactive = {
+    c:BOL ?= ROOT
+	}
+
+  possible = {
+    c:BOL ?= ROOT
+  }
+
+  complete = {
+    game_date >= 1836.2.2
+    }
+
+  on_complete = {
+    add_primary_culture = cu:quechua
+  }
+}
+
+je_clm_more_prim_culture = {
+	icon = "gfx/interface/icons/event_icons/event_map.dds"
+
+	group = je_group_internal_affairs
+
+	is_shown_when_inactive = {
+    c:CLM ?= ROOT
+	}
+
+  possible = {
+    c:CLM ?= ROOT
+  }
+
+  complete = {
+    game_date >= 1836.2.2
+    }
+
+  on_complete = {
+    add_primary_culture = cu:quechua
+  }
+}
+
+je_mex_more_prim_culture = {
+	icon = "gfx/interface/icons/event_icons/event_map.dds"
+
+	group = je_group_internal_affairs
+
+	is_shown_when_inactive = {
+    c:MEX ?= ROOT
+	}
+
+  possible = {
+    c:MEX ?= ROOT
+  }
+
+  complete = {
+    game_date >= 1836.2.2
+    }
+
+  on_complete = {
+    add_primary_culture = cu:mayan
+  }
+}
+
+je_dei_more_prim_culture = {
+	icon = "gfx/interface/icons/event_icons/event_map.dds"
+
+	group = je_group_internal_affairs
+
+	is_shown_when_inactive = {
+    c:DEI ?= ROOT
+	}
+
+  possible = {
+    c:DEI ?= ROOT
+  }
+
+  complete = {
+    game_date >= 1836.2.2
+    }
+
+  on_complete = {
+    add_primary_culture = cu:javan
+  }
+}
+
+je_arg_more_prim_culture = { ## Here, a new primary culture is added to each of 5 countries
+	icon = "gfx/interface/icons/event_icons/event_map.dds"
+
+	group = je_group_internal_affairs
+
+	is_shown_when_inactive = {
+    c:ARG ?= ROOT
+	}
+
+  possible = {
+    c:ARG ?= ROOT
+  }
+
+  complete = {
+    game_date >= 1836.2.2
+    }
+
+  on_complete = {
+    add_primary_culture = cu:patagonian
+  }
+}
+
+je_brz_more_prim_culture = {
+	icon = "gfx/interface/icons/event_icons/event_map.dds"
+
+	group = je_group_internal_affairs
+
+	is_shown_when_inactive = {
+    c:BRZ ?= ROOT
+	}
+
+  possible = {
+    c:BRZ ?= ROOT
+  }
+
+  complete = {
+    game_date >= 1836.2.2
+    }
+
+  on_complete = {
+    add_primary_culture = cu:amazonian
+  }
+}

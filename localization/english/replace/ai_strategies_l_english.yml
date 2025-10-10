@@ -1,4 +1,0 @@
-﻿l_english:
- # replacements: GDP ownership
- ATTITUDE_DETAILS: "[COUNTRY.GetAttitudeTowards(TARGET_COUNTRY.Self).GetReasonsDesc]\n$TOOLTIP_DELIMITER$\n[TARGET_COUNTRY.GetName] has [COUNTRY.GetInvestmentLevelsInCountry(TARGET_COUNTRY.Self)|v] [Concept('concept_building_level', '$concept_building_levels$')] in [COUNTRY.GetName], amount to [COUNTRY.GetInvestmentGdpFractionInCountry(TARGET_COUNTRY.Self)|%2v] of [COUNTRY.GetAdjective] $GDP_SHORT$\n[COUNTRY.GetName] has [TARGET_COUNTRY.GetInvestmentLevelsInCountry(COUNTRY.Self)|v] [Concept('concept_building_level', '$concept_building_levels$')] in [TARGET_COUNTRY.GetName], amount to [TARGET_COUNTRY.GetInvestmentGdpFractionInCountry(COUNTRY.Self)|%2v] of [TARGET_COUNTRY.GetAdjective] $GDP_SHORT$"
- ai_attitude_human_tooltip: "#header $ai_attitude_human$#!\n$ai_attitude_human_desc$\n$TOOLTIP_DELIMITER$\n$ATTITUDE_DETAILS$"

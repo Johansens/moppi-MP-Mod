@@ -1,2 +1,0 @@
-﻿l_german:
- PLAYER_MIGHT_ACCEPT_DESC: "[DiplomaticAction.GetSecondCountry.GetAltName('NOM')|U] ist ein Spieler ([DiplomaticAction.GetSecondCountry.GetPlayedByDesc]) und kann selbst entscheiden, ob es annimmt oder nicht"

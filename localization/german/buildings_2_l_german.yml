@@ -1,0 +1,5 @@
+﻿l_german:
+ building_synthetic_oil_plants:0 "Synthetische ÖL Fabrik"
+ building_synthetic_oil_plants_lens_option:0 "$building_synthetic_oil_plants$ erweitern"
+ building_synthetic_rubber_plants:0 "Synthetische Gummi Fabrik"
+ building_synthetic_rubber_plants_lens_option:0 "$building_synthetic_rubber_plants$ erweitern"

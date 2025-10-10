@@ -1,0 +1,24 @@
+﻿je_rus_pol_rebellion = {
+	icon = "gfx/interface/icons/institution_icons/schools.dds"
+	
+	group = je_group_historical_content
+
+	is_shown_when_inactive = {
+    c:RUS ?= ROOT
+	}
+
+  	possible = {
+    c:RUS ?= ROOT
+  	}
+
+	complete = {
+		game_date >= 1836.2.2
+	}
+
+	on_complete = {
+		trigger_event = { id = russia_polish_unrest.1 days = 10 }
+	}
+
+	weight = 100
+	should_be_pinned_by_default = yes
+}

@@ -1,0 +1,1273 @@
+﻿namespace = russia_polish_unrest
+
+russia_polish_unrest.1 = { #Nicholas I addresses unrest in Poland
+	type = country_event
+	placement = root
+
+	title = russia_polish_unrest.1.t
+	desc = russia_polish_unrest.1.d
+	flavor = russia_polish_unrest.1.f
+
+	gui_window = event_window_1char_tabloid
+	
+	left_icon = scope:nicholas_scope
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	duration = 3
+
+	cooldown = { months = stupidly_long_modifier_time }
+
+	trigger = {
+		#triggred per JE
+	}
+
+	immediate = {
+				
+	}
+
+	option = { # Nicholas I takes tough action against the rebels
+		name = russia_polish_unrest.1.a
+		trigger_event = { id = russia_polish_unrest.2 days = 31 popup = yes }
+		ai_chance = {
+			base = 2
+		}
+	}
+
+	option = { # Nicholas tries to talk to the rebels
+		name = russia_polish_unrest.1.b
+		default_option = yes
+		ai_chance = {
+			base = 8 # this is the default pick for the AI
+		}
+		trigger_event = { id = russia_polish_unrest.5 days = 62 popup = yes }
+	}
+}
+
+russia_polish_unrest.2 = { # what should he do with the rebels?
+	type = country_event
+	placement = root
+
+	title = russia_polish_unrest.2.t
+	desc = russia_polish_unrest.2.d
+	flavor = russia_polish_unrest.2.f
+
+	gui_window = event_window_1char_tabloid
+	
+	left_icon = scope:nicholas_scope
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	duration = 3
+
+	cooldown = { months = stupidly_long_modifier_time }
+
+	trigger = {
+		#triggred per Event
+	}
+
+	immediate = {
+				
+	}
+
+	option = { # Kill all the Rebels
+		name = russia_polish_unrest.2.a
+		trigger_event = { id = russia_polish_unrest.3 days = 31 popup = yes }
+		ai_chance = {
+			base = 8 # this is the default pick for the AI
+		}
+	}
+
+	option = { # kill only the leaders, spare the others
+		name = russia_polish_unrest.2.b
+		default_option = yes
+		trigger_event = { id = russia_polish_unrest.4 days = 31 popup = yes }
+		ai_chance = {
+			base = 2 # this is the default pick for the AI
+		}
+	}
+}
+
+russia_polish_unrest.3 = { # Kill all the Rebels
+	type = country_event
+	placement = root
+
+	title = russia_polish_unrest.3.t
+	desc = russia_polish_unrest.3.d
+	flavor = russia_polish_unrest.3.f
+
+	gui_window = event_window_1char_tabloid
+	
+	left_icon = scope:nicholas_scope
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	duration = 3
+
+	cooldown = { months = stupidly_long_modifier_time }
+
+	trigger = {
+		#triggred per Event
+	}
+
+	immediate = {
+
+	}
+
+	option = {
+		name = russia_polish_unrest.3.a
+		ai_chance = {
+			base = 8 # this is the default pick for the AI
+		}
+
+		every_scope_state = {
+			limit = {
+			OR = {
+				region = sr:region_poland
+				state_region = s:STATE_VILNIUS
+				state_region = s:STATE_KAUNAS
+				state_region = s:STATE_VOLHYNIA
+				state_region = s:STATE_BREST
+				}					
+			}
+			add_radicals_in_state = {
+				value = very_large_radicals
+			}			
+			state_region = {
+			add_devastation = 50
+			}
+		}
+	}
+}
+
+russia_polish_unrest.4 = { # kill only the leaders, spare the others
+	type = country_event
+	placement = root
+
+	title = russia_polish_unrest.4.t
+	desc = russia_polish_unrest.4.d
+	flavor = russia_polish_unrest.4.f
+
+	gui_window = event_window_1char_tabloid
+	
+	left_icon = scope:nicholas_scope
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	duration = 3
+
+	cooldown = { months = stupidly_long_modifier_time }
+
+	trigger = {
+		#triggred per Event
+	}
+
+	immediate = {
+		
+	}
+
+	option = {
+		name = russia_polish_unrest.4.a
+		ai_chance = {
+			base = 8 # this is the default pick for the AI
+		}
+
+		every_scope_state = {
+			limit = {
+			OR = {
+				region = sr:region_poland
+				state_region = s:STATE_VILNIUS
+				state_region = s:STATE_KAUNAS
+				state_region = s:STATE_VOLHYNIA
+				state_region = s:STATE_BREST
+				}					
+			}
+			add_radicals_in_state = {
+				value = large_radicals
+			}			
+			state_region = {
+			add_devastation = 25
+			}
+		}
+	}
+}
+
+russia_polish_unrest.5 = { # Nicholas tries to talk to the rebels
+	type = country_event
+	placement = root
+
+	title = russia_polish_unrest.5.t
+	desc = russia_polish_unrest.5.d
+	flavor = russia_polish_unrest.5.f
+
+	gui_window = event_window_1char_tabloid
+	
+	left_icon = scope:nicholas_scope
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	duration = 3
+
+	cooldown = { months = stupidly_long_modifier_time }
+
+	trigger = {
+		#triggred per Event
+	}
+
+	immediate = {
+				
+	}
+
+	option = { # negotiations fail, The tsar negotiates himself
+		name = russia_polish_unrest.5.a
+		ai_chance = {
+			base = 1 
+		}
+		trigger_event = { id = russia_polish_unrest.6 days = 31 popup = yes }
+	}
+
+	option = { # negotiations of unpleasant compromises,the Tsar negotiates together with his best diplomat 
+		name = russia_polish_unrest.5.b
+		default_option = yes
+		ai_chance = {
+			base = 7 # this is the default pick for the AI
+		}
+		trigger_event = { id = russia_polish_unrest.9 days = 31 popup = yes }
+	}
+
+	option = { # negotiations of good compromises, the Tsar negotiates together with his son
+		name = russia_polish_unrest.5.c
+		ai_chance = {
+			base = 1 
+		}
+		trigger_event = { id = russia_polish_unrest.10 days = 31 popup = yes }
+	}
+
+	option = { # negotiations succeed, the heir and a diplomat negotiate
+		name = russia_polish_unrest.5.d
+		ai_chance = {
+			base = 1 
+		}
+		trigger_event = { id = russia_polish_unrest.11 days = 31 popup = yes }
+	}
+}
+
+russia_polish_unrest.6 = { # negotiations fail, The tsar negotiates himself
+	type = country_event
+	placement = root
+
+	title = russia_polish_unrest.6.t
+	desc = russia_polish_unrest.6.d
+	flavor = russia_polish_unrest.6.f
+
+	gui_window = event_window_1char_tabloid
+	
+	left_icon = scope:nicholas_scope
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	duration = 3
+
+	cooldown = { months = stupidly_long_modifier_time }
+
+	trigger = {
+		#triggred per Event
+	}
+
+	immediate = {
+				
+	}
+
+	option = { # Rebels play for time, success / Nation change to Poland
+		name = russia_polish_unrest.6.a
+		ai_chance = {
+			base = 1
+		}
+		trigger_event = { id = russia_polish_unrest.7 days = 62 popup = yes }
+	}
+
+	option = { # Rebels play for time, fail / Polish uprising
+		name = russia_polish_unrest.6.b
+		default_option = yes
+		ai_chance = {
+			base = 9 # this is the default pick for the AI
+		}
+		trigger_event = { id = russia_polish_unrest.8 days = 31 popup = yes }
+	}
+}
+
+russia_polish_unrest.7 = { # Rebels play for time, success / Nation change to Poland
+	type = country_event
+	placement = root
+
+	title = russia_polish_unrest.7.t
+	desc = russia_polish_unrest.7.d
+	flavor = russia_polish_unrest.7.f
+
+	gui_window = event_window_1char_tabloid
+	
+	left_icon = scope:nicholas_scope
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	duration = 3
+
+	cooldown = { months = stupidly_long_modifier_time }
+
+	trigger = {
+		#triggred per Event
+	}
+
+	immediate = {
+		ruler = {
+			save_scope_as = nicholas_scope
+		}
+
+		s:STATE_LESSER_POLAND = {
+            region_state:RUS = {
+                set_variable = {
+                name = great_polish_revolt
+                }
+            }
+        }
+		s:STATE_MAZOVIA = {
+            region_state:RUS = {
+                set_variable = {
+                name = great_polish_revolt
+                }
+            }
+        }
+		s:STATE_VILNIUS = {
+            region_state:RUS = {
+                set_variable = {
+                name = great_polish_revolt
+                }
+            }
+        }
+		s:STATE_KAUNAS = {
+            region_state:RUS = {
+                set_variable = {
+                name = great_polish_revolt
+                }
+            }
+        }
+		s:STATE_BREST = {
+            region_state:RUS = {
+                set_variable = {
+                name = great_polish_revolt
+                }
+            }
+        }
+		s:STATE_VOLHYNIA = {
+            region_state:RUS = {
+                set_variable = {
+                name = great_polish_revolt
+                }
+            }
+        }
+		s:STATE_GREATER_POLAND = {
+            region_state:RUS = {
+                set_variable = {
+                name = great_polish_revolt
+                }
+            }
+        }
+		s:STATE_RIGA = {
+            region_state:RUS = {
+                set_variable = {
+                name = great_riga_revolt
+                }
+            }
+        }
+
+		add_modifier = {name = modifier_polish_uprising_russia years = 1}
+	}
+
+	option = { # Great rebel uprising
+		name = russia_polish_unrest.7.a
+		type = country_event
+		placement = root
+
+		default_option = yes
+		ai_chance = {
+			base = 8 # this is the default pick for the AI
+		}
+
+		ruler = {
+			kill_character = yes
+		}
+
+		create_country = {
+			tag = POL
+			origin = root
+			state = s:STATE_GREATER_POLAND.region_state:RUS
+
+			on_created = {
+                c:POL = {
+                    activate_law = law_type:law_presidential_republic
+					activate_law = law_type:law_national_militia
+					activate_law = law_type:law_appointed_bureaucrats
+					activate_law = law_type:law_freedom_of_conscience
+					activate_law = law_type:law_racial_segregation
+					activate_law = law_type:law_autocracy
+					activate_law = law_type:law_homesteading
+					activate_law = law_type:law_land_based_taxation
+                }
+				s:STATE_MINSK = {
+            		add_claim = c:POL
+        		}
+        		s:STATE_VITEBSK = {
+            		add_claim = c:POL
+        		}
+        		s:STATE_MOGILEV = {
+            		add_claim = c:POL
+        		}
+        		s:STATE_KIEV = {
+           			add_claim = c:POL
+        		}
+
+				s:STATE_GREATER_POLAND = {
+           			add_claim = c:RUS
+        		}
+				s:STATE_VOLHYNIA = {
+           			add_claim = c:RUS
+        		}
+				s:STATE_BREST = {
+           			add_claim = c:RUS
+        		}
+				s:STATE_MAZOVIA = {
+           			add_claim = c:RUS
+        		}
+				s:STATE_LESSER_POLAND = {
+           			add_claim = c:RUS
+        		}
+				s:STATE_VILNIUS = {
+           			add_claim = c:RUS
+        		}
+				s:STATE_KAUNAS = {
+           			add_claim = c:RUS
+        		}
+				set_variable = {
+             		name = polish_great_rebellion
+        		}
+			}	
+    	}
+
+		hidden_effect = {
+			c:UBD ?= { 
+				make_independent = yes
+				add_primary_culture = cu:lithuanian
+				add_primary_culture = cu:latvian
+				add_primary_culture = cu:estonian
+				remove_primary_culture = cu:north_german
+				remove_primary_culture = cu:russian
+
+				activate_law = law_type:law_racial_segregation
+				activate_law = law_type:law_homesteading
+				activate_law = law_type:law_autocracy
+				activate_law = law_type:law_presidential_republic
+				activate_law = law_type:law_national_militia
+			}
+
+			c:POL ?= {
+				create_diplomatic_pact = {
+				country = c:UBD
+				type = puppet
+				}
+			}
+		}
+
+		every_scope_state = {
+            limit = {
+                is_capital = no
+                has_variable = great_riga_revolt
+            }     
+            set_state_owner = c:UBD
+            set_state_type = incorporated
+        }
+	
+		every_scope_state = {
+            limit = {
+                is_capital = no
+                has_variable = great_polish_revolt
+                }     
+            set_state_owner = c:POL
+            set_state_type = incorporated
+        }
+		c:RUS = {
+				create_diplomatic_play = {
+					name = great_polish_uprising
+					type = dp_return_state
+					target_state = s:STATE_GREATER_POLAND.region_state:POL
+					target_country = c:POL
+
+					add_war_goal = {
+						holder = c:RUS
+						type = return_state
+						target_state = s:STATE_VOLHYNIA.region_state:POL
+					}
+					add_war_goal = {
+						holder = c:RUS
+						type = return_state
+						target_state = s:STATE_BREST.region_state:POL
+					}
+					add_war_goal = {
+						holder = c:RUS
+						type = return_state
+						target_state = s:STATE_MAZOVIA.region_state:POL
+					}
+					add_war_goal = {
+						holder = c:RUS
+						type = return_state
+						target_state = s:STATE_LESSER_POLAND.region_state:POL
+					}
+					add_war_goal = {
+						holder = c:RUS
+						type = return_state
+						target_state = s:STATE_VILNIUS.region_state:POL
+					}
+					add_war_goal = {
+						holder = c:RUS
+						type = return_state
+						target_state = s:STATE_KAUNAS.region_state:POL
+					}				 
+
+					add_war_goal = {
+						holder = c:POL
+						type = return_state
+						target_state = s:STATE_VITEBSK.region_state:RUS
+					}
+					add_war_goal = {
+						holder = c:POL
+						type = return_state
+						target_state = s:STATE_MOGILEV.region_state:RUS
+					}
+					add_war_goal = {
+						holder = c:POL
+						type = return_state
+						target_state = s:STATE_KIEV.region_state:RUS
+					}
+					add_war_goal = {
+						holder = c:POL
+						type = return_state
+						target_state = s:STATE_MINSK.region_state:RUS
+					}
+				}
+			}
+		trigger_event = { id = russia_polish_unrest.12 popup = yes }
+	}
+}
+
+russia_polish_unrest.8 = { # Rebels play for time, fail
+	type = country_event
+	placement = root
+
+	title = russia_polish_unrest.8.t
+	desc = russia_polish_unrest.8.d
+	flavor = russia_polish_unrest.8.f
+
+	gui_window = event_window_1char_tabloid
+	
+	left_icon = scope:nicholas_scope
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	duration = 3
+
+	cooldown = { months = stupidly_long_modifier_time }
+
+	trigger = {
+		#triggred per Event
+	}
+
+	immediate = {
+		ruler = {
+			save_scope_as = nicholas_scope
+		}
+
+		s:STATE_LESSER_POLAND = {
+            region_state:RUS = {
+                set_variable = {
+                name = small_polish_revolt
+                }
+            }
+        }
+		s:STATE_MAZOVIA = {
+            region_state:RUS = {
+                set_variable = {
+                name = small_polish_revolt
+                }
+            }
+        }
+		s:STATE_GREATER_POLAND = {
+            region_state:RUS = {
+                set_variable = {
+                name = small_polish_revolt
+                }
+            }
+        }
+
+		add_modifier = {name = modifier_polish_uprising_russia years = 1}	
+	}
+
+	option = { # Small rebel uprising
+		name = russia_polish_unrest.8.a
+		type = country_event
+		placement = root
+
+		default_option = yes
+		ai_chance = {
+			base = 8 # this is the default pick for the AI
+		}
+
+		ruler = {
+			kill_character = yes
+		}
+
+		create_country = {
+			tag = POL
+			origin = root
+			state = s:STATE_GREATER_POLAND.region_state:RUS
+
+			on_created = {
+                c:POL = {
+                    activate_law = law_type:law_presidential_republic
+					activate_law = law_type:law_national_militia
+					activate_law = law_type:law_appointed_bureaucrats
+					activate_law = law_type:law_freedom_of_conscience
+					activate_law = law_type:law_racial_segregation
+					activate_law = law_type:law_autocracy
+					activate_law = law_type:law_homesteading
+					activate_law = law_type:law_land_based_taxation
+                }
+				s:STATE_VILNIUS = {
+            		add_claim = c:POL
+        		}
+        		s:STATE_KAUNAS = {
+            		add_claim = c:POL
+        		}
+        		s:STATE_BREST = {
+            		add_claim = c:POL
+        		}
+        		s:STATE_VOLHYNIA = {
+           			add_claim = c:POL
+        		}
+
+				s:STATE_GREATER_POLAND = {
+           			add_claim = c:RUS
+        		}
+				s:STATE_MAZOVIA = {
+           			add_claim = c:RUS
+        		}
+				s:STATE_LESSER_POLAND = {
+           			add_claim = c:RUS
+        		}
+				set_variable = {
+            		name = polish_small_rebellion
+        		}
+			}	
+    	}
+		every_scope_state = {
+                    limit = {
+                        is_capital = no
+                        has_variable = small_polish_revolt
+                        }     
+                    set_state_owner = c:POL
+                    set_state_type = incorporated
+        }
+		c:RUS = {
+				create_diplomatic_play = {
+					name = great_polish_uprising
+					type = dp_return_state
+					target_state = s:STATE_GREATER_POLAND.region_state:POL
+					target_country = c:POL
+
+				add_war_goal = {
+					holder = c:RUS
+					type = return_state
+					target_state = s:STATE_MAZOVIA.region_state:POL
+				}
+				add_war_goal = {
+					holder = c:RUS
+					type = return_state
+					target_state = s:STATE_LESSER_POLAND.region_state:POL
+				}
+
+				add_war_goal = {
+					holder = c:POL
+					type = return_state
+					target_state = s:STATE_KAUNAS.region_state:RUS
+				}
+				add_war_goal = {
+					holder = c:POL
+					type = return_state
+					target_state = s:STATE_BREST.region_state:RUS
+				}
+				add_war_goal = {
+					holder = c:POL
+					type = return_state
+					target_state = s:STATE_VOLHYNIA.region_state:RUS
+				}
+				add_war_goal = {
+					holder = c:POL
+					type = return_state
+					target_state = s:STATE_VILNIUS.region_state:RUS
+				}
+			}
+		}
+	}
+}
+russia_polish_unrest.9 = { # negotiations of unpleasant compromises,the Tsar negotiates together with his best diplomat
+	type = country_event
+	placement = root
+
+	title = russia_polish_unrest.9.t
+	desc = russia_polish_unrest.9.d
+	flavor = russia_polish_unrest.9.f
+
+	gui_window = event_window_1char_tabloid
+	
+	left_icon = scope:nicholas_scope
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	duration = 3
+
+	cooldown = { months = stupidly_long_modifier_time }
+
+	trigger = {
+		#triggred per Event
+	}
+
+	immediate = {
+		ruler = {
+			save_scope_as = nicholas_scope
+		}
+
+		s:STATE_LESSER_POLAND = {
+            region_state:RUS = {
+                set_variable = {
+                name = small_polish_compromis
+                }
+            }
+        }
+		s:STATE_MAZOVIA = {
+            region_state:RUS = {
+                set_variable = {
+                name = small_polish_compromis
+                }
+            }
+        }
+		s:STATE_GREATER_POLAND = {
+            region_state:RUS = {
+                set_variable = {
+                name = small_polish_compromis
+                }
+            }
+        }	
+	}
+
+	option = { # Small poland, as puppet
+		name = russia_polish_unrest.9.a
+		type = country_event
+		placement = root
+
+		default_option = yes
+		ai_chance = {
+			base = 8 # this is the default pick for the AI
+		}
+
+		ruler = { # The Tsar dies at the hands of a rebel, which makes the leaders more likely to give in.
+			kill_character = yes
+		}
+
+		create_country = {
+			tag = POL
+			origin = root
+			state = s:STATE_GREATER_POLAND.region_state:RUS
+
+			on_created = {
+                c:POL = {
+                    activate_law = law_type:law_presidential_republic
+					activate_law = law_type:law_national_militia
+					activate_law = law_type:law_appointed_bureaucrats
+					activate_law = law_type:law_freedom_of_conscience
+					activate_law = law_type:law_racial_segregation
+					activate_law = law_type:law_census_voting
+					activate_law = law_type:law_homesteading
+					activate_law = law_type:law_land_based_taxation
+                }
+				every_scope_state = {
+        			limit = {
+						OR = {
+							state_region = s:STATE_GREATER_POLAND
+						}
+        			}     
+					add_radicals_in_state = {
+						value = very_large_radicals
+					}			
+					state_region = {
+					add_devastation = 10
+					}
+    			}
+				c:RUS ?= {
+					create_diplomatic_pact = {
+						country = c:POL
+						type = puppet
+					}
+				}
+			}	
+    	}
+		every_scope_state = {
+        	limit = {
+                is_capital = no
+                has_variable = small_polish_compromis
+				OR = {
+					state_region = s:STATE_GREATER_POLAND
+					state_region = s:STATE_MAZOVIA
+					state_region = s:STATE_LESSER_POLAND
+				}
+        	}     
+        	set_state_owner = c:POL
+        	set_state_type = incorporated
+			add_radicals_in_state = {
+				value = large_radicals
+			}			
+			state_region = {
+				add_devastation = 10
+			}
+    	}
+	}
+
+	option = { # Small poland, as puppet. The Tsar survives
+		name = russia_polish_unrest.9.b
+		type = country_event
+		placement = root
+
+		create_country = {
+			tag = POL
+			origin = root
+			state = s:STATE_GREATER_POLAND.region_state:RUS
+
+			on_created = {
+                c:POL = {
+                    activate_law = law_type:law_presidential_republic
+					activate_law = law_type:law_national_militia
+					activate_law = law_type:law_appointed_bureaucrats
+					activate_law = law_type:law_freedom_of_conscience
+					activate_law = law_type:law_racial_segregation
+					activate_law = law_type:law_census_voting
+					activate_law = law_type:law_homesteading
+					activate_law = law_type:law_land_based_taxation
+                }
+				every_scope_state = {
+        			limit = {
+						OR = {
+							state_region = s:STATE_GREATER_POLAND
+							
+						}
+        			}     
+					add_radicals_in_state = {
+						value = very_large_radicals
+					}			
+					state_region = {
+					add_devastation = 20
+					}
+    			}
+				c:RUS ?= {
+					create_diplomatic_pact = {
+						country = c:POL
+						type = puppet
+					}
+				}
+			}	
+    	}
+		every_scope_state = {
+        	limit = {
+                is_capital = no
+                has_variable = small_polish_compromis
+				OR = {
+					state_region = s:STATE_GREATER_POLAND
+					state_region = s:STATE_MAZOVIA
+					state_region = s:STATE_LESSER_POLAND
+				}
+        	}     
+        	set_state_owner = c:POL
+        	set_state_type = incorporated
+			add_radicals_in_state = {
+				value = very_large_radicals
+			}			
+			state_region = {
+				add_devastation = 20
+			}
+    	}
+	}
+}
+
+russia_polish_unrest.10 = { # negotiations of good compromises, the Tsar negotiates together with his son
+	type = country_event
+	placement = root
+
+	title = russia_polish_unrest.10.t
+	desc = russia_polish_unrest.10.d
+	flavor = russia_polish_unrest.10.f
+
+	gui_window = event_window_1char_tabloid
+	
+	left_icon = scope:nicholas_scope
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	duration = 3
+
+	cooldown = { months = stupidly_long_modifier_time }
+
+	trigger = {
+		#triggred per Event
+	}
+
+	immediate = {
+		ruler = {
+			save_scope_as = nicholas_scope
+		}
+
+		s:STATE_LESSER_POLAND = {
+            region_state:RUS = {
+                set_variable = {
+                name = small_polish_compromis
+                }
+            }
+        }
+		s:STATE_MAZOVIA = {
+            region_state:RUS = {
+                set_variable = {
+                name = small_polish_compromis
+                }
+            }
+        }
+		s:STATE_GREATER_POLAND = {
+            region_state:RUS = {
+                set_variable = {
+                name = small_polish_compromis
+                }
+            }
+        }	
+	}
+
+	option = { # Small poland, as protectorate
+		name = russia_polish_unrest.10.a
+		type = country_event
+		placement = root
+
+		default_option = yes
+		ai_chance = {
+			base = 8 # this is the default pick for the AI
+		}
+
+		ruler = { # The Tsar dies at the hands of a rebel, which makes the leaders more likely to give in.
+			kill_character = yes
+		}
+
+		create_country = {
+			tag = POL
+			origin = root
+			state = s:STATE_GREATER_POLAND.region_state:RUS
+
+			on_created = {
+                c:POL = {
+                    activate_law = law_type:law_presidential_republic
+					activate_law = law_type:law_national_militia
+					activate_law = law_type:law_appointed_bureaucrats
+					activate_law = law_type:law_freedom_of_conscience
+					activate_law = law_type:law_racial_segregation
+					activate_law = law_type:law_census_voting
+					activate_law = law_type:law_homesteading
+					activate_law = law_type:law_land_based_taxation
+                }
+				every_scope_state = {
+        			limit = {
+						OR = {
+							state_region = s:STATE_GREATER_POLAND
+						}
+        			}     
+    			}
+				c:RUS ?= {
+					create_diplomatic_pact = {
+						country = c:POL
+						type = protectorate
+					}
+				}
+			}	
+    	}
+		every_scope_state = {
+        	limit = {
+                is_capital = no
+                has_variable = small_polish_compromis
+				OR = {
+					state_region = s:STATE_GREATER_POLAND
+					state_region = s:STATE_MAZOVIA
+					state_region = s:STATE_LESSER_POLAND
+				}
+        	}     
+        	set_state_owner = c:POL
+        	set_state_type = incorporated
+    	}
+	}
+
+	option = { # Small poland, as protectorate. The Tsar survives
+		name = russia_polish_unrest.10.b
+		type = country_event
+		placement = root
+
+		ai_chance = {
+			base = 2 
+		}
+
+		create_country = {
+			tag = POL
+			origin = root
+			state = s:STATE_GREATER_POLAND.region_state:RUS
+
+			on_created = {
+                c:POL = {
+                    activate_law = law_type:law_presidential_republic
+					activate_law = law_type:law_national_militia
+					activate_law = law_type:law_appointed_bureaucrats
+					activate_law = law_type:law_freedom_of_conscience
+					activate_law = law_type:law_racial_segregation
+					activate_law = law_type:law_census_voting
+					activate_law = law_type:law_homesteading
+					activate_law = law_type:law_land_based_taxation
+                }
+				every_scope_state = {
+        			limit = {
+						OR = {
+							state_region = s:STATE_GREATER_POLAND
+						}
+        			}     
+    			}
+				c:RUS ?= {
+					create_diplomatic_pact = {
+						country = c:POL
+						type = protectorate
+					}
+				}
+			}	
+    	}
+		every_scope_state = {
+        	limit = {
+                is_capital = no
+                has_variable = small_polish_compromis
+				OR = {
+					state_region = s:STATE_GREATER_POLAND
+					state_region = s:STATE_MAZOVIA
+					state_region = s:STATE_LESSER_POLAND
+				}
+        	}     
+        	set_state_owner = c:POL
+        	set_state_type = incorporated
+    	}
+	}
+}
+
+russia_polish_unrest.11 = { # negotiations succeed, the heir and a diplomat negotiate
+	type = country_event
+	placement = root
+
+	title = russia_polish_unrest.11.t
+	desc = russia_polish_unrest.11.d
+	flavor = russia_polish_unrest.11.f
+
+	gui_window = event_window_1char_tabloid
+	
+	left_icon = scope:nicholas_scope
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	duration = 3
+
+	cooldown = { months = stupidly_long_modifier_time }
+
+	trigger = {
+		#triggred per Event
+	}
+
+	immediate = {
+
+		s:STATE_LESSER_POLAND = {
+            region_state:RUS = {
+                set_variable = {
+                name = small_polish_compromis
+                }
+            }
+        }
+		s:STATE_MAZOVIA = {
+            region_state:RUS = {
+                set_variable = {
+                name = small_polish_compromis
+                }
+            }
+        }
+		s:STATE_GREATER_POLAND = {
+            region_state:RUS = {
+                set_variable = {
+                name = small_polish_compromis
+                }
+            }
+        }	
+	}
+
+	option = { # Small poland, as personal union
+		name = russia_polish_unrest.11.a
+		type = country_event
+		placement = root
+
+		default_option = yes
+		ai_chance = {
+			base = 8 # this is the default pick for the AI
+		}
+
+		create_country = {
+			tag = POL
+			origin = root
+			state = s:STATE_GREATER_POLAND.region_state:RUS
+
+			on_created = {
+                c:POL = {
+					activate_law = law_type:law_national_militia
+					activate_law = law_type:law_appointed_bureaucrats
+					activate_law = law_type:law_freedom_of_conscience
+					activate_law = law_type:law_racial_segregation
+					activate_law = law_type:law_census_voting
+					activate_law = law_type:law_homesteading
+					activate_law = law_type:law_land_based_taxation
+                }
+				every_scope_state = {
+        			limit = {
+						OR = {
+							state_region = s:STATE_GREATER_POLAND
+						}
+        			}     
+    			}
+				c:RUS ?= {
+					create_diplomatic_pact = {
+						country = c:POL
+						type = personal_union
+					}
+				}
+			}	
+    	}
+		every_scope_state = {
+        	limit = {
+                is_capital = no
+                has_variable = small_polish_compromis
+				OR = {
+					state_region = s:STATE_GREATER_POLAND
+					state_region = s:STATE_MAZOVIA
+					state_region = s:STATE_LESSER_POLAND
+				}
+        	}     
+        	set_state_owner = c:POL
+        	set_state_type = incorporated
+    	}
+	}
+
+	option = { # No Poland, but huge Unrest.
+		name = russia_polish_unrest.11.b
+		type = country_event
+		placement = root
+
+		ai_chance = {
+			base = 2 
+		}
+
+		every_scope_state = {
+			limit = {
+				OR = {
+					region = sr:region_poland
+				}					
+			}
+			add_radicals_in_state = {
+				value = large_radicals
+			}			
+			state_region = {
+			add_devastation = 25
+			}
+		}
+	}
+}
+
+russia_polish_unrest.12 = { # Nation change to Poland
+	type = country_event
+	placement = root
+
+	title = russia_polish_unrest.12.t
+	desc = russia_polish_unrest.12.d
+	flavor = russia_polish_unrest.12.f
+
+	gui_window = event_window_1char_tabloid
+	
+	left_icon = scope:nicholas_scope
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	duration = 3
+
+	cooldown = { months = stupidly_long_modifier_time }
+
+	trigger = {
+		#triggred per Event
+	}
+
+	immediate = {
+	
+	}
+
+	option = { # for the Tzar!!!
+		name = russia_polish_unrest.12.a
+		type = country_event
+		placement = root
+
+		default_option = yes
+		ai_chance = {
+			base = 10 # this is the default pick for the AI
+		}
+
+	}
+
+	option = { # for Poland!!!
+		name = russia_polish_unrest.12.b
+		type = country_event
+		placement = root
+
+		ai_chance = {
+			base = 0 
+		}
+
+		play_as = c:POL
+	}
+}

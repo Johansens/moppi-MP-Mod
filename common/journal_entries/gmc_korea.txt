@@ -1,0 +1,27 @@
+﻿je_kor_terakoya = {
+	icon = "gfx/interface/icons/institution_icons/schools.dds"
+	
+	group = je_group_historical_content
+
+	modifiers_while_active = {
+		modifier_kor_terakoya
+	}
+
+	complete = {
+		institution_investment_level = {
+			institution = institution_schools
+			value >= 3
+		}
+	}
+
+	on_complete = {
+		add_modifier = {
+			name = modifier_legacy_of_kor_terakoya
+			days = very_long_modifier_time
+			
+		}
+	}
+
+	weight = 100
+	should_be_pinned_by_default = yes
+}

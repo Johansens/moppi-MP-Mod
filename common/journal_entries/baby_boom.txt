@@ -1,0 +1,53 @@
+﻿je_baby_boom = { ## A JE to increase population growth
+	icon = "gfx/interface/icons/event_icons/event_map.dds"
+
+	group = je_group_internal_affairs
+
+	is_shown_when_inactive = {
+		NOT = {country_has_primary_culture = cu:russian
+           country_has_primary_culture = cu:han
+           c:BIC ?= THIS
+           c:BHT ?= THIS
+        }
+	}
+
+  possible = {
+	  NOT = {country_has_primary_culture = cu:russian
+           country_has_primary_culture = cu:han
+           c:BIC ?= THIS
+           c:BHT ?= THIS
+        }
+  }
+
+  complete = {
+    has_technology_researched = pharmaceuticals
+    }
+
+  on_complete = {
+	add_modifier = {name = add_birth_rate_world months = 120}
+  }
+}
+
+je_russia_baby_boom = { ## A JE to increase Russias population growth
+	icon = "gfx/interface/icons/event_icons/event_map.dds"
+
+	group = je_group_internal_affairs
+
+	is_shown_when_inactive = {
+		c:RUS ?= THIS
+    country_has_primary_culture = cu:russian
+	}
+
+  possible = {
+	  c:RUS ?= THIS
+    country_has_primary_culture = cu:russian
+  }
+
+  complete = {
+    has_technology_researched = pharmaceuticals
+    }
+
+  on_complete = {
+	add_modifier = {name = add_russia_birth_rate_world months = 120}
+  }
+}

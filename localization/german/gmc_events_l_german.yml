@@ -1,0 +1,277 @@
+﻿l_german:
+
+gmc_polish_events.1.t: "Aufstand in Polen"
+gmc_polish_events.1.d: "Berichte aus dem Osten sprechen von einem massiven Aufstand in den polnischen Gebieten. Tausende haben sich gegen das russische Joch erhoben und rufen nach nationaler Selbstbestimmung. Eine provisorische Regierung wurde gebildet – ihre Gesandten suchen bereits diplomatischen Rückhalt bei den Nachbarn Europas."
+gmc_polish_events.1.f: "„Freiheit ist kein Geschenk – sie muss errungen werden.“\n– Unbekannter Aufständischer"
+gmc_polish_events.1.a: "Wir unterstützen ihre Sache."
+gmc_polish_events.1.b: "Das ist nicht unser Kampf."
+gmc_polish_events.1.c: "Diese Bewegung muss gestoppt werden."
+
+gmc_polish_events.2.t: "Polnischer Aufstand erschüttert Osteuropa"
+gmc_polish_events.2.d: "Ein bewaffneter Aufstand hat in Teilen Polens begonnen. Obwohl der Aufruhr noch klein ist, entsenden die Aufständischen bereits Gesandte in europäische Hauptstädte, um Unterstützung zu gewinnen. Die Welt beobachtet – und fragt sich, wo wir stehen."
+gmc_polish_events.2.f: "„Ein neues Polen erhebt sich – nicht aus Blutdurst, sondern aus Hoffnung.“\n– Unabhängiger Beobachter"
+
+gmc_polish_events.2.a: "Wir stehen an der Seite Polens"
+gmc_polish_events.2.a_tt: "Wir erklären unser Interesse an Polen und verschlechtern unsere Beziehungen zu Russland."
+
+gmc_polish_events.2.b: "Wir bleiben neutral"
+gmc_polish_events.2.b_tt: "Ein vorsichtiger diplomatischer Balanceakt – wir verbessern unsere Beziehungen zu beiden Seiten leicht."
+
+gmc_polish_events.2.c: "Wir unterstützen Russland"
+gmc_polish_events.2.c_tt: "Wir stärken die russische Position, doch die Polen werden uns das nicht vergessen."
+
+gmc_polish_events.3.t: "Polen bittet um Hilfe"
+gmc_polish_events.3.d: "Eine Delegation aus Polen hat unser Land um Unterstützung gebeten. Der junge Staat steht militärisch und wirtschaftlich unter enormem Druck. Man bietet uns Einfluss – oder sogar Unterordnung – im Gegenzug für unsere Hilfe."
+gmc_polish_events.3.f: "„Wenn Freiheit einen Preis hat, dann möge er bezahlt werden – in Gold, Eisen oder Stolz.“\n– Polnischer Diplomat in London"
+
+gmc_polish_events.3.a: "Wir helfen – aber es wird sie etwas kosten"
+british_help_high_price_tt: "Polen erhält umfangreiche technologische Hilfe und wird zu einem Protektorat."
+
+gmc_polish_events.3.b: "Wir bieten begrenzte Unterstützung"
+british_help_small_price_tt: "Polen erhält einige Technologien, und Polen leistet finanzielle Zahlungen."
+
+gmc_polish_events.3.c: "Wir können nichts für sie tun"
+gmc_polish_events.3.c_tt: "Unsere Beziehungen zu Polen verschlechtern sich."
+
+gmc_polish_events.4.t: "Angebot aus Großbritannien"
+gmc_polish_events.4.d: "Großbritannien bietet uns großzügige Hilfe an – doch der Preis ist hoch. Im Gegenzug für Technologien, Berater und Schutz sollen wir ein britisches Protektorat werden."
+gmc_polish_events.4.f: "„Sie tragen Uniformen, nicht Ketten – noch nicht.“\n– Warschauer Bürger bei Ankunft britischer Truppen"
+
+gmc_polish_events.4.a: "Wir akzeptieren das Angebot"
+gmc_polish_events.4.a_tt: "Polen wird zum britischen Protektorat und erhält umfangreiche technologische Unterstützung."
+
+gmc_polish_events.4.b: "Wir sind kein Vasall"
+gmc_polish_events.4.b_tt: "Wir lehnen das Angebot ab, was unsere Beziehungen zu Großbritannien belastet."
+
+gmc_polish_events.5.t: "Polens Zustimmung"
+gmc_polish_events.5.d: "Polen hat zugestimmt, die britische Hilfe anzunehmen, jedoch ohne weitere Bedingungen. Es wird nichts weiter gefordert."
+gmc_polish_events.5.f: "„Es ist der Anfang einer neuen Ära für uns.“\n– Polnischer Diplomat in London"
+gmc_polish_events.5.a: "Alles klar – keine weiteren Forderungen"
+
+gmc_polish_events.6.t: "Polen lehnt ab"
+gmc_polish_events.6.d: "Polen hat das Angebot abgelehnt. Der Versuch, den polnischen Staat unter britischen Schutz zu stellen, scheitert."
+gmc_polish_events.6.f: "„Wir haben unseren Stolz nicht verkauft.“\n– Polnischer Politiker"
+gmc_polish_events.6.a: "Schade, aber nichts weiter"
+
+  # gmc_polish_events.7
+gmc_polish_events.7.t: "Hilfe gegen Preis – aber weniger stark"
+gmc_polish_events.7.d: "Großbritannien bietet Hilfe an, aber nur gegen einen kleineren Preis. Es wird keine vollständige Protektion gewährt, jedoch gibt es Hilfestellungen bei Technologien."
+gmc_polish_events.7.f: "„Die Freiheit wird zu einem kleinen Preis verkauft.“\n– Warschauer Berater"
+gmc_polish_events.7.a: "Wir nehmen das Angebot an"
+gmc_polish_events.7.b: "Wir lehnen das Angebot ab"
+
+  # gmc_polish_events.8
+gmc_polish_events.8.t: "Britische Hilfe abgelehnt"
+gmc_polish_events.8.d: "Großbritannien hat unser Hilfegesuch endgültig abgelehnt. Wir müssen nun unseren eigenen Weg finden."
+gmc_polish_events.8.f: "„Verlassen wir uns auf uns selbst.“\n– Polnischer General"
+gmc_polish_events.8.a: "Wir müssen unseren eigenen Weg gehen"
+
+  # gmc_polish_events.9
+gmc_polish_events.9.t: "Hilfe aus Preußen, aber zu einem hohen Preis"
+gmc_polish_events.9.d: "Preußen bietet uns Unterstützung an, aber zu einem hohen Preis. Der polnische Staat würde als Protektorat Preußens fungieren."
+gmc_polish_events.9.f: "„Der Preis der Freiheit ist oft sehr hoch.“\n– Polnischer Diplomat"
+gmc_polish_events.9.a: "Wir nehmen das Angebot an"
+gmc_polish_events.9.b: "Wir lehnen das Angebot ab"
+gmc_polish_events.9.c: "Wir müssen uns selbst behaupten"
+
+  # gmc_polish_events.10
+gmc_polish_events.10.t: "Preußisches Angebot"
+gmc_polish_events.10.d: "Preußen bietet uns großzügige Hilfe an – doch der Preis ist hoch. Im Gegenzug für Technologien, Berater und Schutz sollen wir ein Preußisches Protektorat werden."
+gmc_polish_events.10.f: "„Mit einer starken Hand wird uns viel geboten.“\n– Polnischer Diplomat"
+gmc_polish_events.10.a: "Wir nehmen das Angebot an"
+gmc_polish_events.10.b: "Wir lehnen das Angebot ab"
+
+# Event 11
+gmc_polish_events.11.t:0 "Angebot von Preußen"
+gmc_polish_events.11.d:0 "Preußen hat Polen ein Angebot gemacht. Wie wird Polen reagieren?"
+gmc_polish_events.11.f:0 "Preußen bietet Polen eine Allianz und technische Unterstützung an."
+
+gmc_polish_events.11.a:0 "Annehmen"
+gmc_polish_events.11.b:0 "Ablehnen"
+
+# Event 12
+gmc_polish_events.12.t:0 "Hilfeersuchen von Preußen abgelehnt"
+gmc_polish_events.12.d:0 "Preußen hat Polens Hilfeersuchen abgelehnt. Dies wird Konsequenzen haben."
+gmc_polish_events.12.f:0 "Polen fühlt sich von Preußen enttäuscht."
+
+gmc_polish_events.12.a:0 "Verstehen und weiterkämpfen"
+
+# Event 13
+gmc_polish_events.13.t:0 "Hilfegesuch an Frankreich"
+gmc_polish_events.13.d:0 "Polen hat Frankreich um Hilfe gebeten. Frankreich könnte jedoch hohe Bedingungen stellen."
+gmc_polish_events.13.f:0 "Frankreich ist die einzige Option, die Polen noch bleibt."
+
+gmc_polish_events.13.a:0 "Hilfe annehmen, aber zu einem hohen Preis"
+gmc_polish_events.13.b:0 "Hilfe annehmen, aber zu einem geringeren Preis"
+gmc_polish_events.13.c:0 "Hilfe ablehnen"
+
+# Event 14
+gmc_polish_events.14.t:0 "Angebot von Frankreich"
+gmc_polish_events.14.d:0 "Frankreich hat Polen angeboten, ein Protektorat zu werden. Dies könnte Polens Position stärken."
+gmc_polish_events.14.f:0 "Frankreich möchte Polen unter seine Fittiche nehmen."
+
+gmc_polish_events.14.a:0 "Annehmen"
+gmc_polish_events.14.b:0 "Ablehnen"
+
+# Event 15
+gmc_polish_events.15.t:0 "Angebot von Frankreich"
+gmc_polish_events.15.d:0 "Frankreich bietet Polen Unterstützung an. Die Bedingungen sind jedoch entscheidend."
+gmc_polish_events.15.f:0 "Frankreich könnte Polen helfen, aber mit Folgen."
+
+gmc_polish_events.15.a:0 "Hilfe annehmen"
+gmc_polish_events.15.b:0 "Hilfe ablehnen"
+
+# Event 16
+gmc_polish_events.16.t:0 "Hilfeersuchen von Frankreich abgelehnt"
+gmc_polish_events.16.d:0 "Frankreich hat Polens Hilfeersuchen abgelehnt. Es gibt nichts weiter zu tun."
+gmc_polish_events.16.f:0 "Polen muss nun ohne französische Unterstützung weitermachen."
+
+gmc_polish_events.16.a:0 "Verstehen und weitermachen"
+
+# Event 17
+gmc_polish_events.17.t:0 "Hilfeersuchen von Österreich"
+gmc_polish_events.17.d:0 "Polen hat Österreich um Hilfe gebeten. Doch der Preis könnte hoch sein."
+gmc_polish_events.17.f:0 "Österreich könnte Polen helfen, aber zu einem hohen Preis."
+
+gmc_polish_events.17.a:0 "Hilfe annehmen, aber zu einem hohen Preis"
+gmc_polish_events.17.b:0 "Hilfe annehmen, aber zu einem geringeren Preis"
+gmc_polish_events.17.c:0 "Hilfeersuchen ablehnen"
+
+# Event 18
+gmc_polish_events.18.t:0 "Österreichs Angebot"
+gmc_polish_events.18.d:0 "Österreich bietet Polen ein Protektorat an. Akzeptieren oder ablehnen?"
+gmc_polish_events.18.f:0 "Österreich könnte Polen stärken, wenn es das Protektorat akzeptiert."
+
+gmc_polish_events.18.a:0 "Annehmen und Protektorat gründen"
+gmc_polish_events.18.b:0 "Ablehnen und weiterkämpfen"
+
+# Event 19
+gmc_polish_events.19.t:0 "Österreichs weiteres Angebot"
+gmc_polish_events.19.d:0 "Österreich bietet Polen erneut Unterstützung an. Wird Polen das Angebot diesmal annehmen?"
+gmc_polish_events.19.f:0 "Ein weiteres Angebot von Österreich – die Entscheidung liegt bei Polen."
+
+gmc_polish_events.19.a:0 "Annehmen und Protektorat gründen"
+gmc_polish_events.19.b:0 "Ablehnen und weiterkämpfen"
+
+# Event 20
+gmc_polish_events.20.t:0 "Hilfeersuchen von Österreich abgelehnt"
+gmc_polish_events.20.d:0 "Österreich hat Polens Hilfeersuchen abgelehnt. Es gibt keine weitere Option."
+gmc_polish_events.20.f:0 "Österreich hat Polen enttäuscht und nun bleibt nur der eigene Weg."
+
+gmc_polish_events.20.a:0 "Verstehen und weiterkämpfen"
+
+# Event 21
+gmc_polish_events.21.t:0 "KRIEG oder FRIEDEN?"
+gmc_polish_events.21.d:0 "Die Entscheidung steht bevor. Werden wir in den Krieg ziehen, um unser Land und unsere Interessen zu erweitern, oder werden wir uns auf Frieden einlassen und den Status quo bewahren?"
+gmc_polish_events.21.f:0 "Ein kritischer Moment in der polnischen Geschichte."
+
+gmc_polish_events.21.a:0 "Krieg! Der russische Bär muss besiegt werden!"
+gmc_polish_events.21.b:0 "\"Frieden in unserer Zeit\""
+gmc_polish_events.21.f:1 "Polen hat die Wahl, entweder den Krieg gegen Russland zu erklären oder sich auf Friedensgespräche einzulassen."
+
+# Event 22
+gmc_polish_events.22.t:0 "Frieden oder Krieg?"
+gmc_polish_events.22.d:0 "Der Kurs, den Polen einschlägt, wird das Schicksal der Region bestimmen. Werden wir den Konflikt weiter eskalieren oder auf eine friedliche Lösung setzen?"
+gmc_polish_events.22.f:0 "Der Druck der internationalen Politik erreicht seinen Höhepunkt."
+
+gmc_polish_events.22.a:0 "Krieg! Der russische Feind muss bezwungen werden!"
+gmc_polish_events.22.b:0 "Frieden in unserer Zeit – Polens Weg zum Status quo."
+
+# Event 23
+gmc_polish_events.23.t:0 "Der Fall Russlands"
+gmc_polish_events.23.d:0 "Der russische Staat ist zusammengebrochen, und eine neue Ära der geopolitischen Landschaft beginnt. Neue Nationen entstehen, und alte Verbündete werden entweder zu Rivalen oder Partnern."
+gmc_polish_events.23.f:0 "Der Untergang Russlands hat weitreichende Konsequenzen."
+
+gmc_polish_events.23.a:0 "Russlands Untergang – Eine neue Ära der Freiheit!"
+
+# Event 24
+gmc_polish_events.24.t:0 "Der Untergang Russlands"
+gmc_polish_events.24.d:0 "Der russische Staat steht am Rande des Zusammenbruchs. Wirst du den Tod des Zaren herbeiführen und Russland in einen Zustand der Abhängigkeit stürzen, oder wirst du eine andere Entscheidung treffen?"
+gmc_polish_events.24.f:0 "Der russische Tzar steht am Rande des Untergangs. Eine wichtige Entscheidung für die Zukunft Polens."
+
+gmc_polish_events.24.a:0 "Der Untergang Russlands – Eine neue Ära"
+
+gmc_polish_events.24.b:0 "Frieden statt Umbruch"
+
+# Event for Russia
+russia_polish_unrest.1.t:  "Nikolaus I. reagiert auf die Unruhen in Polen"
+russia_polish_unrest.1.d:  "Die polnischen Aufstände haben das Reich erschüttert. Nikolaus I. muss eine Entscheidung treffen, wie er auf diese Krise reagieren soll."
+russia_polish_unrest.1.f:  "Die Situation in Polen ist immer instabiler geworden. Der Zar muss jetzt handeln, um die Ordnung wiederherzustellen."
+
+russia_polish_unrest.1.a:  "Nikolaus I. ergreift harte Maßnahmen gegen die Rebellen"
+russia_polish_unrest.1.b:  "Nikolaus versucht, mit den Rebellen zu verhandeln"
+
+russia_polish_unrest.2.t:  "Was soll er mit den Rebellen tun?"
+russia_polish_unrest.2.d:  "Nikolaus I. muss entscheiden, was mit den Rebellen geschehen soll. Wie wird er mit dieser Krise umgehen?"
+russia_polish_unrest.2.f:  "Der Zar muss jetzt eine Entscheidung treffen: Harte Maßnahmen oder eine Versöhnung?"
+
+russia_polish_unrest.2.a:  "Töte alle Rebellen"
+russia_polish_unrest.2.b:  "Töte nur die Anführer, verschone die anderen"
+
+russia_polish_unrest.3.t:  "Alle Rebellen hinrichten"
+russia_polish_unrest.3.d:  "Der Zar hat sich entschieden, mit aller Härte gegen die Rebellen vorzugehen. Alle Aufständischen werden hingerichtet."
+russia_polish_unrest.3.f:  "Die Rebellion in Polen wird mit unbarmherziger Gewalt unterdrückt. Keine Gnade für die Rebellen."
+
+russia_polish_unrest.3.a:  "Alle Rebellen hinrichten"
+
+russia_polish_unrest.4.t:  "Nur die Anführer hinrichten, die anderen verschonen"
+russia_polish_unrest.4.d:  "Nikolaus I. hat sich entschieden, nur die Anführer der Rebellion zu bestrafen, während die anderen Rebellen verschont werden."
+russia_polish_unrest.4.f:  "Der Zar zeigt Gnade, indem er nur die Rebellenführer zur Rechenschaft zieht."
+
+russia_polish_unrest.4.a:  "Nur die Anführer hinrichten"
+
+russia_polish_unrest.5.t:  "Nikolaus versucht, mit den Rebellen zu verhandeln"
+russia_polish_unrest.5.d:  "Nikolaus I. versucht einen alternativen Ansatz, indem er Gespräche mit den Rebellen aufnimmt, in der Hoffnung, eine friedliche Lösung zu finden."
+russia_polish_unrest.5.f:  "Statt Gewalt anzuwenden, versucht der Zar, die Krise durch Verhandlungen zu lösen."
+
+russia_polish_unrest.5.a:  "Der Zar verhandelt persönlich"
+russia_polish_unrest.5.b:  "Der Zar verhandelt zusammen mit seinem besten Diplomaten"
+russia_polish_unrest.5.c:  "Der Zar verhandelt zusammen mit seinem Sohn"
+russia_polish_unrest.5.d:  "Der Erbe und ein Diplomat verhandeln"
+
+russia_polish_unrest.6.t: "Der Zar führt die Verhandlungen selbst"
+russia_polish_unrest.6.d: "Die Verhandlungen mit den Rebellen gehen weiter. Der Zar setzt alles daran, eine Lösung zu finden, die den Frieden wiederherstellt."
+russia_polish_unrest.6.f: "Während die Gespräche fortgeführt werden, scheint die Lage weiterhin angespannt. Der Zar hofft auf ein Ende der Unruhen."
+
+russia_polish_unrest.6.a: "Verhandlungen verlaufen in eine erhoffte Lösung"
+russia_polish_unrest.6.b: "Verhandlungen scheitern, der Aufstand geht weiter"
+
+russia_polish_unrest.7.t: "Die Rebellen erheben sich"
+russia_polish_unrest.7.d: "Die Verhandlungen scheitern und die Rebellen, nun gestärkt, erklären die Unabhängigkeit Polens. Der Aufstand erreicht seinen Höhepunkt."
+russia_polish_unrest.7.f: "Die einst gezögerten Rebellen haben sich nun erhoben und fordern einen neuen Staat. Die Lage im Land verschärft sich weiter."
+
+russia_polish_unrest.7.a: "WAS?!? NEIN!!!"
+
+russia_polish_unrest.8.t: "Rebellen spielen auf Zeit, nicht mit uns"
+russia_polish_unrest.8.d: "Die Verhandlungen sind gescheitert, aber die Rebellen setzen ihre Bemühungen fort, sich Zeit zu verschaffen und die Situation zu verschärfen."
+russia_polish_unrest.8.f: "Es scheint, dass die Rebellen weiterhin versuchen, den Konflikt zu verzögern, jedoch ohne signifikante Fortschritte."
+
+russia_polish_unrest.8.a: "wir haben sie durchaut!"
+
+russia_polish_unrest.9.t: "Verhandlungen über Kompromisse"
+russia_polish_unrest.9.d: "Der Zar führt Verhandlungen mit seinen besten Diplomaten."
+russia_polish_unrest.9.f: "Eine schwierige Entscheidung steht bevor, und der Zar muss entscheiden, wie weit er nachgeben wird."
+
+russia_polish_unrest.9.a: "Kleinpolen, jedoc.. Wer sind Sie und was mach- Schussgeräusche."
+russia_polish_unrest.9.b: "Kleinpolen, jedoch nicht mehr."
+
+russia_polish_unrest.10.t: "Verhandlungen über Kompromisse"
+russia_polish_unrest.10.d: "Der Zar führt Verhandlungen zusammen mit seinem Sohn."
+russia_polish_unrest.10.f: "Ein neuer Versuch der Diplomatie, um den Frieden zu wahren."
+
+russia_polish_unrest.10.a: "Kleinpolen unter unserem Schutz und eine kleine bedingung von mir."
+russia_polish_unrest.10.b: "Kleinpolen, unter unserem Schutz."
+
+russia_polish_unrest.11.t: "Alexandre ergreift Initiative"
+russia_polish_unrest.11.d: "Nach schwierigen Verhandlungen gelingt es Alexandre und einem talentierten Diplomaten, einen Kompromiss zu erreichen."
+russia_polish_unrest.11.f: "Ein erfolgreicher diplomatischer Schritt, der Polen als persönlichen Union bringt."
+
+russia_polish_unrest.11.a: "Eine Doppelmonarchie, mit Vorzügen für Polen"
+russia_polish_unrest.11.b: "Autonomie für Polen"
+
+russia_polish_unrest.12.t: "Polens Freiheitskampf"
+russia_polish_unrest.12.d: "Ein entscheidender Moment in der Geschichte. Polen wird wieder eine eigenständige Nation."
+russia_polish_unrest.12.f: "Ein historischer Wendepunkt – Polen kehrt zurück auf die Landkarte."
+
+russia_polish_unrest.12.a: "Für den Zaren!!!"
+russia_polish_unrest.12.b: "Für Polen!!!"
